@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WorldCupAnalytics")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9674ce1a2f24ec3da2227cc8a2713a1bba1b3cf1")]
 [assembly: System.Reflection.AssemblyProductAttribute("WorldCupAnalytics")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WorldCupAnalytics")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

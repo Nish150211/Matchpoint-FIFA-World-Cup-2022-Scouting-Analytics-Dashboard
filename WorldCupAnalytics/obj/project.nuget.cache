@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J7hNNNC7u3k=",
+  "dgSpecHash": "JmYws2O/CaI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nish\\Desktop\\WorldCupAnalytics\\WorldCupAnalytics\\WorldCupAnalytics.csproj",
+  "projectFilePath": "C:\\Users\\Nish\\Desktop\\WorldCupAnalytics\\Matchpoint — FIFA World Cup 2022 Scouting & Analytics Dashboard\\WorldCupAnalytics\\WorldCupAnalytics.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nish\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Nish\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
