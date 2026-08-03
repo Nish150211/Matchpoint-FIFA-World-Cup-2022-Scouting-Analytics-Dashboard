@@ -1,0 +1,236 @@
+﻿@model WorldCupAnalytics.Models.ViewModels.PlayerProfileViewModel
+@{
+    Layout = "_AppLayout";
+}
+
+<a class="back-link" href="/Home/Dashboard">&larr; Back to Home</a>
+<div class="breadcrumb">MATCHPOINT / PLAYER PROFILE</div>
+<div class="page-head">
+    <div style="display:flex; gap:16px; align-items:center;">
+        <img src="@WorldCupAnalytics.Helpers.AvatarHelper.GetUrl(Model.DisplayName, "2E7D50")" class="p-avatar" style="width:56px;height:56px;font-size:19px;">
+        <div>
+            <h1>@Model.DisplayName</h1>
+            <p>@Model.TeamName &middot; @Model.Position &middot; Group @(Model.GroupLetter ?? "-") &middot; FIFA World Cup 2022</p>
+        </div>
+    </div>
+    <div style="display:flex; gap:10px;">
+        <a class="btn" href="/Players/Compare?ids=@Model.PlayerId">+ Add to Compare</a>
+        <a class="btn primary" href="/Scouting/Report?id=@Model.PlayerId">Generate Scouting Report &rarr;</a>
+    </div>
+</div>
+
+<div class="feature-strip">
+    <div class="feature-chip">Tournament output stats</div>
+    <div class="feature-chip">Real shot map</div>
+    <div class="feature-chip">Real touch heat map</div>
+    <div class="feature-chip">Match-by-match log</div>
+    <div class="feature-chip">Team form (last 5 results)</div>
+    <div class="feature-chip">Injury log (manual)</div>
+</div>
+
+<div class="divider" style="margin-top:6px;"><div class="dot"></div><span class="label">Tournament Output</span><div class="dot"></div></div>
+<div class="grid cols-4">
+    <div class="card" title="Goals scored in open play + regulation/extra-time penalties. Shootout penalties excluded to match official tournament stats.">
+        <h3>Goals</h3><div class="stat-big">@Model.Goals</div><div class="bracket">xG <span class="val">@Model.Xg</span></div>
+    </div>
+    <div class="card" title="Passes that led directly to a goal">
+        <h3>Assists</h3><div class="stat-big">@Model.Assists</div><div class="bracket">@Model.Starts starts</div>
+    </div>
+    <div class="card" title="Shots on target = goals + saves, excluding blocked/off-target attempts">
+        <h3>Shots / SoT</h3><div class="stat-big">@Model.Shots / @Model.ShotsOnTarget</div>
+        <div class="bracket">@(Model.Shots > 0 ? Math.Round(100.0 * Model.ShotsOnTarget / Model.Shots) : 0)% on target</div>
+    </div>
+    <div class="card" title="Completed passes divided by total passes attempted">
+        <h3>Pass Accuracy</h3><div class="stat-big">@(Model.PassAccuracyPct?.ToString("0") ?? "-")%</div><div class="bracket">@Model.TotalPasses attempted</div>
+    </div>
+</div>
+
+<div class="divider"><div class="dot"></div><span class="label">Shot Map &amp; Touch Heat Map</span><div class="dot"></div></div>
+<div class="stat-label" style="margin-bottom:10px;">Gold = goal, green = saved, dim = off target/blocked. Shootout penalties excluded. Hover any dot or zone for detail.</div>
+<div class="grid cols-2">
+    <div class="card pitch-card">
+        <h4>Shot Map <span class="manual-tag">shot_events</span></h4>
+        <div class="pmeta">@Model.Shots shots &middot; @Model.Goals goals &middot; @Model.Xg xG</div>
+        <div class="pitch-zoomable">
+            <svg width="100%" height="300" viewBox="0 0 420 300">
+                <rect x="0" y="0" width="420" height="300" rx="8" fill="var(--panel-2)" />
+                <g stroke="rgba(20,24,28,0.25)" fill="none" stroke-width="1.5">
+                    <rect x="10" y="10" width="400" height="280" />
+                    <rect x="10" y="70" width="60" height="160" />
+                    <rect x="350" y="70" width="60" height="160" />
+                    <rect x="10" y="115" width="24" height="70" />
+                    <rect x="386" y="115" width="24" height="70" />
+                    <path d="M70 90 A70 70 0 0 1 70 210" />
+                    <path d="M350 90 A70 70 0 0 0 350 210" />
+                </g>
+                @foreach (var dot in Model.ShotMap)
+                {
+                    <circle cx="@dot.SvgX" cy="@dot.SvgY" r="@dot.Radius" fill="@dot.Color" stroke="var(--chalk)" stroke-width="1">
+                        <title>@dot.TooltipText</title>
+                    </circle>
+                }
+            </svg>
+        </div>
+        <div class="legend">
+            <div class="legend-item"><div class="swatch" style="background:#B8842A;border-radius:50%;"></div>Goal</div>
+            <div class="legend-item"><div class="swatch" style="background:#2E7D50;border-radius:50%;"></div>Saved</div>
+            <div class="legend-item"><div class="swatch" style="background:rgba(20,24,28,0.25);border-radius:50%;"></div>Off/blocked</div>
+        </div>
+    </div>
+
+    <div class="card pitch-card">
+        <h4>Touch Heat Map <span class="manual-tag">event_locations</span></h4>
+        <div class="pmeta">@Model.TouchesCount touches logged</div>
+        <div class="pitch-zoomable">
+            <svg width="100%" height="300" viewBox="0 0 420 300">
+                <rect x="0" y="0" width="420" height="300" rx="8" fill="var(--panel-2)" />
+                @foreach (var cell in Model.HeatMap)
+                {
+                    <rect x="@cell.SvgX" y="@cell.SvgY" width="@cell.Width" height="@cell.Height" fill="@($"rgba(46,125,80,{cell.Opacity.ToString(System.Globalization.CultureInfo.InvariantCulture)})")">
+                        <title>@cell.TouchCount touch@(cell.TouchCount == 1 ? "" : "es") in this zone</title>
+                    </rect>
+                }
+                <g stroke="rgba(20,24,28,0.25)" fill="none" stroke-width="1.5">
+                    <rect x="10" y="10" width="400" height="280" />
+                    <rect x="10" y="70" width="60" height="160" />
+                    <rect x="350" y="70" width="60" height="160" />
+                </g>
+            </svg>
+        </div>
+        <div class="stat-label" style="margin-top:8px;">8&times;6 grid &middot; darker = more touches (passes, carries, pressures, duels)</div>
+    </div>
+</div>
+
+<div class="divider"><div class="dot"></div><span class="label">Pass Map</span><div class="dot"></div></div>
+<div class="stat-label" style="margin-bottom:10px;">Every pass attempted, drawn from its real start point to its real end point. Green = completed, gold = incomplete/other outcome. Hover any line for the minute, recipient, and pass type.</div>
+@{
+    int completedPassCount = Model.PassMap.Count(p => p.IsComplete && !p.IsGoalAssist);
+    int assistPassCount = Model.PassMap.Count(p => p.IsGoalAssist);
+    int incompletePassCount = Model.PassMap.Count - completedPassCount - assistPassCount;
+}
+<div class="legend" style="justify-content:flex-start; margin-top:0; margin-bottom:10px;">
+    <div class="legend-item"><div class="swatch" style="background:#2E7D50;"></div>Completed (@completedPassCount)</div>
+    <div class="legend-item"><div class="swatch" style="background:#6C5FBE;"></div>Assist (@assistPassCount)</div>
+    <div class="legend-item"><div class="swatch" style="background:#B8842A;"></div>Incomplete / other (@incompletePassCount)</div>
+</div>
+<div style="display:flex; gap:8px; margin-bottom:12px;">
+    <button type="button" class="chip on" id="passFilterAll">All (@Model.PassMap.Count)</button>
+    <button type="button" class="chip" id="passFilterComplete">Completed only</button>
+    <button type="button" class="chip" id="passFilterIncomplete">Incomplete only</button>
+    <button type="button" class="chip" id="passFilterAssist">Assists only (@assistPassCount)</button>
+</div>
+<div class="card pitch-card">
+    <div class="pitch-zoomable">
+        <svg width="100%" height="300" viewBox="0 0 420 300" id="passMapSvg">
+            <rect x="0" y="0" width="420" height="300" rx="8" fill="var(--panel-2)" />
+            <g stroke="rgba(20,24,28,0.25)" fill="none" stroke-width="1.5">
+                <rect x="10" y="10" width="400" height="280" />
+                <rect x="10" y="70" width="60" height="160" />
+                <rect x="350" y="70" width="60" height="160" />
+            </g>
+            @foreach (var pass in Model.PassMap)
+            {
+                <line class="pass-line @(pass.IsComplete ? "pass-complete" : "pass-incomplete") @(pass.IsGoalAssist ? "pass-assist" : "")" x1="@pass.SvgX1" y1="@pass.SvgY1" x2="@pass.SvgX2" y2="@pass.SvgY2" stroke="@pass.Color" stroke-opacity="@(pass.IsGoalAssist ? "0.9" : "0.4")" stroke-width="@(pass.IsGoalAssist ? "2.5" : "1.5")">
+                    <title>@pass.TooltipText</title>
+                </line>
+            }
+        </svg>
+    </div>
+</div>
+
+<div class="divider"><div class="dot"></div><span class="label">Defensive &amp; Work Rate</span><div class="dot"></div></div>
+<div class="stat-label" style="margin-bottom:10px;">Pressures/Interceptions/Clearances/Blocks/Fouls are raw involvement counts from <span class="mono">event_locations</span>. Ground Duels and Dribbles show real win/success rates &mdash; Aerial Duels are losses-only, since StatsBomb doesn't tag the winning side of an aerial as a separate event.</div>
+<div class="card">
+    <div class="grid cols-4">
+        <div title="Applying pressure to the opponent in possession"><div class="stat-label" style="margin:0;">Pressures</div><div class="stat-big" style="font-size:26px;">@Model.Pressures</div></div>
+        <div title="Tackle duels only — real won/total"><div class="stat-label" style="margin:0;">Ground Duels</div><div class="stat-big" style="font-size:22px;">@Model.GroundDuelsWon/@Model.GroundDuelsTotal</div><div class="stat-label" style="margin:0;">@Model.GroundDuelWinPct% won</div></div>
+        <div title="Aerial duels lost — wins aren't tracked separately in this dataset"><div class="stat-label" style="margin:0;">Aerial Duels Lost</div><div class="stat-big" style="font-size:26px;">@Model.AerialDuelsLost</div></div>
+        <div><div class="stat-label" style="margin:0;">Interceptions</div><div class="stat-big" style="font-size:26px;">@Model.Interceptions</div></div>
+        <div><div class="stat-label" style="margin:0;">Clearances</div><div class="stat-big" style="font-size:26px;">@Model.Clearances</div></div>
+        <div><div class="stat-label" style="margin:0;">Blocks</div><div class="stat-big" style="font-size:26px;">@Model.Blocks</div></div>
+        <div title="Fouls committed / fouls won"><div class="stat-label" style="margin:0;">Fouls (C/W)</div><div class="stat-big" style="font-size:22px;">@Model.FoulsCommitted / @Model.FoulsWon</div></div>
+        <div title="Real Complete/Incomplete success rate"><div class="stat-label" style="margin:0;">Dribbles</div><div class="stat-big" style="font-size:22px;">@Model.DribblesCompleted/@Model.DribblesAttempted</div><div class="stat-label" style="margin:0;">@Model.DribbleSuccessPct% success</div></div>
+    </div>
+</div>
+
+<div class="divider"><div class="dot"></div><span class="label">Match-by-Match Log</span><div class="dot"></div></div>
+<div class="card">
+    <table>
+        <thead><tr><th>Date</th><th>Stage</th><th>Fixture</th><th>Goals</th><th>Assists</th><th>xG</th><th>Shots</th></tr></thead>
+        <tbody>
+            @if (Model.MatchLog.Any())
+            {
+                foreach (var m in Model.MatchLog)
+                {
+                    <tr>
+                        <td>@m.MatchDate.ToString("d MMM")</td>
+                        <td>@m.Stage</td>
+                        <td>vs @m.Opponent</td>
+                        <td class="num">@m.Goals</td>
+                        <td class="num">@m.Assists</td>
+                        <td class="num">@m.Xg</td>
+                        <td class="num">@m.Shots</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr><td colspan="7" class="stat-label">No recorded events</td></tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="divider"><div class="dot"></div><span class="label">Form &amp; Availability</span><div class="dot"></div></div>
+<div class="grid cols-2">
+    <div class="card">
+        <h3>Team Form &mdash; Last @Model.Form.Count Results</h3>
+        <div class="form-dots">
+            @foreach (var result in Model.Form)
+            {
+                var cls = result == "W" ? "w" : result == "L" ? "l" : "d";
+                var word = result == "W" ? "Win" : result == "L" ? "Loss" : "Draw";
+                <div class="fd @cls" title="@word">@result</div>
+            }
+        </div>
+        <div class="stat-label" style="margin-top:10px;">From <span class="mono">matches</span>, @Model.TeamName's results (not filtered to this player's appearances)</div>
+    </div>
+    <div class="card">
+        <h3>Injury &amp; Availability <span class="manual-tag">manual entry</span></h3>
+        <p class="stat-label" style="margin:0 0 14px;">None of the source files track injuries &mdash; status below would be entered by scouting staff.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span class="stat-label" style="margin:0;">Current status</span>
+            <span class="manual-tag" style="background:var(--green-dim); border-color:var(--green); color:var(--chalk);">&#9679; Available</span>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        (function () {
+          const svg = document.getElementById('passMapSvg');
+          const btnAll = document.getElementById('passFilterAll');
+          const btnComplete = document.getElementById('passFilterComplete');
+          const btnIncomplete = document.getElementById('passFilterIncomplete');
+          const btnAssist = document.getElementById('passFilterAssist');
+
+          function setFilter(mode) {
+            [btnAll, btnComplete, btnIncomplete, btnAssist].forEach(b => b.classList.remove('on'));
+            svg.querySelectorAll('.pass-line').forEach(function (line) {
+              const isComplete = line.classList.contains('pass-complete');
+              const isAssist = line.classList.contains('pass-assist');
+              let show = true;
+              if (mode === 'complete') show = isComplete;
+              if (mode === 'incomplete') show = !isComplete;
+              if (mode === 'assist') show = isAssist;
+              line.style.display = show ? '' : 'none';
+            });
+          }
+
+          btnAll.addEventListener('click', function () { setFilter('all'); btnAll.classList.add('on'); });
+          btnComplete.addEventListener('click', function () { setFilter('complete'); btnComplete.classList.add('on'); });
+          btnIncomplete.addEventListener('click', function () { setFilter('incomplete'); btnIncomplete.classList.add('on'); });
+          btnAssist.addEventListener('click', function () { setFilter('assist'); btnAssist.classList.add('on'); });
+        })();
+    </script>
+}

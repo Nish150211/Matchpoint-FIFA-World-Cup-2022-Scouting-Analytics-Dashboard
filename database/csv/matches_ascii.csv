@@ -1,0 +1,65 @@
+match_id,match_date,kickoff_time,competition_stage,stadium_name,stadium_country,home_team_id,home_team_name,away_team_id,away_team_name,home_score,away_score,referee_name,referee_country
+3857276,2022-12-01,15:00:00.000,Group Stage,Al Thumama Stadium,Qatar,1833,Canada,788,Morocco,1,2,Raphael Claus,Brazil
+3857271,2022-11-21,13:00:00.000,Group Stage,Sheikh Khalifa International Stadium,Qatar,768,England,797,Iran,6,2,Raphael Claus,Brazil
+3857296,2022-12-01,15:00:00.000,Group Stage,Ahmad bin Ali Stadium,Qatar,785,Croatia,782,Belgium,0,0,Anthony Taylor,England
+3857274,2022-11-25,16:00:00.000,Group Stage,Sheikh Khalifa International Stadium,Qatar,941,Netherlands,3565,Ecuador,1,1,Mustapha Ghorbal,Algeria
+3857255,2022-12-01,19:00:00.000,Group Stage,Sheikh Khalifa International Stadium,Qatar,778,Japan,772,Spain,2,1,Victor Miguel de Freitas Gomes,South Africa
+3857272,2022-11-25,19:00:00.000,Group Stage,Al Bayt Stadium,Qatar,768,England,1839,United States,0,0,Jesus Valenzuela Saez,Venezuela (Bolivarian Republic)
+3857278,2022-11-29,19:00:00.000,Group Stage,Al Thumama Stadium,Qatar,797,Iran,1839,United States,0,1,Antonio Miguel Mateu Lahoz,Spain
+3857277,2022-11-23,10:00:00.000,Group Stage,Al Bayt Stadium,Qatar,788,Morocco,785,Croatia,0,0,Fernando Andres Rapallini,Argentina
+3857273,2022-11-25,10:00:00.000,Group Stage,Ahmad bin Ali Stadium,Qatar,907,Wales,797,Iran,0,2,Mario Alberto Escobar Toca,Guatemala
+3857275,2022-11-30,15:00:00.000,Group Stage,Education City Stadium ,Qatar,777,Tunisia,771,France,1,0,Matthew Conger,New Zealand
+3857261,2022-11-29,19:00:00.000,Group Stage,Ahmad bin Ali Stadium,Qatar,907,Wales,768,England,0,3,Slavko Vincic,Slovenia
+3857290,2022-11-24,10:00:00.000,Group Stage,Al Janoub Stadium   ,Qatar,773,Switzerland,2722,Cameroon,1,0,Facundo Tello Figueroa,Argentina
+3857298,2022-11-24,16:00:00.000,Group Stage,Stadium 974,Qatar,780,Portugal,4885,Ghana,3,2,Ismail Elfath,United States of America
+3857285,2022-11-21,16:00:00.000,Group Stage,Al Thumama Stadium,Qatar,787,Senegal,941,Netherlands,0,2,Wilton Pereira Sampaio,Brazil
+3857282,2022-11-21,19:00:00.000,Group Stage,Ahmad bin Ali Stadium,Qatar,1839,United States,907,Wales,1,1,Abdulrahman Ibrahim Al Jassim,Qatar
+3857297,2022-11-26,13:00:00.000,Group Stage,Education City Stadium ,Qatar,789,Poland,799,Saudi Arabia,2,0,Wilton Pereira Sampaio,Brazil
+3857294,2022-11-29,15:00:00.000,Group Stage,Al Bayt Stadium,Qatar,941,Netherlands,3566,Qatar,2,0,Bakary Papa Gassama,Gambia
+3857266,2022-11-26,16:00:00.000,Group Stage,Stadium 974,Qatar,771,France,776,Denmark,2,1,Szymon Marciniak,Poland
+3857284,2022-11-23,13:00:00.000,Group Stage,Sheikh Khalifa International Stadium,Qatar,770,Germany,778,Japan,1,2,Ivan Arcides Barton Cisneros,El Salvador
+3857254,2022-11-22,13:00:00.000,Group Stage,Education City Stadium ,Qatar,776,Denmark,777,Tunisia,0,0,Cesar Arturo Ramos Palazuelos,Mexico
+3857265,2022-11-22,16:00:00.000,Group Stage,Stadium 974,Qatar,794,Mexico,789,Poland,0,0,Chris Beath,Australia
+3857301,2022-11-25,13:00:00.000,Group Stage,Al Thumama Stadium,Qatar,3566,Qatar,787,Senegal,1,3,Antonio Miguel Mateu Lahoz,Spain
+3857268,2022-11-23,19:00:00.000,Group Stage,Ahmad bin Ali Stadium,Qatar,782,Belgium,1833,Canada,1,0,Janny Sikazwe,Zambia
+3857269,2022-11-28,16:00:00.000,Group Stage,Stadium 974,Qatar,781,Brazil,773,Switzerland,1,0,Ivan Arcides Barton Cisneros,El Salvador
+3869321,2022-12-09,19:00:00.000,Quarter-finals,Lusail Stadium,Qatar,941,Netherlands,779,Argentina,2,2,Antonio Miguel Mateu Lahoz,Spain
+3857292,2022-12-01,19:00:00.000,Group Stage,Al Bayt Stadium,Qatar,795,Costa Rica,770,Germany,2,4,Stephanie Frappart,France
+3857295,2022-11-27,10:00:00.000,Group Stage,Ahmad bin Ali Stadium,Qatar,778,Japan,795,Costa Rica,0,1,Michael Oliver,England
+3869685,2022-12-18,17:00:00.000,Final,Lusail Stadium,Qatar,779,Argentina,771,France,3,3,Szymon Marciniak,Poland
+3869684,2022-12-17,17:00:00.000,3rd Place Final,Sheikh Khalifa International Stadium,Qatar,785,Croatia,788,Morocco,2,1,Abdulrahman Ibrahim Al Jassim,Qatar
+3857256,2022-12-02,19:00:00.000,Group Stage,Stadium 974,Qatar,786,Serbia,773,Switzerland,2,3,Fernando Andres Rapallini,Argentina
+3869151,2022-12-03,21:00:00.000,Round of 16,Ahmad bin Ali Stadium,Qatar,779,Argentina,792,Australia,2,1,Szymon Marciniak,Poland
+3857257,2022-11-30,15:00:00.000,Group Stage,Al Janoub Stadium   ,Qatar,792,Australia,776,Denmark,1,0,Mustapha Ghorbal,Algeria
+3857258,2022-11-24,19:00:00.000,Group Stage,Lusail Stadium,Qatar,781,Brazil,786,Serbia,2,0,Alireza Faghani,Australia
+3857288,2022-11-26,10:00:00.000,Group Stage,Al Janoub Stadium   ,Qatar,777,Tunisia,792,Australia,0,1,Daniel Siebert,Germany
+3857267,2022-11-29,15:00:00.000,Group Stage,Sheikh Khalifa International Stadium,Qatar,3565,Ecuador,787,Senegal,1,2,Clement Turpin,France
+3857287,2022-11-24,13:00:00.000,Group Stage,Education City Stadium ,Qatar,783,Uruguay,791,South Korea,0,0,Clement Turpin,France
+3869486,2022-12-10,17:00:00.000,Quarter-finals,Al Thumama Stadium,Qatar,788,Morocco,780,Portugal,1,0,Facundo Tello Figueroa,Argentina
+3857260,2022-11-30,19:00:00.000,Group Stage,Lusail Stadium,Qatar,799,Saudi Arabia,794,Mexico,1,2,Michael Oliver,England
+3857264,2022-11-30,19:00:00.000,Group Stage,Stadium 974,Qatar,789,Poland,779,Argentina,0,2,Danny Desmond Makkelie,Netherlands
+3857289,2022-11-26,19:00:00.000,Group Stage,Lusail Stadium,Qatar,779,Argentina,794,Mexico,2,0,Daniele Orsato,Italy
+3869254,2022-12-06,21:00:00.000,Round of 16,Lusail Stadium,Qatar,780,Portugal,773,Switzerland,6,1,Cesar Arturo Ramos Palazuelos,Mexico
+3869118,2022-12-04,21:00:00.000,Round of 16,Al Bayt Stadium,Qatar,768,England,787,Senegal,3,0,Ivan Arcides Barton Cisneros,El Salvador
+3869519,2022-12-13,21:00:00.000,Semi-finals,Lusail Stadium,Qatar,779,Argentina,785,Croatia,3,0,Daniele Orsato,Italy
+3869354,2022-12-10,21:00:00.000,Quarter-finals,Al Bayt Stadium,Qatar,768,England,771,France,1,2,Wilton Pereira Sampaio,Brazil
+3869552,2022-12-14,21:00:00.000,Semi-finals,Al Bayt Stadium,Qatar,771,France,788,Morocco,2,0,Cesar Arturo Ramos Palazuelos,Mexico
+3869420,2022-12-09,17:00:00.000,Quarter-finals,Education City Stadium ,Qatar,785,Croatia,781,Brazil,1,1,Michael Oliver,England
+3869220,2022-12-06,17:00:00.000,Round of 16,Education City Stadium ,Qatar,788,Morocco,772,Spain,0,0,Fernando Andres Rapallini,Argentina
+3869219,2022-12-05,17:00:00.000,Round of 16,Al Janoub Stadium   ,Qatar,778,Japan,785,Croatia,1,1,Ismail Elfath,United States of America
+3869253,2022-12-05,21:00:00.000,Round of 16,Stadium 974,Qatar,781,Brazil,791,South Korea,4,1,Clement Turpin,France
+3869152,2022-12-04,17:00:00.000,Round of 16,Al Thumama Stadium,Qatar,771,France,789,Poland,3,1,Jesus Valenzuela Saez,Venezuela (Bolivarian Republic)
+3869117,2022-12-03,17:00:00.000,Round of 16,Sheikh Khalifa International Stadium,Qatar,941,Netherlands,1839,United States,3,1,Wilton Pereira Sampaio,Brazil
+3857270,2022-11-28,19:00:00.000,Group Stage,Lusail Stadium,Qatar,780,Portugal,783,Uruguay,2,0,Alireza Faghani,Australia
+3857263,2022-11-27,19:00:00.000,Group Stage,Al Bayt Stadium,Qatar,772,Spain,770,Germany,1,1,Danny Desmond Makkelie,Netherlands
+3857259,2022-11-28,10:00:00.000,Group Stage,Al Janoub Stadium   ,Qatar,2722,Cameroon,786,Serbia,3,3,Mohamed Abdulla Hassan Mohd,United Arab Emirates
+3857283,2022-11-27,13:00:00.000,Group Stage,Al Thumama Stadium,Qatar,782,Belgium,788,Morocco,0,2,Cesar Arturo Ramos Palazuelos,Mexico
+3857286,2022-11-20,16:00:00.000,Group Stage,Al Bayt Stadium,Qatar,3566,Qatar,3565,Ecuador,0,2,Daniele Orsato,Italy
+3857300,2022-11-22,10:00:00.000,Group Stage,Lusail Stadium,Qatar,779,Argentina,799,Saudi Arabia,1,2,Slavko Vincic,Slovenia
+3857299,2022-11-28,13:00:00.000,Group Stage,Education City Stadium ,Qatar,791,South Korea,4885,Ghana,2,3,Anthony Taylor,England
+3857293,2022-12-02,15:00:00.000,Group Stage,Al Janoub Stadium   ,Qatar,4885,Ghana,783,Uruguay,0,2,Daniel Siebert,Germany
+3857291,2022-11-23,16:00:00.000,Group Stage,Al Thumama Stadium,Qatar,772,Spain,795,Costa Rica,7,0,,
+3857281,2022-11-27,16:00:00.000,Group Stage,Sheikh Khalifa International Stadium,Qatar,785,Croatia,1833,Canada,4,1,Andres Matonte,Uruguay
+3857280,2022-12-02,19:00:00.000,Group Stage,Lusail Stadium,Qatar,2722,Cameroon,781,Brazil,1,0,Ismail Elfath,United States of America
+3857279,2022-11-22,19:00:00.000,Group Stage,Al Janoub Stadium   ,Qatar,771,France,792,Australia,4,1,Victor Miguel de Freitas Gomes,South Africa
+3857262,2022-12-02,15:00:00.000,Group Stage,Education City Stadium ,Qatar,791,South Korea,780,Portugal,2,1,Facundo Tello Figueroa,Argentina

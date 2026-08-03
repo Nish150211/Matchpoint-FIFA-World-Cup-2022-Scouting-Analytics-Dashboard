@@ -1,0 +1,128 @@
+﻿@model WorldCupAnalytics.Models.ViewModels.ScoutingReportViewModel
+@{
+    Layout = "_AppLayout";
+}
+
+<div class="breadcrumb">MATCHPOINT / SCOUTING REPORT</div>
+<div class="page-head">
+    <div><h1>Scouting Report</h1><p>Auto-generated from tournament data &middot; pick a player below</p></div>
+    <div style="display:flex; gap:10px;">
+        <button type="button" class="btn" disabled title="Not wired up yet — this report is read-only for now">Edit</button>
+        <button type="button" class="btn primary" onclick="window.print()">Export / Print</button>
+    </div>
+</div>
+<div class="feature-strip">
+    <div class="feature-chip">Any-player selector</div>
+    <div class="feature-chip">Rule-based recommendation</div>
+    <div class="feature-chip">Auto strengths / considerations</div>
+    <div class="feature-chip">Real stat grid</div>
+</div>
+
+<div class="gsearch-wrap" style="max-width:340px; margin-bottom:20px;">
+    <label class="stat-label">Player</label>
+    <input type="text" class="search-input" id="reportPlayerSearch" placeholder="Search for a player&hellip;" autocomplete="off" value="@Model.DisplayName">
+    <div class="gsearch-results" id="reportSearchResults"></div>
+</div>
+
+<div class="report-sheet">
+    <div class="report-head">
+        <div>
+            <h2>@Model.DisplayName</h2>
+            <div class="stat-label" style="margin:0;">@Model.Position &middot; @Model.TeamName</div>
+            <div class="verdict" title="Rule-based on goals/assists/pass accuracy/starts — see notes below, not a statistical model">Recommendation: @Model.Verdict</div>
+        </div>
+        <div class="report-meta">PREPARED BY J. OKONKWO<br>FIFA World Cup 2022<br>Generated live from source data</div>
+    </div>
+
+    <div class="grid cols-3">
+        <div class="card" title="Goals exclude shootout penalties; Assists = passes that led directly to a goal">
+            <h3>Goals / Assists</h3><div class="stat-big">@Model.Goals / @Model.Assists</div><div class="bracket">@Model.Starts starts &middot; @Model.Shots shots</div>
+        </div>
+        <div class="card" title="Expected Goals (StatsBomb model) and completed-pass percentage">
+            <h3>xG / Pass Acc.</h3><div class="stat-big">@Model.Xg</div><div class="bracket">Pass acc. <span class="val">@(Model.PassAccuracyPct.HasValue ? $"{Model.PassAccuracyPct}%" : "—")</span></div>
+        </div>
+        <div class="card">
+            <h3>Fitness <span class="manual-tag">manual</span></h3><div class="stat-big" style="font-size:22px; padding-top:8px;">Available</div><div class="bracket">No injury data in source files</div>
+        </div>
+    </div>
+
+    <div class="two-col">
+        <div class="swot">
+            <h4>Strengths</h4>
+            <ul>
+                @foreach (var s in Model.Strengths)
+                {
+                    <li>@s</li>
+                }
+            </ul>
+        </div>
+        <div class="swot">
+            <h4>Considerations</h4>
+            <ul>
+                @foreach (var c in Model.Considerations)
+                {
+                    <li>@c</li>
+                }
+            </ul>
+        </div>
+    </div>
+
+    <div class="divider" style="margin:20px 0;"><div class="dot"></div><span class="label">Analyst Notes</span><div class="dot"></div></div>
+    <p style="font-size:13.5px; line-height:1.8; color:var(--chalk-dim); margin:0;">
+        @Model.AnalystNotes
+    </p>
+
+    <div class="divider" style="margin:20px 0;"><div class="dot"></div><span class="label">Full Profile</span><div class="dot"></div></div>
+    <a class="btn" href="/Players/Profile?id=@Model.PlayerId">View Shot Map, Heat Map &amp; Match Log &rarr;</a>
+</div>
+
+@section Scripts {
+    <script>
+        (function () {
+          const input = document.getElementById('reportPlayerSearch');
+          const results = document.getElementById('reportSearchResults');
+          let debounceTimer;
+
+          input.addEventListener('focus', function () { input.select(); });
+
+          input.addEventListener('input', function () {
+            clearTimeout(debounceTimer);
+            const query = input.value.trim();
+            if (query.length < 2) {
+              results.classList.remove('show');
+              results.innerHTML = '';
+              return;
+            }
+            debounceTimer = setTimeout(() => runSearch(query), 200);
+          });
+
+          document.addEventListener('click', function (e) {
+            if (!e.target.closest('.gsearch-wrap')) {
+              results.classList.remove('show');
+            }
+          });
+
+          async function runSearch(query) {
+            try {
+              const res = await fetch('/Players/Search?q=' + encodeURIComponent(query));
+              const players = await res.json();
+
+              if (players.length === 0) {
+                results.innerHTML = '<div class="sr-empty">No players match &ldquo;' + query + '&rdquo;</div>';
+              } else {
+                results.innerHTML = players.map(p =>
+                  '<a class="sr-item" href="/Scouting/Report?id=' + p.playerId + '" style="text-decoration:none;color:inherit;">' +
+                    '<div><div class="sr-name">' + p.displayName + '</div><div class="sr-meta">' + p.teamName + ' &middot; ' + p.position + '</div></div>' +
+                    '<div class="sr-stat">' + p.goals + 'G ' + p.assists + 'A</div>' +
+                  '</a>'
+                ).join('');
+              }
+              results.classList.add('show');
+            } catch (err) {
+              results.innerHTML = '<div class="sr-empty">Search failed &mdash; try again</div>';
+              results.classList.add('show');
+            }
+          }
+        })();
+    </script>
+}

@@ -1,0 +1,588 @@
+event_id,match_id,period,minute,team_id,player_off_id,player_off_name,player_on_id,player_on_name,position_name,outcome_name
+72347fda-045d-48ec-b456-7af85ba13503,3857276,2,59,1833,16459,Cyle Larin,23640,Jonathan David,Center Forward,Tactical
+777ac928-1ce7-4141-9b0e-4bdd092fcf36,3857276,2,59,1833,16252,Mark Anthony Kaye,31684,Atiba Hutchinson,Left Defensive Midfield,Tactical
+aa2170fe-6638-4ceb-866a-64acc0a72d4c,3857276,2,60,1833,29758,Sam Adekugbe,133229,Ismael Kone,Left Back,Tactical
+c3119f45-b744-4f1f-ada2-ade2436aee1d,3857276,2,64,788,3625,Sofiane Boufal,21736,Zakaria Aboukhlal,Left Wing,Tactical
+af9a6f30-9ad5-48c4-8ddf-0c08aca634bf,3857276,2,64,788,3634,Abdelhamid Sabiri,23774,Selim Amallah,Left Center Midfield,Tactical
+05ea9578-acfa-44d3-9c14-587b8339a2fe,3857276,2,65,1833,12770,Jonathan Osorio,16120,Richie Laryea,Left Midfield,Tactical
+89982369-0b24-42ca-92c3-fb33fe40c9f2,3857276,2,75,1833,9922,David Junior Hoilett,9036,David Wallace Wotherspoon,Left Midfield,Tactical
+0af4ab50-25c2-4507-8324-2f7cdb1acc3c,3857276,2,75,788,5237,Hakim Ziyech,59493,Abderrazak Hamdallah,Right Wing,Tactical
+34c63339-b138-44f0-be08-d37c32410af2,3857276,2,75,788,46258,Azzedine Ounahi,7459,Jawad El Yamiq,Right Center Midfield,Tactical
+c4c15d58-0699-41a3-a2b9-bf8a9f71d7f4,3857276,2,84,788,5245,Achraf Hakimi Mouh,102668,Yahya Jabrane,Right Wing Back,Tactical
+f84b18a1-fbfe-4643-8dbc-ae7f64730826,3857271,1,19,797,5227,Alireza Safar Beiranvand,125823,Seyed Hossein Hosseini,Goalkeeper,Tactical
+894f5f42-5ab3-444f-8d2f-d4930b5023d7,3857271,2,45,797,125818,Ali Karimi,5722,Saeid Ezatolahi Afagh,Left Defensive Midfield,Tactical
+cb8a34b1-f110-460b-a4e4-fd9878e236ce,3857271,2,45,797,5239,Alireza Jahanbakhsh,23874,Ali Gholizadeh,Right Wing,Tactical
+2777cca8-930d-4f44-8b63-18910145ab83,3857271,2,45,797,5222,Roozbeh Cheshmi,124175,Mohammad Hossein Kanani Zadegan,Center Back,Tactical
+9d54fb83-7090-493c-94a6-3da2f7010262,3857271,2,62,797,5720,Milad Mohammadi,124161,Mehdi Torabi,Left Wing Back,Tactical
+0db58865-7da4-47dd-8b76-a96ae7322d9c,3857271,2,70,768,3233,Raheem Sterling,9638,Jack Grealish,Left Wing,Tactical
+3b6cae3e-463d-4484-a48c-4d0c2b47578a,3857271,2,70,768,22084,Bukayo Saka,3318,Marcus Rashford,Right Wing,Tactical
+5608b0b7-01b0-4dcb-9879-a085fb3ac19b,3857271,2,70,768,3336,Harry Maguire,10956,Eric Dier,Left Center Back,Injury
+10fed23e-609c-47b5-8ea2-88f2192d8c19,3857271,2,70,768,7843,Mason Mount,4354,Phil Foden,Center Attacking Midfield,Tactical
+bbb054d6-909a-47a0-bc6f-187df303b75b,3857271,2,75,768,10955,Harry Kane,3616,Callum Wilson,Center Forward,Tactical
+91298db9-de46-4ee5-bd70-adbaac3e973c,3857271,2,76,797,124167,Ahmad Nourollahi,5224,Sardar Azmoun,Right Defensive Midfield,Tactical
+98f2473c-df4d-4f19-8f6c-f80774afdeab,3857296,2,45,782,5630,Dries Mertens,3289,Romelu Lukaku Menama,Center Attacking Midfield,Tactical
+ac8e5665-5187-4a35-bdd7-0ee7d2e05a33,3857296,2,58,782,16559,Leandro Trossard,5632,Thorgan Hazard,Center Attacking Midfield,Tactical
+5bce2389-a5d8-4726-b7d5-3b837daceab6,3857296,2,63,785,22041,Marko Livaja,7693,Bruno Petkovic,Center Forward,Tactical
+9b774e0b-075f-48ee-9b21-47c5aaeee380,3857296,2,63,785,5460,Andrej Kramaric,11603,Mario Pasalic,Right Wing,Tactical
+d205e8ed-f896-417d-82d4-da326ce10337,3857296,2,71,782,5633,Yannick Ferreira Carrasco,23650,Jeremy Doku,Center Attacking Midfield,Tactical
+07666215-7d34-4b4b-9282-a9eb7d5d910c,3857296,2,71,782,6331,Leander Dendoncker,2954,Youri Tielemans,Right Defensive Midfield,Tactical
+2c671ca4-0f18-4e82-bdf3-d42d980ec7ce,3857296,2,86,782,3176,Thomas Meunier,3621,Eden Hazard,Right Back,Tactical
+2a6d4b6f-9156-43da-a86b-e398c00e1d2a,3857296,2,90,785,5456,Mateo Kovacic,28914,Lovro Majer,Left Center Midfield,Tactical
+a074c570-a274-423d-8307-681b4fe3e407,3857274,2,45,941,8259,Steven Bergwijn,2988,Memphis Depay,Left Center Forward,Tactical
+4b539261-1857-464f-a090-2ec988e6ce5e,3857274,2,68,941,4318,Davy Klaassen,7745,Steven Berghuis,Center Attacking Midfield,Tactical
+41aa6c64-cd60-45bf-8dcf-ad22a9f95e8a,3857274,2,73,3565,34396,Michael Steveen Estrada Martinez,40211,Jeremy Leonel Sarmiento Morante,Center Forward,Tactical
+3307eff1-b310-4aa3-9d3d-602b4a9a555b,3857274,2,78,941,20750,Cody Mathes Gakpo,7829,Wout Weghorst,Right Center Forward,Tactical
+812abbc9-4b0a-4cef-aad7-e7cdf72574de,3857274,2,79,941,7891,Teun Koopmeiners,6994,Marten de Roon,Right Defensive Midfield,Tactical
+334dce72-eb13-4e64-a1e1-527adcda7353,3857274,2,89,3565,28559,Enner Remberto Valencia Lastra,348757,Kevin Jose Rodriguez Cortez,Center Forward,Injury
+baaa1b0e-f077-4890-b74f-181a5b431abf,3857274,2,89,3565,31152,Gonzalo Jordy Plata Jimenez,12803,Romario Andres Ibarra Mina,Right Attacking Midfield,Tactical
+30cfe6c8-c95f-435e-a10a-fb5410b23f3e,3857255,2,45,778,31090,Takefusa Kubo,8361,Ritsu Doan,Right Wing,Tactical
+09c6b15a-1f0c-4c8c-abf0-c5d0fe880a7b,3857255,2,45,772,3957,Cesar Azpilicueta Tanco,5721,Daniel Carvajal Ramos,Right Back,Tactical
+e4f96ff4-7075-47a8-a945-51834548978c,3857255,2,45,778,5690,Yuto Nagatomo,37211,Kaoru Mitoma,Left Wing Back,Tactical
+4febc959-152f-4c28-a39d-894332e95dce,3857255,2,56,772,68574,Nicholas Williams Arthuer,6748,Ferran Torres Garcia,Right Wing,Tactical
+c741e132-3943-4448-aaa1-e26c25d87711,3857255,2,56,772,3477,Alvaro Borja Morata Martin,5719,Marco Asensio Willemsen,Center Forward,Tactical
+dfeae11b-b4b7-457e-9aa6-f6702b60fbfe,3857255,2,61,778,30628,Daizen Maeda,8949,Takuma Asano,Center Forward,Tactical
+1775e084-e2f1-475f-9b87-0fca1229e4bd,3857255,2,67,772,133353,Pablo Martin Paez Gavira,30756,Anssumane Fati,Right Center Midfield,Tactical
+e7a3e7ae-356e-4186-881c-2d0c01531768,3857255,2,68,778,9411,Daichi Kamada,23730,Takehiro Tomiyasu,Left Wing,Tactical
+9f490ec7-f290-4849-a973-24912482ea62,3857255,2,68,772,39161,Alejandro Balde Martinez,5211,Jordi Alba Ramos,Left Back,Tactical
+88171f38-a88b-43cb-8e49-db64b30ffd63,3857255,2,86,778,37208,Ao Tanaka,23721,Wataru Endo,Right Defensive Midfield,Tactical
+2a52e5ff-18e3-435f-ad1c-c0dcf7ef219f,3857272,2,67,768,3233,Raheem Sterling,9638,Jack Grealish,Left Wing,Tactical
+e194156b-d16d-4b7c-863d-f20d96fc225b,3857272,2,68,768,30714,Jude Bellingham,3532,Jordan Brian Henderson,Right Defensive Midfield,Tactical
+94c9bfab-5799-4735-b634-7cec47201505,3857272,2,76,1839,8526,Weston McKennie,24243,Brenden Aaronson,Right Midfield,Tactical
+488f3964-cee4-4a22-a718-222ae56c4eac,3857272,2,77,1839,21881,Sergino Dest,6806,Shaquell Moore,Right Back,Tactical
+45d19e3e-391f-4c62-ba0a-d5dcaf507a31,3857272,2,77,768,22084,Bukayo Saka,3318,Marcus Rashford,Right Wing,Tactical
+460d5dd6-3f0e-43cb-ac3f-f85f237aca61,3857272,2,82,1839,3377,Timothy Weah,34339,Giovanni Reyna,Right Center Forward,Tactical
+8da92e6d-ba3b-4c19-81fa-2fd891ac8317,3857272,2,82,1839,22008,Haji Wright,22168,Joshua Sargent,Left Center Forward,Tactical
+bc03c31d-fce0-4ae8-834c-7ae8ddb47dc2,3857278,1,47,797,5720,Milad Mohammadi,125818,Ali Karimi,Left Back,Injury
+cbe1a5da-bafd-4a9d-9fc1-aaeb55d11328,3857278,2,45,1839,8246,Christian Pulisic,24243,Brenden Aaronson,Left Wing,Tactical
+9c31b370-10ef-43b2-a760-1a394ec8796c,3857278,2,45,797,5224,Sardar Azmoun,5240,Saman Ghoddos,Center Forward,Tactical
+69a396c8-baff-438a-910e-883c76c1f7b0,3857278,2,64,1839,8526,Weston McKennie,13035,Kellyn Kai Perry-Acosta,Left Defensive Midfield,Tactical
+d924efa4-3650-4438-b3c6-88a3f6313d82,3857278,2,70,797,124167,Ahmad Nourollahi,124161,Mehdi Torabi,Right Center Midfield,Tactical
+1ece6ae9-7ed7-482a-b709-8e0b2e6d79aa,3857278,2,71,797,5230,Ehsan Hajsafi,326758,Abolfazl Jalali,Left Back,Tactical
+a2f3d918-5aa5-484c-939b-b20557b7435f,3857278,2,76,1839,22168,Joshua Sargent,22008,Haji Wright,Left Center Forward,Injury
+a7a919bc-9410-407c-999d-3b3a12405316,3857278,2,76,797,23874,Ali Gholizadeh,5231,Karim Ansarifard,Right Wing,Tactical
+76cae12e-52f5-434b-a357-bbca0acfe367,3857278,2,81,1839,3377,Timothy Weah,12524,Walker Zimmerman,Right Center Forward,Tactical
+a9a2eec3-5604-44a2-a729-423ade1ebbef,3857278,2,81,1839,21881,Sergino Dest,6806,Shaquell Moore,Right Back,Tactical
+0a830e74-4040-4ef8-852d-48f66fdd9447,3857277,2,45,785,3441,Nikola Vlasic,11603,Mario Pasalic,Right Wing,Tactical
+e40b75b2-90c6-4f23-becc-d18646ded857,3857277,2,59,788,15890,Noussair Mazraoui,31295,Yahia Attiyat allah,Left Back,Injury
+39146a6d-16e6-45d4-95c6-24bd0d68daf7,3857277,2,64,788,3625,Sofiane Boufal,149714,Abdessamad Ezzalzouli,Left Midfield,Tactical
+8f2899e0-6eda-4a83-91b7-1d2603d841bb,3857277,2,69,785,5460,Andrej Kramaric,22041,Marko Livaja,Center Forward,Tactical
+f0fc4a48-2420-4ef8-a1f7-e6b70bf64709,3857277,2,78,785,5456,Mateo Kovacic,28914,Lovro Majer,Left Center Midfield,Tactical
+451decad-b79d-4c40-b765-ec4edefcab92,3857277,2,80,788,6301,Youssef En-Nesyri,59493,Abderrazak Hamdallah,Center Forward,Tactical
+850b43e4-fffd-475f-b8d4-1943bccd92a1,3857277,2,81,788,46258,Azzedine Ounahi,3634,Abdelhamid Sabiri,Right Center Midfield,Tactical
+f68125b9-94a8-4694-ad70-bdcc32c2d0ab,3857277,2,89,785,5474,Ivan Perisic,16527,Mislav Orsic,Right Wing,Tactical
+1f5aea4f-181a-4a9d-be13-34a6cbb09852,3857273,2,56,907,4774,Connor Roberts,29377,Brennan Johnson,Right Wing Back,Tactical
+9cd64b11-5db6-4740-b128-724c102fb4aa,3857273,2,56,907,9540,Harry Wilson,11252,Daniel James,Left Center Midfield,Tactical
+72612fb1-490a-4ee6-877b-789f8e568209,3857273,2,67,797,5224,Sardar Azmoun,5231,Karim Ansarifard,Center Forward,Tactical
+6328135e-9286-4fec-b188-317c6e38a92c,3857273,2,75,797,23874,Ali Gholizadeh,5239,Alireza Jahanbakhsh,Right Midfield,Tactical
+6f2dc550-a62f-453f-a24a-2c59d471bfe4,3857273,2,75,797,5230,Ehsan Hajsafi,124161,Mehdi Torabi,Left Midfield,Tactical
+6265801b-6b11-41fe-a0bd-49caea7a24d3,3857273,2,76,907,4934,Ethan Ampadu,10931,Joe Allen,Right Defensive Midfield,Tactical
+bf601d58-e61c-4fa8-8062-1c64c5b6ccc3,3857273,2,77,797,124167,Ahmad Nourollahi,5222,Roozbeh Cheshmi,Left Defensive Midfield,Injury
+c47ef60b-0d3d-4755-bd67-5181d5eb9b3f,3857273,2,82,797,5722,Saeid Ezatolahi Afagh,125818,Ali Karimi,Right Defensive Midfield,Injury
+9cd72bc6-dec7-4f73-8b98-0188f0f5eebe,3857273,2,86,907,3517,Aaron Ramsey,9914,Daniel Ward,Left Defensive Midfield,Tactical
+6e1c8983-6b4e-4f77-8c60-5cf0346c0730,3857275,2,59,777,3196,Wahbi Khazri,16352,Issam Jebali,Center Forward,Injury
+8e599fb1-0bee-4a9d-9951-18e3455145da,3857275,2,62,771,5485,Raphael Varane,17592,William Saliba,Right Center Back,Tactical
+bfb21f36-71eb-4e0b-8798-fcfef9a9d193,3857275,2,62,771,8217,Kingsley Coman,3009,Kylian Mbappe Lottin,Right Wing,Tactical
+0d42977b-9ed3-4ccd-9007-220745739402,3857275,2,62,771,7153,Jordan Veretout,3026,Adrien Rabiot,Left Center Midfield,Tactical
+feb3ee1e-86f0-4e8c-b2a0-45135e9d0879,3857275,2,72,771,11990,Youssouf Fofana,5487,Antoine Griezmann,Right Center Midfield,Tactical
+5195a002-a719-4f9c-bf7a-2adb84b3beb3,3857275,2,73,777,102816,Mohamed Ali Ben Romdhane,6347,Ghilane Chalali,Left Attacking Midfield,Tactical
+4e2a59bc-3756-4b29-8f47-b26435379b6e,3857275,2,78,771,7345,Matteo Guendouzi Olie,5477,Ousmane Dembele,Right Wing,Tactical
+1dde524d-32d2-40f1-877a-f8edf3fb8b5d,3857275,2,82,777,35592,Anis Ben Slimane,30681,Ali Abdi,Right Attacking Midfield,Tactical
+082d867e-3710-446e-95cb-5d89e15269f0,3857261,1,35,907,34794,Neco Williams,4774,Connor Roberts,Right Back,Injury
+75892cd7-7610-4f63-a959-87a45440800a,3857261,2,45,907,6399,Gareth Frank Bale,29377,Brennan Johnson,Right Wing,Tactical
+ecfd4afe-b72c-48a7-b85a-1bbb1d8e0011,3857261,2,56,768,3205,Kyle Walker,3664,Trent Alexander-Arnold,Right Back,Tactical
+0bf5037c-515e-490f-a5f7-d4b750eb20da,3857261,2,57,768,10955,Harry Kane,3616,Callum Wilson,Center Forward,Tactical
+ca2a4a42-3a70-4686-a5ea-498dda24308c,3857261,2,57,768,3943,Declan Rice,4706,Kalvin Phillips,Center Defensive Midfield,Tactical
+1c829600-1ffd-4707-bb47-c165c3d2d025,3857261,2,58,907,3086,Ben Davies,22074,Joseff Morrell,Left Back,Injury
+191b1b72-48a5-4f31-a5f6-55add02d2e4b,3857261,2,64,768,3382,Luke Shaw,3308,Kieran Trippier,Left Back,Tactical
+7d853336-3452-483e-8db8-735831eae1e4,3857261,2,75,768,3318,Marcus Rashford,9638,Jack Grealish,Right Wing,Tactical
+6d2a27b4-f4a9-4012-83fe-274ea86e815e,3857261,2,76,907,11252,Daniel James,9540,Harry Wilson,Left Wing,Tactical
+f2c8af65-27bc-4a94-afe7-efeecded5abe,3857261,2,80,907,10931,Joe Allen,82257,Rubin Colwill,Right Defensive Midfield,Injury
+2eed3afa-1fbb-42b1-be3d-86f121a51785,3857290,2,67,2722,30016,Martin Hongla Yma II,28966,Gael Ondoua,Left Center Midfield,Tactical
+337e9cb2-3b96-4cb0-98aa-354d15b2b693,3857290,2,70,773,16026,Djibril Sow,8561,Fabian Frei,Center Attacking Midfield,Tactical
+16f07777-2cbf-476d-9ad9-7e256e2c73c6,3857290,2,71,773,3533,Xherdan Shaqiri,29006,Noah Okafor,Right Wing,Tactical
+0d1dd153-ccc2-4141-813a-b3997aa6df6a,3857290,2,71,773,5545,Breel-Donald Embolo,5543,Haris Seferovic,Center Forward,Tactical
+9cbc7a89-c642-4fc5-a0c6-aff536b25563,3857290,2,73,2722,3551,Karl Brillant Toko Ekambi,3639,Georges-Kevin Nkoudou Mbida,Left Wing,Tactical
+306f92c9-5d38-4d93-a926-f5ea0e4bb02e,3857290,2,73,2722,3499,Jean-Eric Maxim Choupo-Moting,11174,Vincent Pate Aboubakar,Center Forward,Tactical
+3a329bbd-f318-4752-a382-e7d096b0a29b,3857290,2,80,773,30401,Ruben Vargas,50436,Fabian Rieder,Left Wing,Tactical
+a23110df-a1f5-4ffb-95d1-df0efce2a68e,3857290,2,80,2722,4935,Bryan Mbeumo,16015,Nicolas Moumi Ngamaleu,Right Wing,Tactical
+c4fee02f-6114-4217-ac73-32b16144bd94,3857290,2,89,773,5544,Ricardo Ivan Rodriguez Araya,29012,Eray Ervin Comert,Left Back,Tactical
+7d81965d-6916-4301-98b4-33b891488c13,3857298,2,55,780,11184,Otavio Edmilson da Silva Monteiro,5214,William Silva de Carvalho,Left Center Midfield,Injury
+0920e907-52ca-4d4c-83ec-8e6f519d7312,3857298,2,65,4885,45047,Alidu Seidu,33602,Tariq Lamptey,Right Wing Back,Tactical
+a2ce3548-f552-414c-8bdb-7c972bfea4cf,3857298,2,75,4885,17033,Mohammed Kudus,44225,Osman Bukari,Left Center Midfield,Tactical
+13dae1e6-b98f-43e1-b4f5-10e48243ab6a,3857298,2,76,4885,3347,Andre Ayew Pele,3450,Jordan Ayew,Right Center Forward,Tactical
+83ee0b38-6a3d-4642-8669-096d687db2a6,3857298,2,76,780,9927,Ruben Diogo Da Silva Neves,18360,Rafael Alexandre Conceicao Leao,Center Defensive Midfield,Tactical
+c50ba75e-bcd8-43ad-9839-6794819c5852,3857298,2,87,780,5207,Cristiano Ronaldo dos Santos Aveiro,38803,Goncalo Matias Ramos,Center Forward,Tactical
+77b3ef76-c4f9-4dd1-b581-82e8e76ac197,3857298,2,87,780,12041,Joao Felix Sequeira,4272,Joao Mario Naval da Costa Eduardo,Right Wing,Tactical
+1780cabc-b9a4-4fa6-a789-511642ce7b72,3857298,2,87,780,3193,Bernardo Mota Veiga de Carvalho e Silva,12169,Joao Maria Lobo Alves Palhinha Goncalves,Left Defensive Midfield,Tactical
+a624a763-f8b3-4402-b3e7-af4449ebd476,3857298,2,91,4885,2989,Alexander Djiku,9286,Antoine Semenyo,Center Back,Tactical
+6c424e89-51ac-4186-801a-08292621111b,3857298,2,92,4885,31029,Salis Abdul Samed,28616,Daniel-Kofi Kyereh,Center Defensive Midfield,Tactical
+d927a137-a029-4036-b071-0d75888559b8,3857285,2,61,941,3264,Vincent Janssen,2988,Memphis Depay,Right Center Forward,Tactical
+3ab73733-85ae-46b5-90ee-0f3e42c0445f,3857285,2,61,787,8553,Abdou Diallo,32915,Ismail Jakobs,Left Back,Injury
+1a13c2b3-d7ba-44d3-9d50-8799797f9c21,3857285,2,68,787,20611,Boulaye Dia,88123,Cheikh Ahmadou Bamba Mbacke Dieng,Center Forward,Tactical
+d17d4431-d700-41af-826c-c9c947da99d7,3857285,2,73,787,3684,Cheikhou Kouyate,21026,Pape Gueye,Right Center Midfield,Injury
+2425bed7-89c5-464d-b0e5-3b2d539eec4e,3857285,2,73,787,20758,Krepin Diatta,50497,Nicolas Jackson,Right Wing,Tactical
+b5b94167-6a87-4dec-bc16-d7d7ba6692c2,3857285,2,78,941,8259,Steven Bergwijn,4318,Davy Klaassen,Right Center Forward,Tactical
+cd8528b5-0be2-47e7-b1b6-cc5b83205802,3857285,2,78,941,7745,Steven Berghuis,7891,Teun Koopmeiners,Right Defensive Midfield,Tactical
+8eef287b-bfd6-428b-8875-c24361b5e102,3857285,2,93,941,20750,Cody Mathes Gakpo,6994,Marten de Roon,Right Center Forward,Tactical
+cd37cb6c-d003-4bad-b807-587d139daef9,3857282,2,45,907,11252,Daniel James,3853,Kieffer Roberto Francisco Moore,Left Center Forward,Tactical
+287361ae-1b20-44c9-b6bc-d6630a0929fa,3857282,2,65,1839,8526,Weston McKennie,24243,Brenden Aaronson,Right Center Midfield,Tactical
+2f7d93cd-b8ca-4ce0-9dc2-2f3333517787,3857282,2,73,1839,22168,Joshua Sargent,22008,Haji Wright,Center Forward,Tactical
+1484e424-7581-4307-95c9-11acea7dec2a,3857282,2,74,1839,21881,Sergino Dest,3658,DeAndre Yedlin,Right Back,Tactical
+487fba58-8fef-4444-bdfe-1a2aec3aad99,3857282,2,74,1839,38792,Yunus Dimoara Musah,13035,Kellyn Kai Perry-Acosta,Left Center Midfield,Injury
+966bd529-296e-4021-a558-828073374ddb,3857282,2,78,907,34794,Neco Williams,29377,Brennan Johnson,Left Wing Back,Tactical
+e16b9af3-8b90-49ee-a3cd-fbf76df6e009,3857282,2,87,1839,3377,Timothy Weah,23789,Jordan Morris,Right Wing,Tactical
+0f10aebd-c114-4c96-a828-58895aabbfdc,3857282,2,92,907,9540,Harry Wilson,50528,Sorba Thomas,Left Midfield,Tactical
+1ed870b6-0270-4605-a421-e285a20e1a41,3857282,2,94,907,4934,Ethan Ampadu,22074,Joseff Morrell,Left Defensive Midfield,Injury
+4c4540e8-1fad-4a0a-9534-93a1eec32b95,3857297,2,45,799,51632,Sami Khalil Al Naji,54144,Nawaf Shaker Al Abid,Center Attacking Midfield,Tactical
+f94a9eeb-9be6-4f1a-9392-9eab9108344c,3857297,2,62,789,5660,Piotr Zielinski,31955,Jakub Kaminski,Center Attacking Midfield,Tactical
+9f3dd550-3cf7-4f2f-94bb-85282694cfef,3857297,2,64,799,5191,Mohammed Al Burayk,57620,Sultan Abdullah Salim Al Ghannam,Right Back,Tactical
+461a3c2a-6b76-42cf-b821-01d44c36ffa4,3857297,2,70,789,5665,Arkadiusz Milik,12493,Krzysztof Piatek,Left Center Forward,Tactical
+90b9babc-7070-4c21-8a0e-56e31fbebc61,3857297,2,84,799,56755,Abdulelah Saad Hameed Al-Malki,51705,Abdulrahman Al-Obood,Left Defensive Midfield,Tactical
+83e35309-0994-4353-b078-164420292cc0,3857297,2,85,799,51469,Saleh Khalid Al Shehri,74623,Nasser Al Dawsari,Center Forward,Tactical
+2a850a82-c6eb-48ab-baeb-df30235f0d04,3857297,2,94,799,54144,Nawaf Shaker Al Abid,5188,Hattan Babhir,Center Attacking Midfield,Tactical
+2e031f4e-6d03-4899-868e-9c38fe2b3076,3857294,2,63,3566,124488,Hassan Khalid Al Heidos,149463,Ali Assadalla Thaimn Qambar,Left Center Midfield,Injury
+d55b58c0-f255-407d-a935-1f6c531dc23e,3857294,2,63,3566,124500,Assim Omer Al Haj Madibo,124492,Karim Boudiaf,Center Defensive Midfield,Tactical
+440dba29-f341-49cc-b9a9-02936ce7ccb3,3857294,2,64,3566,124495,Almoez Ali Zainalabiddin Abdulla,124901,Mohammed Muntari,Right Center Forward,Tactical
+41ee30bd-776a-4902-b8ca-0a67c614a37d,3857294,2,65,941,4318,Davy Klaassen,7745,Steven Berghuis,Center Attacking Midfield,Tactical
+d2ce7aa9-f813-47d3-9ed0-e9a8b23d4118,3857294,2,65,941,2988,Memphis Depay,3264,Vincent Janssen,Left Center Forward,Tactical
+9886a74c-18a8-469a-9bcb-4d5b31602afa,3857294,2,82,941,20750,Cody Mathes Gakpo,7829,Wout Weghorst,Right Center Forward,Tactical
+60d86b7d-fe79-47f1-a561-c0541d0f6e8c,3857294,2,82,941,6994,Marten de Roon,7891,Teun Koopmeiners,Right Defensive Midfield,Tactical
+4255cac6-baf1-4819-aee5-c481df8a0757,3857294,2,84,3566,124514,Abdulaziz Hatem Mohammed Abdullah,124490,Ahmed Alaa Eldin Abdelmotaal,Right Center Midfield,Tactical
+e17c512e-7bdb-4aaf-b1a1-0a84c69a273f,3857294,2,84,3566,124899,Ismaeel Mohammad Mohammad,124512,Mosaab Khoder Jibril,Right Wing Back,Tactical
+f177efce-6f2f-4b29-a541-af812c239095,3857294,2,85,941,8118,Frenkie de Jong,21879,Kenneth Taylor,Left Defensive Midfield,Tactical
+bcc116c5-4bab-4262-9ae1-a07b8e62177a,3857266,2,45,776,5732,Andreas Evald Cornelius,4447,Martin Braithwaite Christensen,Center Forward,Tactical
+469c11ba-24eb-49e9-bc01-b465508c831c,3857266,2,61,771,3604,Olivier Giroud,2972,Marcus Thuram,Center Forward,Tactical
+9869aa62-80f2-4db8-93b4-797ef50b352c,3857266,2,72,776,24443,Mikkel Damsgaard,6302,Kasper Dolberg,Left Wing,Tactical
+ed5ee939-7873-40a1-8fd7-bf8c9dd32df5,3857266,2,73,771,5485,Raphael Varane,11135,Ibrahima Konate,Right Center Back,Tactical
+1d7a6c42-ceb0-49ea-acae-e6024b83cbbd,3857266,2,74,771,5477,Ousmane Dembele,8217,Kingsley Coman,Right Wing,Tactical
+3a15a300-4061-4b96-a620-d2bdb719ea48,3857266,2,84,776,27569,Jesper Lindstrom,7097,Christian Norgaard,Right Wing,Tactical
+df0555b2-256b-4923-a53d-c8c6633db5c9,3857266,2,91,776,16190,Rasmus Nissen Kristensen,24547,Alexander Hartmann Bah,Right Wing Back,Tactical
+b3002b12-ec2f-4b0c-8d13-f1a2b338e7ab,3857266,2,92,771,5487,Antoine Griezmann,11990,Youssouf Fofana,Center Attacking Midfield,Tactical
+b8fe0e07-6fcd-4c55-b6d8-3eb9781d98ec,3857284,2,45,778,31090,Takefusa Kubo,23730,Takehiro Tomiyasu,Left Wing,Tactical
+00026ffe-6297-4fd4-b4b1-35211bc10933,3857284,2,56,778,5690,Yuto Nagatomo,37211,Kaoru Mitoma,Left Wing Back,Tactical
+d22ce87b-40d7-4bb9-a0a3-5abf329f2b43,3857284,2,56,778,30628,Daizen Maeda,8949,Takuma Asano,Center Forward,Tactical
+6ed4d0e8-4743-48d4-b90f-b2ccc30237f9,3857284,2,66,770,5562,Thomas Muller,8804,Jonas Hofmann,Center Attacking Midfield,Tactical
+d11fb04a-e92d-44b7-aa87-6c8c9d0c3f19,3857284,2,67,770,10287,Ilkay Gundogan,6324,Leon Goretzka,Left Defensive Midfield,Tactical
+eef70629-3ff6-4b3d-b347-527342bb30ea,3857284,2,70,778,37208,Ao Tanaka,8361,Ritsu Doan,Left Defensive Midfield,Tactical
+156e7610-9b54-4ad5-9d23-af4b560222a5,3857284,2,73,778,3530,Hiroki Sakai,8776,Takumi Minamino,Right Wing Back,Injury
+78b8c35c-21a5-4eae-a833-96928b389eb1,3857284,2,78,770,39565,Jamal Musiala,8227,Mario Gotze,Center Attacking Midfield,Tactical
+462afc4e-bf75-44c7-b216-8f2d7cef35eb,3857284,2,78,770,8966,Kai Havertz,8546,Niclas Fullkrug,Center Forward,Tactical
+72154c72-d817-48ee-a284-d41d67b97b1d,3857284,2,89,770,8400,Serge Gnabry,38837,Youssoufa Moukoko,Left Wing,Tactical
+b80c05c8-25dd-44cf-814d-0c69552d9382,3857254,1,45,776,5527,Thomas Delaney,24443,Mikkel Damsgaard,Center Defensive Midfield,Injury
+4c65a014-ab4a-49ed-8039-27ddfdfe6625,3857254,2,63,776,5534,Simon Thorup Kjaer,18722,Mathias Jensen,Center Back,Tactical
+374f1653-c245-49fb-baae-3b3b3923029a,3857254,2,64,776,17042,Andreas Skov Olsen,27569,Jesper Lindstrom,Right Attacking Midfield,Tactical
+bd7863d4-a605-4485-9cb5-066d8a49f2c8,3857254,2,64,776,6302,Kasper Dolberg,5732,Andreas Evald Cornelius,Center Forward,Tactical
+894170ff-2f52-465b-a017-84944b2f2484,3857254,2,66,777,35592,Anis Ben Slimane,3557,Naim Sliti,Right Wing,Tactical
+4df985b4-bf4f-4699-95a1-189313608292,3857254,2,79,777,23910,Youssef Msakni,50988,Hannibal Mejbri,Left Wing,Tactical
+0162ca7b-0f2b-4526-b3ff-2073e3ff8280,3857254,2,80,777,16352,Issam Jebali,128793,Taha Yassine Khenissi,Center Forward,Tactical
+9e33f002-bea8-42fb-91f8-48ca39cce993,3857254,2,87,777,9236,Mohamed Drager,105944,Wajdi Kechrida,Right Wing Back,Tactical
+d298a8fa-e9ec-4712-8cd5-9df3d2c9c90a,3857254,2,87,777,44955,Aissa Bilal Laidouni,5650,Ferjani Sassi,Left Defensive Midfield,Tactical
+986a15bd-0a68-472d-b393-aac4d5eb2e8e,3857265,2,45,789,50502,Nicola Zalewski,11737,Krystian Bielik,Left Midfield,Tactical
+5cdc84d1-7da5-40b2-a862-e4777d844dcb,3857265,2,70,794,5575,Hector Miguel Herrera Lopez,26297,Carlos Alberto Rodriguez Gomez,Right Center Midfield,Tactical
+e019d8d3-30ce-4cb2-99b7-fc4be06f097b,3857265,2,70,794,26400,Henry Josue Martin Mex,5568,Raul Alonso Jimenez Rodriguez,Center Forward,Tactical
+d6ee0b30-0ed5-4bd0-a7cf-a0bf08ee4ef6,3857265,2,71,789,4664,Sebastian Szymanski,7979,Przemyslaw Frankowski,Left Midfield,Tactical
+db4960a2-54e9-4ffa-803e-40423f45426f,3857265,2,83,794,26301,Ernesto Alexis Vega Rojas,15452,Carlos Uriel Antuna Romero,Left Wing,Tactical
+77e81df6-ea72-475e-af5b-7945f72770a5,3857265,2,87,789,5660,Piotr Zielinski,5665,Arkadiusz Milik,Center Attacking Midfield,Tactical
+a2ec80df-584c-4dd3-b89d-0f8054c1a8a6,3857301,2,63,787,20758,Krepin Diatta,31751,Pathe Ismael Ciss,Left Wing,Tactical
+ed9080c7-eb0d-4743-b7c2-d25520fb0d80,3857301,2,68,3566,124492,Karim Boudiaf,124514,Abdulaziz Hatem Mohammed Abdullah,Right Center Midfield,Tactical
+ffdb32ab-0ae6-4d2e-a1cf-3566cb038f9f,3857301,2,73,787,13314,Famara Diedhiou,88123,Cheikh Ahmadou Bamba Mbacke Dieng,Center Forward,Tactical
+f8a6c12a-5e36-47a1-9755-0b7ffd031c03,3857301,2,73,787,2941,Ismaila Sarr,80484,Iliman Ndiaye,Left Wing,Tactical
+00cd79a6-f04f-4a8a-97f6-162ce63582e0,3857301,2,74,3566,124488,Hassan Khalid Al Heidos,124901,Mohammed Muntari,Left Center Midfield,Tactical
+ab2be83f-0ebc-424a-96f8-ba8309cb8b60,3857301,2,76,787,32915,Ismail Jakobs,15970,Pape Abou Cisse,Left Back,Tactical
+c49e8e7d-b04b-4d00-9e3a-4c73d3636fd6,3857301,2,76,787,4506,Nampalys Mendy,50498,Pape Matar Sarr,Right Center Midfield,Tactical
+86cdcc61-da19-4df4-b89a-9258a33f2b13,3857301,2,82,3566,124900,Homam Alamin Ahmed,124504,Tarek Salman Salman,Left Wing Back,Tactical
+c4662747-d990-490c-b650-56e451057140,3857301,2,82,3566,124506,Pedro Miguel Correia,124909,Mohammed Waed Abdulwahhab Al Bayati,Right Center Back,Tactical
+fa2af6cc-2a25-4735-a4d4-eca928acfd94,3857268,2,45,782,2954,Youri Tielemans,48347,Amadou Onana,Right Defensive Midfield,Tactical
+fd8274c3-6f90-4676-86d9-4fd3b16fe91d,3857268,2,45,782,5633,Yannick Ferreira Carrasco,3176,Thomas Meunier,Left Wing Back,Tactical
+d2f24a0a-f4bd-4b43-97c6-d4930a190929,3857268,2,57,1833,9922,David Junior Hoilett,16459,Cyle Larin,Left Attacking Midfield,Tactical
+8f9164c3-2847-44c6-9cca-a09a2aa7564c,3857268,2,57,1833,31684,Atiba Hutchinson,133229,Ismael Kone,Right Defensive Midfield,Tactical
+3d98b5b9-2e07-40fe-9182-cb99fdeb7446,3857268,2,61,782,3621,Eden Hazard,16559,Leandro Trossard,Left Attacking Midfield,Tactical
+b4428be1-2a9e-48b7-b10b-916aacdfc13f,3857268,2,73,1833,16120,Richie Laryea,29758,Sam Adekugbe,Right Wing Back,Tactical
+c540746e-ee9e-42ad-8d57-7d4896975f0e,3857268,2,77,782,3457,Michy Batshuayi Tunga,16275,Ikoma Lois Openda,Center Forward,Tactical
+a78b3ed0-af62-43f3-95e8-db3a99b157b5,3857268,2,80,1833,24024,Tajon Buchanan,23363,Liam Millar,Right Wing Back,Tactical
+77b9d4ad-8e4a-4874-b50f-9ce6eb175139,3857268,2,80,1833,11187,Stephen Antunes Eustaquio,12770,Jonathan Osorio,Left Defensive Midfield,Tactical
+30cb3923-b6fe-4b6e-b9e6-cf9154e777f2,3857269,2,45,781,22600,Lucas Tolentino Coelho de Lima,25104,Rodrygo Silva de Goes,Center Attacking Midfield,Tactical
+cb0d1f3c-fc00-44a0-907c-c3641a51d2ff,3857269,2,57,781,9904,Frederico Rodrigues Santos,25142,Bruno Guimaraes Rodriguez Moura,Right Defensive Midfield,Tactical
+75480828-e0d0-4e03-8f26-f433ce22ac3b,3857269,2,57,773,30401,Ruben Vargas,3913,Edimilson Fernandes,Left Wing,Tactical
+fed645e6-ea8e-476e-a53b-ff7540dcc961,3857269,2,58,773,50436,Fabian Rieder,12326,Renato Steffen,Right Wing,Tactical
+3a02c9f8-2c72-4895-8816-80a0445c2dcf,3857269,2,72,781,3280,Richarlison de Andrade,3202,Gabriel Fernando de Jesus,Center Forward,Tactical
+9688e44b-946f-48c7-9734-135f7e8b1db2,3857269,2,72,781,10595,Raphael Dias Belloli,25363,Antony Matheus dos Santos,Right Midfield,Tactical
+642487e9-d615-4a88-b244-3e57fb62d277,3857269,2,74,773,16026,Djibril Sow,16016,Michel Aebischer,Center Attacking Midfield,Tactical
+3349d720-ad21-41d9-b0fd-d8efd603622a,3857269,2,74,773,5545,Breel-Donald Embolo,5543,Haris Seferovic,Center Forward,Tactical
+3a254f43-8cf4-4073-980a-487b14d84d25,3857269,2,85,773,7796,Silvan Widmer,8561,Fabian Frei,Right Back,Tactical
+d0da4aa6-82c9-4b87-a4e3-fd7f77e71343,3857269,2,85,781,6945,Alex Sandro Lobo Silva,11183,Alex Nicolao Telles,Left Back,Tactical
+984639f8-7add-40be-9d35-4a203521c029,3869321,2,45,941,8259,Steven Bergwijn,7745,Steven Berghuis,Right Center Forward,Tactical
+a617add6-229d-4795-b098-0e26d7467c8d,3869321,2,45,941,6994,Marten de Roon,7891,Teun Koopmeiners,Right Defensive Midfield,Tactical
+9c8afea9-9e2a-4996-8838-ad05f9ddcc31,3869321,2,64,941,3311,Daley Blind,20033,Luuk de Jong,Left Wing Back,Tactical
+17ba40b3-f2b0-4108-8c33-226f1ad45ac3,3869321,2,65,779,7797,Rodrigo Javier De Paul,16308,Leandro Daniel Paredes,Right Center Midfield,Tactical
+88318d90-f718-463c-bf28-0eeb972d5509,3869321,2,77,779,19597,Marcos Javier Acuna,5507,Nicolas Alejandro Tagliafico,Left Wing Back,Tactical
+cd1246a2-4e6b-4e0e-86d4-8150e443a28c,3869321,2,77,779,20572,Cristian Gabriel Romero,7161,German Alejandro Pezzella,Right Center Back,Tactical
+c3d06186-b9f6-48d1-80d5-dfade1103eef,3869321,2,77,941,2988,Memphis Depay,7829,Wout Weghorst,Center Attacking Midfield,Tactical
+ade904a3-0e91-4a4b-a208-72dba7aafa66,3869321,2,80,779,29560,Julian Alvarez,11456,Lautaro Javier Martinez,Left Center Forward,Tactical
+436289e7-4855-4ba2-b310-3ffcb56c7efc,3869321,4,105,779,29201,Nahuel Molina Lucero,28263,Gonzalo Ariel Montiel,Right Wing Back,Tactical
+6b6618c3-6800-4c7f-8f03-aecbd3aecea1,3869321,4,111,779,27768,Lisandro Martinez,2995,Angel Fabian Di Maria Hernandez,Left Center Back,Tactical
+dd30f143-ef67-4b77-9ad0-67b07c5f0f19,3869321,4,112,941,20750,Cody Mathes Gakpo,21547,Noa Lang,Left Midfield,Tactical
+aad81251-d4e7-49d4-8c24-23dd601a2a99,3857292,2,45,795,108340,Brandon Aguilera Zamora,132756,Youstin Delfin Salas Gomez,Left Wing,Tactical
+909b6b45-9f99-4105-88ac-092807551094,3857292,2,45,770,6324,Leon Goretzka,8507,Lukas Klostermann,Right Defensive Midfield,Tactical
+a9aaf44e-e4b9-473f-a196-e876cc5a8da9,3857292,2,53,770,10287,Ilkay Gundogan,8546,Niclas Fullkrug,Left Defensive Midfield,Tactical
+0d16f93d-e970-4b9d-bac4-caf5aec35e1a,3857292,2,65,770,5562,Thomas Muller,8966,Kai Havertz,Left Center Forward,Tactical
+3f7be925-aa4f-473b-b30d-77a56f44db2c,3857292,2,65,770,12034,David Raum,8227,Mario Gotze,Left Back,Tactical
+ae67c47c-c103-4c59-9e9f-57db22b61bc7,3857292,2,73,795,5595,Johan Alberto Venegas Ulloa,15477,Ronald Alberto Matarrita Ulate,Left Wing,Tactical
+aef01798-e0ad-4618-819d-76156fc43723,3857292,2,73,795,130185,Keysher Fuller Spence,132728,Jewison Bennette,Right Wing,Tactical
+8bfd32f2-14a6-497d-86d4-96b30f5f5c13,3857292,2,92,795,5836,Bryan Oviedo,132296,Anthony Daniel Contreras Enriquez,Left Wing Back,Tactical
+4b7cef77-7f9b-47b1-aa2d-498e5b931a87,3857292,2,92,795,5839,Yeltsin Ignacio Tejeda Valverde,135271,Roan Roberto Wilson Gordon,Left Defensive Midfield,Tactical
+6b905f2c-4df3-4cc3-b3b5-beae1ddb8012,3857292,2,93,770,6322,Niklas Sule,8808,Matthias Ginter,Center Back,Tactical
+8221b131-38f9-4412-bb05-22d87fafd7ff,3857295,2,45,778,5690,Yuto Nagatomo,95272,Hiroki Ito,Left Center Back,Tactical
+4d194a3f-aa63-461f-885a-f76ca4c61ce2,3857295,2,45,778,38285,Ayase Ueda,8949,Takuma Asano,Center Forward,Tactical
+026ded78-abfb-4c9a-b375-e696e3d991d1,3857295,2,61,778,37209,Miki Yamane,37211,Kaoru Mitoma,Right Wing Back,Tactical
+96ea5156-cbcc-4282-ab2e-ff398ef09575,3857295,2,64,795,132497,Gerson Torres Barrantes,108340,Brandon Aguilera Zamora,Right Wing,Tactical
+49fcfb03-0028-41e8-ab5b-b845d0ec174e,3857295,2,64,795,132296,Anthony Daniel Contreras Enriquez,132728,Jewison Bennette,Center Forward,Tactical
+985c32d3-2b92-4050-9ad7-539b6d42937b,3857295,2,66,778,8361,Ritsu Doan,23527,Junya Ito,Right Wing,Tactical
+6f5e2ed6-ade5-4df9-8306-db1489075841,3857295,2,81,778,37122,Yuki Soma,8776,Takumi Minamino,Right Wing Back,Tactical
+59b452df-b399-4052-aaa9-d0fe8c80c3fc,3857295,2,88,795,5582,Celso Borges Mora,132756,Youstin Delfin Salas Gomez,Right Defensive Midfield,Tactical
+37c3a2f6-4db7-4768-897b-b247f5494f0c,3857295,2,94,795,5581,Joel Nathaniel Campbell Samuels,132772,Daniel Alonso Chacon Salas,Center Forward,Tactical
+df245155-92fc-4123-8bcf-66ba2ee77870,3869685,1,40,771,5477,Ousmane Dembele,22097,Randal Kolo Muani,Right Wing,Tactical
+bae6c6ee-59b6-419e-992d-7567437736f5,3869685,1,41,771,3604,Olivier Giroud,2972,Marcus Thuram,Center Forward,Tactical
+e7e1f696-1fe2-4b3a-b2ec-aeb36b0c8258,3869685,2,63,779,2995,Angel Fabian Di Maria Hernandez,19597,Marcos Javier Acuna,Left Wing,Tactical
+3c9df00b-0b30-4548-9cd1-ceff03cc9919,3869685,2,70,771,6704,Theo Bernard Francois Hernandez,24778,Eduardo Camavinga,Left Back,Tactical
+43fe1865-0aa9-4bb1-bf33-a2871df4589b,3869685,2,70,771,5487,Antoine Griezmann,8217,Kingsley Coman,Center Attacking Midfield,Tactical
+c7266755-5003-418c-bf4f-f7da41d47840,3869685,3,90,779,29201,Nahuel Molina Lucero,28263,Gonzalo Ariel Montiel,Right Back,Tactical
+5688fcf1-1b7a-4938-8d14-92b87c198d95,3869685,3,95,771,3026,Adrien Rabiot,11990,Youssouf Fofana,Left Defensive Midfield,Tactical
+8939a18c-593c-41fc-b86d-308cd189fca1,3869685,3,101,779,7797,Rodrigo Javier De Paul,16308,Leandro Daniel Paredes,Right Center Midfield,Tactical
+1e6477ea-098a-41d5-96d1-d2944e38f46c,3869685,3,101,779,29560,Julian Alvarez,11456,Lautaro Javier Martinez,Center Forward,Tactical
+c001d49f-247b-40d8-b247-38c7adcdebe4,3869685,4,112,771,5485,Raphael Varane,11135,Ibrahima Konate,Right Center Back,Injury
+6e81c350-5788-4f84-891a-92db9bfbf0db,3869685,4,115,779,27886,Alexis Mac Allister,7161,German Alejandro Pezzella,Left Center Midfield,Tactical
+838765c8-45c7-4379-857c-f103770acbfc,3869685,4,120,771,4445,Jules Kounde,7439,Axel Disasi,Right Back,Tactical
+27c68f97-cc44-4fb8-9703-0a4de1c9f6ed,3869685,4,120,779,5507,Nicolas Alejandro Tagliafico,5743,Paulo Bruno Exequiel Dybala,Left Wing Back,Tactical
+b8f55195-7688-412b-9eb7-41b3ca7cad10,3869684,2,45,788,3634,Abdelhamid Sabiri,21214,Ilias Chair,Left Center Midfield,Tactical
+4fc488a7-2f00-4039-be76-132173e5bf4a,3869684,2,55,788,156734,Bilal El Khannous,46258,Azzedine Ounahi,Left Center Midfield,Tactical
+e674ead9-edce-4a47-9b41-da13e3e65208,3869684,2,61,785,5460,Andrej Kramaric,3441,Nikola Vlasic,Right Wing,Injury
+bb656f1f-6187-4cd6-b49e-ce447e60dea5,3869684,2,63,788,3625,Sofiane Boufal,131037,Anass Zaroury,Left Wing,Tactical
+a2b79be4-6350-416f-acb5-80554c7f33c5,3869684,2,63,788,139016,Achraf Dari,67700,Badr Banoun,Left Center Back,Injury
+cf0feac3-e562-4749-8ea9-eba6ae5a75f6,3869684,2,66,788,7459,Jawad El Yamiq,23774,Selim Amallah,Right Center Back,Injury
+3224e803-a209-4217-aaa7-cfd3f3138d64,3869684,2,66,785,28914,Lovro Majer,11603,Mario Pasalic,Center Attacking Midfield,Tactical
+0187836d-d9eb-4cd8-a6da-b5337e6a74f3,3869684,2,66,785,22041,Marko Livaja,7693,Bruno Petkovic,Center Forward,Tactical
+24013071-314d-4152-94fd-320faf16bf76,3869684,2,94,785,16527,Mislav Orsic,32602,Kristijan Jakic,Left Wing,Tactical
+bc89d79c-d081-4a80-bc50-7486c7ed4b16,3857256,2,54,786,6321,Milos Veljkovic,16489,Nemanja Gudelj,Center Back,Tactical
+9939d361-dda1-4d69-a7b9-a3acf2428312,3857256,2,54,786,18015,Dusan Vlahovic,6319,Luka Jovic,Right Center Forward,Tactical
+c6b97cde-9a3a-482f-83fd-07673bd3d916,3857256,2,66,786,5589,Sergej Milinkovic-Savic,6901,Nemanja Maksimovic,Left Defensive Midfield,Tactical
+f1638ab0-d97a-4327-8349-c47f1b18ba20,3857256,2,67,773,16026,Djibril Sow,3913,Edimilson Fernandes,Center Attacking Midfield,Tactical
+e57e06ab-d12f-43ca-ba7f-7550df0ae4f9,3857256,2,68,773,3533,Xherdan Shaqiri,5538,Denis Lemi Zakaria Lako Lado,Right Wing,Tactical
+57b8af86-aeef-47bd-8f05-6657b51df70b,3857256,2,77,786,3831,Dusan Tadic,7117,Filip Duricic,Center Attacking Midfield,Tactical
+aef444af-03d3-4dcc-a073-baf623ccbcec,3857256,2,77,786,6318,Andrija Zivkovic,5833,Nemanja Radonjic,Right Wing Back,Tactical
+4f65a529-9d06-458b-8ac8-a29901d95e8d,3857256,2,82,773,30401,Ruben Vargas,16022,Christian Fassnacht,Left Wing,Tactical
+dd15b2cf-b188-4606-bc8e-91f956e7891f,3857256,2,95,773,5545,Breel-Donald Embolo,29006,Noah Okafor,Center Forward,Tactical
+9d26b3f5-3b66-4341-91e4-d69ccee5c786,3869151,2,49,779,7006,Alejandro Dario Gomez,27768,Lisandro Martinez,Right Midfield,Tactical
+0785bb9a-445c-4d51-9fac-a865b9de9e28,3869151,2,57,792,33477,Riley McGree,8346,Craig Goodwin,Left Wing,Tactical
+3d5a739a-2baa-41c3-8d51-2d3f5815c968,3869151,2,57,792,33488,Keanu Baccus,8859,Ajdin Hrustic,Right Defensive Midfield,Tactical
+3a8a17d8-6b17-4277-88b3-e561d63248f9,3869151,2,71,779,29560,Julian Alvarez,11456,Lautaro Javier Martinez,Left Center Forward,Tactical
+4c706c35-758f-41f0-b543-bc63d423dcbe,3869151,2,71,779,19597,Marcos Javier Acuna,5507,Nicolas Alejandro Tagliafico,Left Wing Back,Tactical
+5b523ef1-f23e-4dca-bb28-8d21b5ae4eb1,3869151,2,71,792,33492,Mitchell Thomas Duke,9980,Jamie MacLaren,Left Center Forward,Tactical
+cf36514a-7d3d-4b0c-9b13-8b49345683fb,3869151,2,71,792,5481,Mathew Leckie,227697,Garang Kuol,Right Center Forward,Tactical
+a15cfcc7-d2c3-42cb-b2bb-7ab45f6b322e,3869151,2,71,792,15957,Milos Degenek,28370,Fran Karacic,Right Back,Tactical
+ed5c1ba4-22b3-4b86-8be2-de5a953d159b,3869151,2,79,779,29201,Nahuel Molina Lucero,28268,Exequiel Alejandro Palacios,Right Wing Back,Tactical
+23678b52-1481-4ac6-a3c4-518e441a04c6,3869151,2,79,779,27886,Alexis Mac Allister,28263,Gonzalo Ariel Montiel,Left Center Midfield,Tactical
+5451e62a-29e3-4bdc-8e97-5e44d55701ec,3857257,2,45,792,8346,Craig Goodwin,33488,Keanu Baccus,Left Midfield,Tactical
+b1013ad8-5e47-47b0-ac13-75d7cabbb8c6,3857257,2,45,776,16190,Rasmus Nissen Kristensen,24547,Alexander Hartmann Bah,Right Back,Tactical
+a33994e5-574d-4d0f-8033-50a9a763c6db,3857257,2,58,776,4447,Martin Braithwaite Christensen,6302,Kasper Dolberg,Center Forward,Tactical
+ae21d32c-f5bc-4ac0-bab4-7caa3f41e7a8,3857257,2,58,776,18722,Mathias Jensen,24443,Mikkel Damsgaard,Right Center Midfield,Tactical
+02fd834d-cd59-496a-991d-9fd89c792b06,3857257,2,68,776,17042,Andreas Skov Olsen,16294,Robert Skov,Right Wing,Tactical
+c4ddba45-dff6-421c-ab81-635c7c964731,3857257,2,69,776,16554,Joakim Maehle,5732,Andreas Evald Cornelius,Left Back,Tactical
+45a47fb8-2360-42e3-ba80-163ed7b296d7,3857257,2,73,792,33477,Riley McGree,22371,Bailey Wright,Left Wing,Tactical
+89c78ee6-bddf-4419-b87d-d52a1b2f45ce,3857257,2,81,792,33492,Mitchell Thomas Duke,9980,Jamie MacLaren,Center Forward,Tactical
+66be34fe-f7b1-4593-a9d4-9ad5b9f9644b,3857257,2,88,792,5481,Mathew Leckie,8859,Ajdin Hrustic,Left Wing,Tactical
+a7a9d8c0-9274-4714-984f-afbdce083dd1,3857258,2,56,786,16489,Nemanja Gudelj,30179,Ivan Ilic,Left Defensive Midfield,Tactical
+d02e89b0-74ec-4499-8f7e-32ac022b9b49,3857258,2,56,786,6318,Andrija Zivkovic,5833,Nemanja Radonjic,Right Wing Back,Tactical
+2b7c3178-cb5c-4e4d-8293-20456bbc8bc4,3857258,2,65,786,6687,Sasa Lukic,7145,Darko Lazovic,Right Defensive Midfield,Tactical
+43cad167-fa7b-4036-8366-6e9f30b13f32,3857258,2,65,786,7993,Filip Mladenovic,18015,Dusan Vlahovic,Left Wing Back,Tactical
+2aff811c-19a3-4433-8de8-1b55664fc8df,3857258,2,74,781,22600,Lucas Tolentino Coelho de Lima,9904,Frederico Rodrigues Santos,Right Defensive Midfield,Tactical
+9c00a897-766a-47d5-8c85-ab5b0c8c12be,3857258,2,75,781,18395,Vinicius Jose Paixao de Oliveira Junior,25104,Rodrygo Silva de Goes,Left Wing,Tactical
+c418bcb1-4d3c-440e-a48d-8cb2abceb83a,3857258,2,78,781,3280,Richarlison de Andrade,3202,Gabriel Fernando de Jesus,Center Forward,Tactical
+23c7b8db-e84f-4ccc-8347-22a40d7a7742,3857258,2,79,781,4320,Neymar da Silva Santos Junior,25363,Antony Matheus dos Santos,Center Attacking Midfield,Injury
+f8919ec4-2ed5-4877-88ee-f5ef1f01114e,3857258,2,82,786,4269,Aleksandar Mitrovic,6901,Nemanja Maksimovic,Left Center Forward,Tactical
+a475b5ba-4478-4c67-8dca-ec1331a23ea4,3857258,2,86,781,10595,Raphael Dias Belloli,29976,Gabriel Teodoro Martinelli Silva,Right Wing,Tactical
+69724491-50c8-4a79-89a1-f52c6c998d5e,3857288,2,45,777,9236,Mohamed Drager,5650,Ferjani Sassi,Right Wing Back,Tactical
+abc62236-b4f4-49a0-9af5-64b98cbfe335,3857288,2,63,792,33492,Mitchell Thomas Duke,9980,Jamie MacLaren,Right Center Forward,Tactical
+9e2fa7b2-7a55-47c0-a712-3fd966f3ca1f,3857288,2,63,792,33477,Riley McGree,8859,Ajdin Hrustic,Left Center Forward,Tactical
+99f3c660-65ff-48ba-89e9-96d222f7b317,3857288,2,66,777,44955,Aissa Bilal Laidouni,3196,Wahbi Khazri,Left Center Midfield,Tactical
+58ae3005-2cc9-4681-9dea-e471bcf700fa,3857288,2,72,777,16352,Issam Jebali,128793,Taha Yassine Khenissi,Center Forward,Tactical
+7f1b6c00-137c-44bd-b131-96b4b7150dae,3857288,2,72,777,5655,Dylan Daniel Mahmoud Bronn,105944,Wajdi Kechrida,Right Back,Tactical
+92473483-6434-4dfc-bf69-9d53a9ab0f8c,3857288,2,74,792,28370,Fran Karacic,15957,Milos Degenek,Right Back,Tactical
+1ca3a0f7-ea81-49ae-b6ac-7b8c9d4b7c05,3857288,2,84,792,5481,Mathew Leckie,33488,Keanu Baccus,Right Midfield,Tactical
+9acd492d-771b-4ac7-b6a2-be85729abe6a,3857288,2,84,792,8346,Craig Goodwin,24475,Awer Denis Bul Mabil,Left Midfield,Tactical
+9b52a4a0-5fbc-460a-97da-d76ef5dd00ca,3857267,2,45,3565,12583,Carlos Armando Gruezo Arboleda,36148,Jose Adoni Cifuentes Charcopa,Center Defensive Midfield,Tactical
+2c6801f1-854e-46b3-aa1b-58ff5fe4551b,3857267,2,45,3565,37945,Alan Steven Franco Palma,40211,Jeremy Leonel Sarmiento Morante,Right Center Midfield,Tactical
+f287f0b2-8364-4655-9dc0-2bb7986cf8fa,3857267,2,63,3565,34396,Michael Steveen Estrada Martinez,91090,Djorkaeff Neicer Reasco Gonzalez,Right Center Forward,Tactical
+7e201be0-1909-4492-a107-f0d9eafb9dd1,3857267,2,73,787,31751,Pathe Ismael Ciss,4506,Nampalys Mendy,Right Defensive Midfield,Tactical
+713f7d2e-3b8e-40e6-be5d-df78e400104f,3857267,2,74,787,80484,Iliman Ndiaye,88123,Cheikh Ahmadou Bamba Mbacke Dieng,Right Wing,Tactical
+268ee6f8-314c-494a-9480-051c4725cbb0,3857267,2,84,3565,37737,Angelo Smit Preciado Quinonez,51969,Jackson Gabriel Porozo Vernaza,Right Back,Tactical
+3d0c372b-933f-4902-960c-a42fd634ebad,3857267,2,94,787,20611,Boulaye Dia,15970,Pape Abou Cisse,Right Wing,Tactical
+d5779d61-4946-487b-ab17-d1c1af1294ce,3857287,2,63,783,5246,Luis Alberto Suarez Diaz,4319,Edinson Roberto Cavani Gomez,Center Forward,Tactical
+a113f3a0-1070-4388-a98e-4d9881903878,3857287,2,73,791,29966,Ui-Jo Hwang,40542,Gue-Sung Cho,Center Forward,Tactical
+a98fcdec-7f7f-4734-8995-24c503b88856,3857287,2,73,791,5623,Jae-Sung Lee,40558,Jun-Ho Son,Center Attacking Midfield,Tactical
+8854ec76-0996-430d-859f-c8c758e00dbd,3857287,2,74,791,41711,Sang-Ho Na,22740,Kang-In Lee,Right Wing,Tactical
+5f5771e7-9ba9-472d-9118-c87ecefbe575,3857287,2,77,783,5255,Matias Vecino Falero,28729,Diego Nicolas De La Cruz Arcosa,Left Midfield,Tactical
+071b33da-9954-4e0f-825f-9d48de5beb80,3857287,2,78,783,7104,Mathias Olivera Miramontes,34476,Matias Nicolas Vina Susperreguy,Left Back,Tactical
+84106acd-4a14-4a37-a9c9-575256e25b8e,3857287,2,87,783,36288,Facundo Pellistri Rebollo,5264,Guillermo Varela Olivera,Right Midfield,Tactical
+5177c0ae-a280-4f97-a436-74508f18d4d2,3869486,2,50,780,5209,Raphael Adelino Jose Guerreiro,7005,Joao Pedro Cavaco Cancelo,Left Back,Tactical
+dda18ec7-83fe-4315-9fe3-2c35bec9255b,3869486,2,50,780,9927,Ruben Diogo Da Silva Neves,5207,Cristiano Ronaldo dos Santos Aveiro,Center Defensive Midfield,Tactical
+1b1d5d03-8785-447d-98dd-c513ce5a94d7,3869486,2,56,788,5219,Romain Saiss,139016,Achraf Dari,Left Center Back,Injury
+0d30329e-3f85-4eb7-9291-aa58b5b57068,3869486,2,63,788,23774,Selim Amallah,296254,Walid Cheddira,Left Center Midfield,Tactical
+a7b2b17f-03e8-47c6-9400-e0c5e27bc465,3869486,2,64,788,6301,Youssef En-Nesyri,67700,Badr Banoun,Center Forward,Tactical
+291b1273-cff8-40e5-9aa4-b9f36d54526d,3869486,2,68,780,38803,Goncalo Matias Ramos,18360,Rafael Alexandre Conceicao Leao,Center Attacking Midfield,Tactical
+1efad622-9c62-4624-ab7b-ca6975a810e5,3869486,2,68,780,11184,Otavio Edmilson da Silva Monteiro,34639,Vitor Machado Ferreira,Right Defensive Midfield,Tactical
+0c6f9267-fec0-429c-98a0-92d5dcf4a2a9,3869486,2,78,780,16028,Jose Diogo Dalot Teixeira,10868,Ricardo Jorge Luz Horta,Right Back,Tactical
+223b71fd-8ed0-41dc-8b05-1ca5ca2bac7c,3869486,2,80,788,5237,Hakim Ziyech,21736,Zakaria Aboukhlal,Right Wing,Tactical
+32333a1f-a1a1-442d-b4ca-84f3bf1e4091,3869486,2,80,788,3625,Sofiane Boufal,102668,Yahya Jabrane,Left Wing,Tactical
+4607d6f2-7d53-4737-93c5-e18eb5c83bd8,3857260,1,36,799,5715,Ali Albulayhi,51470,Riyadh Sharahili,Left Back,Injury
+a0d6fdbd-9bee-417e-97bc-e1ace3f8655c,3857260,2,45,794,26301,Ernesto Alexis Vega Rojas,15452,Carlos Uriel Antuna Romero,Left Wing,Tactical
+31d5f0dc-5891-4cad-ac8e-297a05cf18de,3857260,2,45,799,51096,Ali Al Hassan,51103,Abdullah Mohammed Madu,Right Defensive Midfield,Tactical
+c70a1bbd-a4e5-4e2b-866e-e520b7f0cab4,3857260,2,61,799,51469,Saleh Khalid Al Shehri,51705,Abdulrahman Al-Obood,Center Forward,Tactical
+56eb8cb0-21ea-4845-b605-56c7136dea33,3857260,2,76,794,26280,Orbelin Pineda Alvarado,26297,Carlos Alberto Rodriguez Gomez,Center Attacking Midfield,Tactical
+23b73ee3-2cd0-4694-96f2-6bed0e59ea99,3857260,2,76,794,26400,Henry Josue Martin Mex,5568,Raul Alonso Jimenez Rodriguez,Center Forward,Tactical
+569cefeb-5e42-48d6-99e4-85647c07a450,3857260,2,85,794,26406,Jorge Eduardo Sanchez Ramos,30500,Kevin Nahin Alvarez Campos,Right Back,Tactical
+942e59c3-076c-4886-bc85-645c5ebf5aa7,3857260,2,85,794,5567,Edson Omar Alvarez Velazquez,26318,Rogelio Gabriel Funes Mori,Right Defensive Midfield,Tactical
+79687d53-a834-42ef-b059-aca1c0a3eb8a,3857260,2,87,799,57620,Sultan Abdullah Salim Al Ghannam,5188,Hattan Babhir,Right Wing Back,Tactical
+55e9f46e-b91c-48af-8bf5-adeb7aff854b,3857264,2,45,789,8836,Karol Swiderski,28453,Michal Skoras,Left Center Forward,Tactical
+e1e533c9-0d00-465d-9d47-6bf45f2b6aa6,3857264,2,45,789,7979,Przemyslaw Frankowski,31955,Jakub Kaminski,Left Midfield,Tactical
+e1c1e603-ca8a-4a73-a0a4-87c384917eb1,3857264,2,58,779,2995,Angel Fabian Di Maria Hernandez,16308,Leandro Daniel Paredes,Right Wing,Tactical
+f8d35d32-7a3b-4d78-98e7-bdaff200280f,3857264,2,58,779,19597,Marcos Javier Acuna,5507,Nicolas Alejandro Tagliafico,Left Back,Tactical
+36019601-f71b-4919-abf7-d77a52ef5512,3857264,2,61,789,11737,Krystian Bielik,8714,Damian Szymanski,Right Defensive Midfield,Tactical
+9a72002e-328b-460a-a08d-3489db37faed,3857264,2,72,789,5673,Bartosz Bereszynski,4685,Artur Jedrzejczyk,Left Back,Tactical
+ceb37325-79ce-47a7-8d67-2d356e782266,3857264,2,78,779,29560,Julian Alvarez,11456,Lautaro Javier Martinez,Center Forward,Tactical
+68573339-c788-4d8f-aacd-1f784347c858,3857264,2,78,779,38718,Enzo Fernandez,7161,German Alejandro Pezzella,Left Center Midfield,Tactical
+decab4d8-3f6f-4dfa-8c4c-9553c0cc6fdb,3857264,2,82,779,27886,Alexis Mac Allister,28637,Thiago Ezequiel Almada,Left Wing,Tactical
+7ae55be9-8f7d-4c06-b405-0b7bddacbb94,3857264,2,82,789,3637,Grzegorz Krychowiak,12493,Krzysztof Piatek,Left Defensive Midfield,Tactical
+b226cc43-d03f-4219-8b41-132c28509b9c,3857289,1,40,794,5563,Jose Andres Guardado Hernandez,15872,Erick Gabriel Gutierrez Galaviz,Left Center Midfield,Injury
+24d18c6f-df93-47ae-9995-a213a56a28c8,3857289,2,56,779,26404,Guido Rodriguez,38718,Enzo Fernandez,Left Defensive Midfield,Tactical
+ad4cab42-7a73-420d-92fd-754ea88c716c,3857289,2,62,779,11456,Lautaro Javier Martinez,29560,Julian Alvarez,Left Center Forward,Tactical
+69d219e6-e56e-4ddb-a714-58c4a942e045,3857289,2,62,779,28263,Gonzalo Ariel Montiel,29201,Nahuel Molina Lucero,Right Back,Tactical
+e0ce35bb-c316-4aee-a337-ddff770524fa,3857289,2,65,794,30500,Kevin Nahin Alvarez Campos,5568,Raul Alonso Jimenez Rodriguez,Right Wing Back,Tactical
+87af94c5-a65b-467f-8057-c38cd84cd35c,3857289,2,65,794,26301,Ernesto Alexis Vega Rojas,15452,Carlos Uriel Antuna Romero,Right Center Forward,Tactical
+b485fe79-c3a8-42c0-b59f-9878530f4d8a,3857289,2,68,779,27886,Alexis Mac Allister,28268,Exequiel Alejandro Palacios,Left Midfield,Tactical
+32c3b1ae-d3de-4401-9a3e-455a21fa8465,3857289,2,68,779,2995,Angel Fabian Di Maria Hernandez,20572,Cristian Gabriel Romero,Right Midfield,Tactical
+5d5a3ffa-05e9-48ff-8be4-e7750ac36569,3857289,2,72,794,5571,Hirving Rodrigo Lozano Bahena,26375,Roberto Carlos Alvarado Hernandez,Left Wing,Tactical
+62178a32-a5ba-450f-8fe9-6084f1578d4c,3869254,2,45,773,5537,Fabian Lukas Schar,29012,Eray Ervin Comert,Center Back,Tactical
+78f899a6-7d69-4a37-9d35-465d4a1d5cd7,3869254,2,53,773,6983,Remo Freuler,5538,Denis Lemi Zakaria Lako Lado,Left Center Midfield,Tactical
+3b066e30-8db6-4410-b249-0dc16417b8ee,3869254,2,53,773,16026,Djibril Sow,5543,Haris Seferovic,Right Center Midfield,Tactical
+6c2b6706-49eb-4ff4-9ea6-ce022a9ca9b8,3869254,2,65,773,30401,Ruben Vargas,29006,Noah Okafor,Left Midfield,Tactical
+e19f9614-c46f-460c-ab3e-1bad309c4ea5,3869254,2,72,780,38803,Goncalo Matias Ramos,10868,Ricardo Jorge Luz Horta,Center Forward,Tactical
+71479e73-7791-4020-b4f2-aba568d08407,3869254,2,72,780,12041,Joao Felix Sequeira,5207,Cristiano Ronaldo dos Santos Aveiro,Left Wing,Tactical
+374632e9-acf7-4e77-abb0-d3d22e167fbb,3869254,2,73,780,11184,Otavio Edmilson da Silva Monteiro,34639,Vitor Machado Ferreira,Left Center Midfield,Tactical
+1c6b84f4-1e6f-4d84-ac75-0470971ac8a5,3869254,2,80,780,3193,Bernardo Mota Veiga de Carvalho e Silva,9927,Ruben Diogo Da Silva Neves,Right Center Midfield,Tactical
+8e479f7b-edb6-4068-bcc9-2d7bc8a8d2bb,3869254,2,86,780,5204,Bruno Miguel Borges Fernandes,18360,Rafael Alexandre Conceicao Leao,Right Wing,Tactical
+edabea6c-5d16-477f-896d-ac15e3fdd0d5,3869254,2,88,773,5545,Breel-Donald Embolo,41655,Ardon Jashari,Left Center Forward,Tactical
+9fb12e9c-570f-4588-982f-c483e7b29887,3869118,2,45,787,31751,Pathe Ismael Ciss,21026,Pape Gueye,Right Defensive Midfield,Tactical
+e8c27e9d-1cdd-48ea-811b-c249b1fbb8ef,3869118,2,45,787,20758,Krepin Diatta,50498,Pape Matar Sarr,Right Wing,Tactical
+850ba3c1-c2c2-42c7-af3f-da127d5cf349,3869118,2,45,787,80484,Iliman Ndiaye,88123,Cheikh Ahmadou Bamba Mbacke Dieng,Center Attacking Midfield,Tactical
+363943c3-80ed-48ee-a8d5-7c46e3204ac2,3869118,2,64,768,22084,Bukayo Saka,3318,Marcus Rashford,Right Wing,Tactical
+6d4665c6-7b26-426f-be64-59fb4e733092,3869118,2,64,768,4354,Philip Foden,9638,Jack Grealish,Left Wing,Tactical
+753f807a-543e-42aa-a0b6-45fc2b8b4859,3869118,2,71,787,20611,Boulaye Dia,13314,Famara Diedhiou,Right Wing,Tactical
+436dafb4-5edc-4336-99e7-e6d88f8c289f,3869118,2,75,768,30714,Jude Bellingham,7843,Mason Mount,Left Center Midfield,Tactical
+fc0f6738-0132-4aa6-bc3c-ba36046b2e75,3869118,2,76,768,3244,John Stones,10956,Eric Dier,Right Center Back,Tactical
+49dc8dc2-ff67-47f7-91dd-8d571dbaede8,3869118,2,81,768,3532,Jordan Brian Henderson,4706,Kalvin Phillips,Right Center Midfield,Tactical
+08c50046-3613-408d-b744-7b6791428545,3869118,2,83,787,32915,Ismail Jakobs,3675,Fode Ballo Toure,Left Back,Tactical
+4f8da580-ea66-44a7-8240-c19402167719,3869519,2,45,785,12625,Borna Sosa,16527,Mislav Orsic,Left Back,Tactical
+f904a674-0437-46e9-bf85-e2b50b2cb80a,3869519,2,45,785,11603,Mario Pasalic,3441,Nikola Vlasic,Right Wing,Tactical
+90125fd5-ddb1-494c-9d05-9cdf40e12dbd,3869519,2,49,785,5469,Marcelo Brozovic,7693,Bruno Petkovic,Center Defensive Midfield,Tactical
+5d00585b-8f36-4dfa-b036-bb2045096e12,3869519,2,61,779,16308,Leandro Daniel Paredes,27768,Lisandro Martinez,Right Defensive Midfield,Tactical
+edf07d01-6dc5-4055-a83f-63a6304d0086,3869519,2,71,785,5460,Andrej Kramaric,22041,Marko Livaja,Center Attacking Midfield,Tactical
+533b8145-7c43-4442-bb5f-24e5b754d934,3869519,2,73,779,7797,Rodrigo Javier De Paul,28268,Exequiel Alejandro Palacios,Right Center Midfield,Tactical
+0b6afa8a-cbb1-4c91-b12b-d61c95f4edb9,3869519,2,73,779,29560,Julian Alvarez,5743,Paulo Bruno Exequiel Dybala,Left Center Forward,Tactical
+c9da8ec4-a9a1-4fc6-95e9-51b24ec5bc2a,3869519,2,80,785,5463,Luka Modric,28914,Lovro Majer,Right Defensive Midfield,Tactical
+913342f4-387f-4e20-bd50-8e31efe76d01,3869519,2,85,779,27886,Alexis Mac Allister,6377,Angel Martin Correa,Left Center Midfield,Tactical
+6a3ff067-67e9-46d8-bef6-003f8cd6051e,3869519,2,85,779,29201,Nahuel Molina Lucero,21081,Juan Marcos Foyth,Right Wing Back,Tactical
+6d3e0ab2-8db1-4fe0-befe-ded4c7202530,3869354,2,78,771,5477,Ousmane Dembele,8217,Kingsley Coman,Right Wing,Tactical
+02eae2e6-b7bd-4fc6-9c2b-4fd01e98e10c,3869354,2,78,768,3532,Jordan Brian Henderson,7843,Mason Mount,Right Center Midfield,Tactical
+725ce7ae-e230-4356-a9e5-d3bfe0a92b41,3869354,2,78,768,22084,Bukayo Saka,3233,Raheem Sterling,Right Wing,Tactical
+bd7ec7b6-8ed1-45e7-a499-f54007f025cf,3869354,2,84,768,4354,Philip Foden,3318,Marcus Rashford,Left Wing,Tactical
+a2e472e6-da55-495e-96c8-0f6dc3d1bc87,3869354,2,97,768,3244,John Stones,9638,Jack Grealish,Right Center Back,Injury
+a175f361-f4a2-4d96-b884-e24c77254288,3869552,1,20,788,5219,Romain Saiss,23774,Selim Amallah,Center Back,Injury
+560baaaa-dd30-4b0d-a8e3-bace53edfded,3869552,2,45,788,15890,Noussair Mazraoui,31295,Yahia Attiyat allah,Left Back,Tactical
+11696e19-7bc7-49bc-a661-def6849c41bf,3869552,2,64,771,3604,Olivier Giroud,2972,Marcus Thuram,Center Forward,Tactical
+b3df7430-10bd-4cb7-831d-4a0af1b4c1d4,3869552,2,65,788,6301,Youssef En-Nesyri,59493,Abderrazak Hamdallah,Center Forward,Tactical
+a385e278-e208-4478-8778-47484c65c1f2,3869552,2,66,788,3625,Sofiane Boufal,21736,Zakaria Aboukhlal,Left Wing,Tactical
+bcd77a09-09de-43b7-9b3a-984f6c5431b8,3869552,2,77,788,23774,Selim Amallah,149714,Abdessamad Ezzalzouli,Left Center Midfield,Tactical
+1ea98086-edeb-4434-ba24-b91b4af6a8dc,3869552,2,78,771,5477,Ousmane Dembele,22097,Randal Kolo Muani,Right Wing,Tactical
+3f6f2752-1f11-4d93-9fd2-795c2d653b47,3869420,2,55,781,10595,Raphael Dias Belloli,25363,Antony Matheus dos Santos,Right Midfield,Tactical
+369e7ae0-4051-4cc8-bc70-1da505ab98fa,3869420,2,63,781,18395,Vinicius Jose Paixao de Oliveira Junior,25104,Rodrygo Silva de Goes,Left Midfield,Tactical
+6a95c4ff-7dd2-4e35-a845-1f9bce9964a4,3869420,2,71,785,11603,Mario Pasalic,3441,Nikola Vlasic,Right Wing,Tactical
+7ee1fdef-9c3d-412b-a3c3-ddbf05f9138e,3869420,2,71,785,5460,Andrej Kramaric,7693,Bruno Petkovic,Center Forward,Tactical
+78e43b5f-b533-435f-be57-fa6c63892790,3869420,2,83,781,3280,Richarlison de Andrade,25305,Pedro Guilherme Abreu dos Santos,Center Forward,Tactical
+5264c7d7-02f2-480b-8755-ea045acf2dda,3869420,4,105,785,5456,Mateo Kovacic,28914,Lovro Majer,Left Center Midfield,Tactical
+d24dfdf3-65c9-49a5-9299-b16440f137e0,3869420,4,105,781,22600,Lucas Tolentino Coelho de Lima,9904,Frederico Rodrigues Santos,Right Defensive Midfield,Tactical
+be1fb8ab-5f75-4a30-a038-e8216b1d5206,3869420,4,105,781,13620,Eder Gabriel Militao,6945,Alex Sandro Lobo Silva,Right Back,Tactical
+fc154453-7a21-4963-9509-6273b7ccb394,3869420,4,109,785,12625,Borna Sosa,8654,Ante Budimir,Left Back,Tactical
+5d52d284-09d4-4ee5-a738-651b34776807,3869420,4,113,785,5469,Marcelo Brozovic,16527,Mislav Orsic,Left Midfield,Tactical
+7fa06e72-7ecd-4a04-bc8a-c9b8f93c9c06,3869220,2,62,772,133353,Pablo Martin Paez Gavira,6583,Carlos Soler Barragan,Left Center Midfield,Tactical
+ce6ab941-e523-4ccc-b334-eaae2f6818ae,3869220,2,62,772,5719,Marco Asensio Willemsen,3477,Alvaro Borja Morata Martin,Center Forward,Tactical
+b889ab61-3551-4d2c-bb28-b5a67bbb8b78,3869220,2,65,788,3625,Sofiane Boufal,149714,Abdessamad Ezzalzouli,Left Wing,Tactical
+2480e5be-49b6-44f3-8d6a-b443b558666b,3869220,2,75,772,6748,Ferran Torres Garcia,68574,Nicholas Williams Arthuer,Right Wing,Tactical
+7dac6c7b-09b4-40e8-a134-a98bdb364cca,3869220,2,81,788,23774,Selim Amallah,296254,Walid Cheddira,Left Center Midfield,Tactical
+7da1cdf9-1886-460b-8d24-c2e15fd163df,3869220,2,81,788,6301,Youssef En-Nesyri,3634,Abdelhamid Sabiri,Center Forward,Tactical
+16a3afd5-240e-488d-95d8-1af9fc0e968b,3869220,2,82,788,15890,Noussair Mazraoui,31295,Yahia Attiyat allah,Left Back,Tactical
+6d27ddbf-27cd-4633-8db5-d3d5cba3e617,3869220,2,84,788,12149,Nayef Aguerd,7459,Jawad El Yamiq,Right Center Back,Injury
+456546d7-d192-47f0-bb09-27d4a8ce343c,3869220,3,97,772,16532,Daniel Olmo Carvajal,30756,Anssumane Fati,Left Wing,Tactical
+9468138d-3876-4b78-baf6-9e321d209604,3869220,3,97,772,5211,Jordi Alba Ramos,39161,Alejandro Balde Martinez,Left Back,Tactical
+23efb733-928e-4d78-b7dc-e6cc6dc33212,3869220,4,117,772,68574,Nicholas Williams Arthuer,6720,Pablo Sarabia Garcia,Right Wing,Tactical
+44fd7afb-4796-4904-8f10-3fb64501a612,3869220,4,119,788,46258,Azzedine Ounahi,67700,Badr Banoun,Right Center Midfield,Tactical
+378b364a-295e-4591-90b2-f462a8a34e86,3869219,2,61,785,7693,Bruno Petkovic,8654,Ante Budimir,Center Forward,Tactical
+7349c733-b7b7-41bb-bc6f-4f19ea8a6e7b,3869219,2,63,778,5690,Yuto Nagatomo,37211,Kaoru Mitoma,Left Wing Back,Tactical
+60b0982f-07d1-4d0a-b5cd-4abe6ccf2db5,3869219,2,63,778,30628,Daizen Maeda,8949,Takuma Asano,Center Forward,Tactical
+9004db7d-8f75-4c76-8a5e-df6865b69f8f,3869219,2,67,785,5460,Andrej Kramaric,11603,Mario Pasalic,Left Wing,Tactical
+3cde10ac-f2c9-42f6-a2bc-9db3a22dbb03,3869219,2,73,778,9411,Daichi Kamada,3530,Hiroki Sakai,Left Wing,Tactical
+3bb9fac8-aa48-4111-a181-7de4dc0c7525,3869219,2,86,778,8361,Ritsu Doan,8776,Takumi Minamino,Right Wing,Tactical
+f522b1ad-362c-4cdd-853f-c41165ba4d55,3869219,3,98,785,5463,Luka Modric,28914,Lovro Majer,Right Center Midfield,Tactical
+c5bcc6b5-18b9-45c9-9407-3ea6232d7a8b,3869219,3,98,785,5456,Mateo Kovacic,3441,Nikola Vlasic,Left Center Midfield,Tactical
+52c2dacc-1df8-464a-acec-6f845ac010db,3869219,4,105,778,37221,Hidemasa Morita,37208,Ao Tanaka,Left Defensive Midfield,Tactical
+5a1982fb-af82-4e66-a498-daaa1249b85a,3869219,4,105,785,5474,Ivan Perisic,16527,Mislav Orsic,Left Wing,Tactical
+62e49431-8fa7-4db5-b98b-395bcf95d518,3869219,4,105,785,8654,Ante Budimir,22041,Marko Livaja,Center Forward,Tactical
+a2dd07cd-34e3-4eea-bc13-59ec993ee95f,3869253,2,45,791,40538,Jin-Su Kim,5986,Chul Hong,Left Back,Tactical
+cee10e5c-c19c-407a-b512-0f8ff05f781e,3869253,2,45,791,5618,Woo-Young Jung,40558,Jun-Ho Son,Right Defensive Midfield,Tactical
+b53b76e8-c57a-4550-9f1e-3d91c27953c8,3869253,2,62,781,13620,Eder Gabriel Militao,4324,Daniel Alves da Silva,Right Back,Tactical
+1ec3434f-7816-4354-9e51-be47cbea8762,3869253,2,64,791,23763,In-Beom Hwang,23264,Seung-Ho Paik,Right Center Midfield,Tactical
+aad08449-809b-4055-8c1e-b44f0aae65d9,3869253,2,71,781,3063,Danilo Luiz da Silva,11493,Gleison Bremer Silva Nascimento,Left Back,Tactical
+435800f5-d462-4c58-b0db-3ea6e42e78f7,3869253,2,71,781,18395,Vinicius Jose Paixao de Oliveira Junior,29976,Gabriel Teodoro Martinelli Silva,Left Wing,Tactical
+a870c6ec-4aff-49df-ac06-cc2f268a27ae,3869253,2,73,791,5623,Jae-Sung Lee,22740,Kang-In Lee,Left Center Midfield,Tactical
+277b61b3-c7d9-4c6a-bf3c-d9b7ddda2bcf,3869253,2,79,791,40542,Gue-Sung Cho,29966,Ui-Jo Hwang,Center Forward,Tactical
+7d1505bf-a5a3-422f-9a8c-c702b0cf132a,3869253,2,79,781,5547,Alisson Ramses Becker,25101,Weverton Pereira da Silva,Goalkeeper,Tactical
+6056a6ab-b3df-4f22-805c-89b4ba099777,3869253,2,80,781,4320,Neymar da Silva Santos Junior,25104,Rodrygo Silva de Goes,Center Attacking Midfield,Tactical
+f9b3a069-829d-4575-a220-29d1ebfc131c,3869152,2,63,789,4664,Sebastian Szymanski,5665,Arkadiusz Milik,Left Center Midfield,Tactical
+2fdd46a2-6cc8-4836-a95b-f94bc74ba11d,3869152,2,65,771,10481,Aurelien Djani Tchouameni,11990,Youssouf Fofana,Right Defensive Midfield,Tactical
+e53c4242-86f3-46b6-ac12-85c5f0892ae1,3869152,2,70,789,31955,Jakub Kaminski,50502,Nicola Zalewski,Right Wing,Tactical
+5a153fd3-82bc-4c79-bbbf-9bb895bf33c3,3869152,2,70,789,3637,Grzegorz Krychowiak,11737,Krystian Bielik,Left Defensive Midfield,Tactical
+5390bc05-7d4e-4757-b757-77eb3acb3f4e,3869152,2,75,771,5477,Ousmane Dembele,8217,Kingsley Coman,Right Wing,Tactical
+b2dbfb7e-41dc-499f-a6c0-5742d2807eb8,3869152,2,75,771,3604,Olivier Giroud,2972,Marcus Thuram,Center Forward,Tactical
+6a5ddf35-beca-4be3-adf3-259caadca851,3869152,2,86,789,44166,Jakub Piotr Kiwior,4626,Jan Bednarek,Left Center Back,Tactical
+9fda932f-3a5b-471b-b718-3d2421eb60cc,3869152,2,86,789,7979,Przemyslaw Frankowski,5667,Kamil Grosicki,Left Wing,Tactical
+8d3688e7-c893-4b1a-be69-ba7e8b1d3ef8,3869152,2,91,771,4445,Jules Kounde,7439,Axel Disasi,Right Back,Tactical
+4d4dbd2d-6cfa-41c8-86cf-3165c88496c0,3869117,2,45,941,6994,Marten de Roon,8259,Steven Bergwijn,Right Defensive Midfield,Tactical
+0c6340a6-46a8-4dd4-9011-2372296ead79,3869117,2,45,941,4318,Davy Klaassen,7891,Teun Koopmeiners,Center Attacking Midfield,Tactical
+597671be-d440-4246-9229-a2ce8bf8102c,3869117,2,45,1839,22433,Jesus Ferreira,34339,Giovanni Reyna,Center Forward,Tactical
+ed3f859b-c8da-4adb-9299-7e8e70d678ef,3869117,2,66,1839,3377,Timothy Weah,24243,Brenden Aaronson,Right Wing,Tactical
+d8bee911-107c-42f7-987e-8af49ce82525,3869117,2,66,1839,8526,Weston McKennie,22008,Haji Wright,Right Center Midfield,Tactical
+c8cd2599-5a31-4642-b77e-6af0b5a82827,3869117,2,74,1839,21881,Sergino Dest,3658,DeAndre Yedlin,Right Back,Tactical
+29b4cf54-f718-436c-a9fe-29a9febf2a87,3869117,2,82,941,2988,Memphis Depay,39167,Xavi Simons,Left Center Forward,Tactical
+55501a39-8f98-484f-aad5-fe78b691b652,3869117,2,91,1839,4614,Antonee Robinson,23789,Jordan Morris,Left Back,Tactical
+a55c2557-1851-4a91-a463-8a0f93ed74d7,3869117,2,92,941,3306,Nathan Ake,8069,Matthijs de Ligt,Left Center Back,Tactical
+ac10594b-a9f0-43ca-a584-aac45b7f2200,3869117,2,92,941,20750,Cody Mathes Gakpo,7829,Wout Weghorst,Center Attacking Midfield,Tactical
+7d3eb704-b2da-4b5b-9283-e63e3e7f741e,3857270,1,41,780,41092,Nuno Mendes,5209,Raphael Adelino Jose Guerreiro,Left Back,Injury
+6fa0cdc6-51ba-41cc-83a6-72ea9949c5a2,3857270,2,61,783,5255,Matias Vecino Falero,5258,Giorgian Daniel De Arrascaeta Benedetti,Left Center Midfield,Tactical
+a023ea04-28ae-4b15-97e5-180e11120bd2,3857270,2,61,783,5249,Diego Roberto Godin Leal,36288,Facundo Pellistri Rebollo,Center Back,Tactical
+4e9196ad-9c27-47a2-83f9-11f5ba4f36ce,3857270,2,68,780,9927,Ruben Diogo Da Silva Neves,18360,Rafael Alexandre Conceicao Leao,Center Defensive Midfield,Tactical
+8ae23a4f-6e71-4364-bc82-c77b829bb962,3857270,2,71,783,32478,Darwin Gabriel Nunez Ribeiro,6297,Maximiliano Gomez Gonzalez,Left Center Forward,Tactical
+5444cdb5-fd6d-4d47-96f7-26dc1241f0fc,3857270,2,72,783,4319,Edinson Roberto Cavani Gomez,5246,Luis Alberto Suarez Diaz,Right Center Forward,Tactical
+a37284f9-77e0-4d65-b3da-6641f7d89589,3857270,2,82,780,5207,Cristiano Ronaldo dos Santos Aveiro,38803,Goncalo Matias Ramos,Center Forward,Tactical
+800b063e-ffa9-41e1-bc1d-e42627aacaa6,3857270,2,82,780,12041,Joao Felix Sequeira,40874,Matheus Luiz Nunes,Right Wing,Tactical
+adf27c2a-d39c-4a43-831d-3b0e66030ffe,3857270,2,82,780,5214,William Silva de Carvalho,12169,Joao Maria Lobo Alves Palhinha Goncalves,Center Defensive Midfield,Tactical
+769a418f-a832-403d-9e8b-4538d6d9415a,3857270,2,85,783,7104,Mathias Olivera Miramontes,34476,Matias Nicolas Vina Susperreguy,Left Back,Tactical
+811dd47a-54ed-42e3-9fb9-bce43cb017b8,3857263,2,53,772,6748,Ferran Torres Garcia,3477,Alvaro Borja Morata Martin,Right Wing,Tactical
+6c846d8a-1683-44d0-84a3-f5c3c2f9ecbd,3857263,2,65,772,5719,Marco Asensio Willemsen,5199,Jorge Resurreccion Merodio,Right Wing,Tactical
+75809579-1a65-44f3-9d93-119fed499701,3857263,2,65,772,133353,Pablo Martin Paez Gavira,68574,Nicholas Williams Arthuer,Right Center Midfield,Tactical
+9fd32b61-bc84-462a-9a00-f902888dfebd,3857263,2,69,770,10287,Ilkay Gundogan,3053,Leroy Sane,Center Attacking Midfield,Tactical
+0d33a8a2-85c5-436a-8a93-f197c57ac565,3857263,2,69,770,5562,Thomas Muller,8546,Niclas Fullkrug,Center Forward,Tactical
+e239a490-19e9-4f9f-b76f-0fc2487b6e0c,3857263,2,69,770,8511,Thilo Kehrer,8507,Lukas Klostermann,Right Back,Tactical
+ab39ee27-3362-4298-9928-e9d06b34fe72,3857263,2,81,772,5211,Jordi Alba Ramos,39161,Alejandro Balde Martinez,Left Back,Tactical
+e4403e35-f7af-4327-b8f3-fb543a62aca7,3857263,2,84,770,8400,Serge Gnabry,8804,Jonas Hofmann,Left Wing,Tactical
+397d7e72-003b-44c2-affa-a17ee5b0fdce,3857263,2,86,770,12034,David Raum,24118,Nico Schlotterbeck,Left Back,Tactical
+12d4bd8c-758a-42dc-bb13-ceed728fddd8,3857259,2,54,2722,30016,Martin Hongla Yma II,11174,Vincent Pate Aboubakar,Center Defensive Midfield,Tactical
+e1595be8-d640-4f2a-b686-2cff04ccaea2,3857259,2,55,786,27719,Strahinja Pavlovic,10477,Stefan Mitrovic,Left Center Back,Tactical
+82d1d9c6-c745-4cdc-b670-83cf55a776c1,3857259,2,66,2722,3551,Karl Brillant Toko Ekambi,46903,Christian Mougang Bassogog,Left Wing,Tactical
+cf7c2e24-a0ca-4f71-b686-f4cd6575155c,3857259,2,67,2722,12623,Pierre Kunde Malong,28966,Gael Ondoua,Right Defensive Midfield,Tactical
+c0b60c4d-a85e-4bed-b3e3-dff0ecb6af78,3857259,2,77,786,6318,Andrija Zivkovic,5833,Nemanja Radonjic,Right Wing Back,Tactical
+ba614cf8-4efc-4fc3-84be-b66071cd65af,3857259,2,77,786,6321,Milos Veljkovic,18737,Srdan Babic,Center Back,Tactical
+e44ef0ea-5b5c-47a6-912c-0ba03d7ea49b,3857259,2,78,786,5589,Sergej Milinkovic-Savic,3512,Marko Grujic,Left Attacking Midfield,Tactical
+56dd4a4d-fd57-49b0-b77a-3f7c5394b46b,3857259,2,80,2722,3141,Andre-Frank Zambo Anguissa,8591,Samuel Yves Oum Gwet,Left Defensive Midfield,Tactical
+031d17a4-2391-4f9d-b0d1-08ce65435e84,3857259,2,80,2722,4935,Bryan Mbeumo,3639,Georges-Kevin Nkoudou Mbida,Left Wing,Tactical
+80807ca9-107a-4016-8ff2-6d0990201628,3857259,2,90,786,5591,Filip Kostic,7117,Filip Duricic,Left Wing Back,Tactical
+a8619b19-cd72-4e4f-b601-0313c199e03e,3857283,2,59,782,3621,Eden Hazard,5630,Dries Mertens,Center Attacking Midfield,Tactical
+3b763ccc-569d-4023-b5c6-57f37f1d52fa,3857283,2,59,782,48347,Amadou Onana,2954,Youri Tielemans,Right Defensive Midfield,Tactical
+b7429de7-39fc-4622-9f6a-2fe6137c2789,3857283,2,66,788,23774,Selim Amallah,31295,Yahia Attiyat allah,Right Center Midfield,Tactical
+02f68c92-feaf-4836-8d63-bbdde6e91fd9,3857283,2,66,788,5245,Achraf Hakimi Mouh,3634,Abdelhamid Sabiri,Right Back,Tactical
+0839cabc-de02-4d55-be28-a5d610ac0e1f,3857283,2,71,788,3625,Sofiane Boufal,21736,Zakaria Aboukhlal,Left Wing,Tactical
+b86eca45-24d2-4fae-b561-bdcdef7cae43,3857283,2,71,788,6301,Youssef En-Nesyri,59493,Abderrazak Hamdallah,Center Forward,Tactical
+7ab81830-2861-4ea5-b27a-647e010842c3,3857283,2,74,782,3457,Michy Batshuayi Tunga,32688,Charles De Ketelaere,Center Forward,Tactical
+0d9de65c-28b0-46c8-93a8-b7451a004f9b,3857283,2,74,782,5632,Thorgan Hazard,16559,Leandro Trossard,Left Wing,Tactical
+0d8c2de0-c478-4c6a-a9ee-1d96c6fea07f,3857283,2,77,788,46258,Azzedine Ounahi,7459,Jawad El Yamiq,Left Center Midfield,Tactical
+a1dac564-8008-4605-bf07-83dc31a6af77,3857283,2,80,782,3176,Thomas Meunier,3289,Romelu Lukaku Menama,Right Back,Tactical
+b81dd9d3-c008-4993-bdee-4d954785794b,3857286,2,67,3565,12803,Romario Andres Ibarra Mina,40211,Jeremy Leonel Sarmiento Morante,Left Midfield,Tactical
+dba4b789-5d76-40c2-b318-03af55bcee5e,3857286,2,71,3566,124488,Hassan Khalid Al Heidos,124909,Mohammed Waed Abdulwahhab Al Bayati,Right Center Midfield,Tactical
+0412cd50-376d-42eb-8958-33991e2b2a8c,3857286,2,71,3566,124495,Almoez Ali Zainalabiddin Abdulla,124901,Mohammed Muntari,Right Center Forward,Tactical
+eb1cb548-f46e-412f-840a-1b4d9389797f,3857286,2,75,3565,28559,Enner Remberto Valencia Lastra,36148,Jose Adoni Cifuentes Charcopa,Right Center Forward,Injury
+449b5573-85fb-4afd-b637-0b40472ada83,3857286,2,89,3565,34396,Michael Steveen Estrada Martinez,348757,Kevin Jose Rodriguez Cortez,Center Forward,Tactical
+9565a967-8eb9-41ea-bc82-b134c8ad928a,3857286,2,89,3565,37726,Moises Isaac Caicedo Corozo,37945,Alan Steven Franco Palma,Left Defensive Midfield,Tactical
+19057d45-7969-4795-b9e2-527591c75a28,3857300,1,47,799,5178,Salman Mohammed Al Faraj,54144,Nawaf Shaker Al Abid,Right Center Midfield,Injury
+e06af55c-ffca-4465-a368-280cba48dd2b,3857300,2,58,779,20572,Cristian Gabriel Romero,27768,Lisandro Martinez,Right Center Back,Tactical
+19e6ceb9-e4a8-4764-9def-4e9d279babb1,3857300,2,58,779,7006,Alejandro Dario Gomez,29560,Julian Alvarez,Left Midfield,Tactical
+111e9ac6-3b2b-41fd-b8a0-c2248d57d84c,3857300,2,58,779,16308,Leandro Daniel Paredes,38718,Enzo Fernandez,Left Defensive Midfield,Tactical
+fdb2f137-a94f-4a1e-82aa-547ac00ca39c,3857300,2,70,779,5507,Nicolas Alejandro Tagliafico,19597,Marcos Javier Acuna,Left Back,Tactical
+1b91db7c-31df-44f8-81b5-05f30e420660,3857300,2,77,799,51469,Saleh Khalid Al Shehri,57620,Sultan Abdullah Salim Al Ghannam,Center Forward,Tactical
+bb7db8b9-e75f-4cda-97b3-addc75e522de,3857300,2,87,799,54144,Nawaf Shaker Al Abid,51094,Abdulelah Al Amri,Center Attacking Midfield,Tactical
+fe4614ca-012f-4b00-a416-6c9894d5cb2f,3857300,2,88,799,51099,Firas Tariq Nasser Al Albirakan,121539,Haitham Mohammed Asiri,Center Forward,Tactical
+e859b894-d1e8-4c24-bf67-9c06117c66ef,3857300,2,98,799,5183,Yasir Gharsan Al Shahrani,5191,Mohammed Al Burayk,Left Midfield,Injury
+cb87a2fe-49ea-4850-96cb-efa8741677c7,3857299,2,45,791,22067,Woo-Yeong Jeong,41711,Sang-Ho Na,Center Attacking Midfield,Tactical
+df970688-269f-41e7-a4be-b968c87cf0b0,3857299,2,56,791,3135,Chang-Hoon Kwon,22740,Kang-In Lee,Center Attacking Midfield,Tactical
+cbead842-d911-4291-934a-3fbad478f98a,3857299,2,77,4885,33602,Tariq Lamptey,12259,Denis Odoi,Right Back,Tactical
+8cdbe0e1-fe71-448b-a1ee-647673ec71dc,3857299,2,77,4885,3347,Andre Ayew Pele,28616,Daniel-Kofi Kyereh,Center Attacking Midfield,Tactical
+6c9d2c71-a6ab-4692-a295-4a9b91939a27,3857299,2,77,4885,3450,Jordan Ayew,35658,Kamaldeen Sulemana,Left Wing,Tactical
+83a4900a-77e9-4f98-b054-ccab7e6bcce3,3857299,2,78,791,5618,Woo-Young Jung,29966,Ui-Jo Hwang,Right Defensive Midfield,Tactical
+543c129c-0586-441f-a8a5-5375138ad68d,3857299,2,82,4885,17033,Mohammed Kudus,2989,Alexander Djiku,Right Wing,Tactical
+d1af58c0-dc26-47a6-abc2-05673c2ed35c,3857299,2,87,4885,23615,Gideon Mensah,12325,Abdul Rahman Baba,Left Wing Back,Injury
+1fd4f4cd-0d01-486e-84f5-9b01b3c0d71b,3857299,2,91,791,43565,Min Jae Kim,40564,Kyung-Won Kwon,Right Center Back,Tactical
+7321a54a-36c4-4fbe-b4fb-c1c43b02a649,3857293,1,33,783,5260,Rodrigo Bentancur Colman,5255,Matias Vecino Falero,Left Defensive Midfield,Injury
+359a093a-b085-4251-903d-65f05a083d17,3857293,2,45,4885,3347,Andre Ayew Pele,44225,Osman Bukari,Center Attacking Midfield,Tactical
+0fd52a6e-92c7-4e67-a8ec-f508dd14fcb6,3857293,2,45,4885,3450,Jordan Ayew,35658,Kamaldeen Sulemana,Left Wing,Tactical
+43c9d944-4691-4bac-8e64-a50a22b2b9c7,3857293,2,65,783,5246,Luis Alberto Suarez Diaz,4319,Edinson Roberto Cavani Gomez,Right Center Forward,Tactical
+2d7e7e2c-4cbe-46bc-958a-61553e65a180,3857293,2,65,783,36288,Facundo Pellistri Rebollo,28729,Diego Nicolas De La Cruz Arcosa,Right Midfield,Tactical
+a5867e65-d1e8-45ba-b8b5-392c6f9838c6,3857293,2,71,4885,6393,Inaki Williams Arthuer,9286,Antoine Semenyo,Center Forward,Tactical
+3726a4f1-8c9c-4045-898d-cc106a57ce57,3857293,2,71,4885,31029,Salis Abdul Samed,28616,Daniel-Kofi Kyereh,Left Defensive Midfield,Tactical
+04d40d8d-cc40-4766-8921-116834c0c7ee,3857293,2,79,783,5258,Giorgian Daniel De Arrascaeta Benedetti,36666,Agustin Canobbio Graviz,Left Midfield,Tactical
+f310919c-be20-42a8-b9f5-2d29bbea1e5a,3857293,2,79,783,32478,Darwin Gabriel Nunez Ribeiro,6297,Maximiliano Gomez Gonzalez,Left Center Forward,Tactical
+5833b06d-5810-42f9-8cf1-f5c6d49bf2d3,3857293,2,97,4885,17033,Mohammed Kudus,136306,Abdul Fatawu Issahaku,Center Attacking Midfield,Tactical
+7493c4e0-812c-4dbd-b7a9-57b8bec72d86,3857291,2,45,795,132271,Carlos Manuel Martinez Castro,6328,Kendall Jamaal Waston Manley,Right Center Back,Tactical
+e8ed6113-7ddc-4dbf-af2a-69975846349d,3857291,2,56,772,6748,Ferran Torres Garcia,3477,Alvaro Borja Morata Martin,Right Wing,Tactical
+ef8ce8cb-740a-4e3d-aa51-018d5d654b94,3857291,2,56,772,30486,Pedro Gonzalez Lopez,6583,Carlos Soler Barragan,Left Center Midfield,Tactical
+2c0c30f7-6aa1-4aee-86ed-2438d9b1f8eb,3857291,2,60,795,132296,Anthony Daniel Contreras Enriquez,184468,Alvaro Jose Zamora Mata,Right Wing,Tactical
+59a3bca3-0efe-4067-8cba-75b2cb26fadf,3857291,2,60,795,132728,Jewison Bennette,5592,Bryan Ruiz Gonzalez,Left Wing,Tactical
+e7139736-f4ab-41e2-8278-95164abd360e,3857291,2,63,772,5211,Jordi Alba Ramos,39161,Alejandro Balde Martinez,Left Back,Tactical
+01fe0a99-649f-4344-9316-493ca7d9391a,3857291,2,63,772,5203,Sergio Busquets i Burgos,5199,Jorge Resurreccion Merodio,Center Defensive Midfield,Tactical
+f17f73a1-a3a5-4ec1-92ff-d863b72f43e8,3857291,2,68,772,5719,Marco Asensio Willemsen,68574,Nicholas Williams Arthuer,Right Wing,Tactical
+4ad806fe-3370-4a51-b827-8314b95aab9f,3857291,2,71,795,5582,Celso Borges Mora,108340,Brandon Aguilera Zamora,Right Center Midfield,Tactical
+d63d5b4b-957b-4f75-86d9-c3ee2c4b7f38,3857291,2,81,795,5836,Bryan Oviedo,15477,Ronald Alberto Matarrita Ulate,Left Wing Back,Tactical
+95cc6deb-fe53-4a55-9cdd-ce68b7171e1f,3857281,2,45,1833,16459,Cyle Larin,12770,Jonathan Osorio,Right Center Forward,Tactical
+c6668731-f47f-4724-b775-df6af2597a69,3857281,2,45,1833,11187,Stephen Antunes Eustaquio,133229,Ismael Kone,Left Defensive Midfield,Injury
+a1bf2a1b-dabf-4910-bce0-9a9ff49861c0,3857281,2,59,785,22041,Marko Livaja,7693,Bruno Petkovic,Center Forward,Tactical
+2ef8512c-d770-435c-a69b-81bbf59bdcc2,3857281,2,61,1833,16120,Richie Laryea,9922,David Junior Hoilett,Left Wing Back,Tactical
+17de4ff1-09bd-4720-9363-f08f004f622f,3857281,2,72,785,5460,Andrej Kramaric,3441,Nikola Vlasic,Right Wing,Tactical
+85d90532-90ca-4d2e-9fb8-0bdf94c29dde,3857281,2,72,1833,23640,Jonathan David,26348,Lucas Daniel Cavallini,Left Center Forward,Tactical
+c035e09c-0637-40a0-bc92-7ef9d37f194f,3857281,2,72,1833,31684,Atiba Hutchinson,29758,Sam Adekugbe,Center Defensive Midfield,Tactical
+beb8a8c1-b3c1-44b6-bc27-8a1f675607b4,3857281,2,85,785,5474,Ivan Perisic,16527,Mislav Orsic,Left Wing,Tactical
+c597e4bc-4824-4531-ab09-876e87a17491,3857281,2,85,785,5463,Luka Modric,11603,Mario Pasalic,Right Center Midfield,Tactical
+2a569722-d82b-4328-ab5a-6a0a6a1d4962,3857281,2,85,785,5456,Mateo Kovacic,28914,Lovro Majer,Left Center Midfield,Tactical
+51607a88-6eca-4b21-aa75-a2a266115a39,3857280,2,54,781,11183,Alex Nicolao Telles,4372,Marcos Aoas Correa,Left Back,Injury
+cce55f4e-862c-4837-bc8f-3c9afe4c56e3,3857280,2,54,781,9904,Frederico Rodrigues Santos,25142,Bruno Guimaraes Rodriguez Moura,Right Defensive Midfield,Tactical
+f115f48f-b609-4ee0-9759-328e649c03c9,3857280,2,54,781,25104,Rodrygo Silva de Goes,25154,Everton Augusto de Barros Ribeiro,Center Attacking Midfield,Tactical
+1d36c10f-994b-418a-a159-7e0b9c2fa479,3857280,2,63,2722,4935,Bryan Mbeumo,3551,Karl Brillant Toko Ekambi,Right Midfield,Tactical
+d0fe6b4e-65b7-4dc3-ab2e-d0ea2150912e,3857280,2,63,781,3202,Gabriel Fernando de Jesus,25305,Pedro Guilherme Abreu dos Santos,Center Forward,Tactical
+ebeb7608-75b8-4f8d-adcf-1fdbf8d49342,3857280,2,67,2722,12623,Pierre Kunde Malong,10530,Jules Olivier Ntcham,Right Defensive Midfield,Tactical
+526e8b4d-15c1-423b-9585-82475ab5467a,3857280,2,78,781,25363,Antony Matheus dos Santos,10595,Raphael Dias Belloli,Right Wing,Tactical
+160fcc6e-fcbd-471d-bf52-7e3716411ae0,3857280,2,84,2722,16015,Nicolas Moumi Ngamaleu,33813,Jerome Ngom Mbekeli,Right Midfield,Tactical
+ec51b81d-bff5-4443-becf-196354dc7b4b,3857279,1,12,771,5484,Lucas Hernandez Pi,6704,Theo Bernard Francois Hernandez,Left Back,Injury
+4a089dce-8416-41e9-b27c-890696c66e3b,3857279,2,55,792,33492,Mitchell Thomas Duke,9430,Jason Cummings,Center Forward,Tactical
+414ef37f-34a0-4ac1-bcd9-00aac04023a7,3857279,2,72,792,33477,Riley McGree,24475,Awer Denis Bul Mabil,Left Center Midfield,Tactical
+e57a1b2a-49c2-43d2-9187-de2ce9426aa3,3857279,2,72,792,8346,Craig Goodwin,227697,Garang Kuol,Left Midfield,Tactical
+9dee2d4f-c59f-409b-924e-d46d082e6710,3857279,2,76,771,10481,Aurelien Djani Tchouameni,11990,Youssouf Fofana,Right Defensive Midfield,Tactical
+214033b0-bf75-462b-969e-cef6586ccab3,3857279,2,76,771,5477,Ousmane Dembele,8217,Kingsley Coman,Right Wing,Tactical
+4929f7a5-5c9e-47d5-80a1-81b482d07cc1,3857279,2,84,792,5490,Jackson Irvine,33488,Keanu Baccus,Left Center Midfield,Tactical
+a2b7c289-7599-4f80-8ba9-e7d609e6d07c,3857279,2,84,792,33572,Nathaniel Atkinson,15957,Milos Degenek,Right Back,Tactical
+b6a7affc-5758-4994-94cc-0c2f8b90e7f8,3857279,2,88,771,5476,Benjamin Pavard,4445,Jules Kounde,Right Back,Tactical
+7e19e279-0532-48ce-90cb-8f2b5bd9d2c0,3857279,2,88,771,3604,Olivier Giroud,2972,Marcus Thuram,Center Forward,Tactical
+c819dc62-c935-4284-8e81-b4b007c07142,3857262,2,64,780,40874,Matheus Luiz Nunes,12169,Joao Maria Lobo Alves Palhinha Goncalves,Right Center Midfield,Tactical
+e30b8126-21b7-4810-91a8-bc6ed6756734,3857262,2,64,780,9927,Ruben Diogo Da Silva Neves,18360,Rafael Alexandre Conceicao Leao,Center Defensive Midfield,Tactical
+288ab522-b916-49b7-98d7-9ff3895d0f04,3857262,2,64,780,5207,Cristiano Ronaldo dos Santos Aveiro,5218,Andre Miguel Valente Silva,Center Forward,Tactical
+972248fa-0abe-47b6-af36-0edd7afa4a4b,3857262,2,65,791,5623,Jae-Sung Lee,5620,Hee-Chan Hwang,Left Wing,Tactical
+1790948b-2e93-4659-b1bc-4273d26a6675,3857262,2,80,791,5604,Young-Gwon Kim,40558,Jun-Ho Son,Left Center Back,Injury
+056c29c8-ef1c-407c-ba62-57a8b0dca7cc,3857262,2,81,791,22740,Kang-In Lee,29966,Ui-Jo Hwang,Left Center Midfield,Tactical
+87843ec2-ebab-4ad8-ba7b-3b53fd356f03,3857262,2,81,780,4272,Joao Mario Naval da Costa Eduardo,5214,William Silva de Carvalho,Right Center Midfield,Tactical
+650af2c9-a2f8-43ec-add6-d238944382ec,3857262,2,81,780,34639,Vitor Machado Ferreira,3193,Bernardo Mota Veiga de Carvalho e Silva,Left Center Midfield,Tactical
+7f9e9eda-c56c-4100-9ee0-b19294ffc3fc,3857262,2,92,791,40542,Gue-Sung Cho,99479,Yu-Min Cho,Right Center Forward,Tactical

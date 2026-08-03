@@ -1,0 +1,253 @@
+﻿@model WorldCupAnalytics.Models.ViewModels.HomeDashboardViewModel
+@{
+    Layout = "_AppLayout";
+}
+
+<div class="hero">
+    <div class="hero-inner">
+        <h1>Scout the 2022 World Cup</h1>
+        <p>@Model.TotalPlayers players, 64 matches, @Model.TotalShots.ToString("N0") shots, @((Model.TotalPasses / 1000.0).ToString("0.0"))k passes &mdash; all sourced from real StatsBomb open event data. Search a player or browse the leaderboards below.</p>
+        <div class="hero-search">
+            <input type="text" id="heroSearch" placeholder="Search a player, e.g. Mbapp&eacute;, Modri&#263;, Kane&hellip;" autocomplete="off">
+            <div class="gsearch-results" id="heroSearchResults"></div>
+        </div>
+    </div>
+</div>
+
+<div class="feature-strip">
+    <div class="feature-chip">Tournament leaderboards</div>
+    <div class="feature-chip">Global player search</div>
+    <div class="feature-chip">Click-through to full profile</div>
+    <div class="feature-chip">Finishing over/underperformance</div>
+    <div class="feature-chip">Featured player spotlight</div>
+</div>
+
+<div class="divider" style="margin-top:8px;"><div class="dot"></div><span class="label">Tournament Snapshot</span><div class="dot"></div></div>
+<div class="grid cols-3">
+    <div class="card"><h3>Goals Scored</h3><div class="stat-big">@Model.TotalGoals</div><div class="stat-label">From @Model.TotalShots.ToString("N0") shots logged</div></div>
+    <div class="card"><h3>Featured Players</h3><div class="stat-big">@Model.TotalPlayers</div><div class="stat-label">Across 32 national squads</div></div>
+    <div class="card"><h3>Passes Tracked</h3><div class="stat-big">@((Model.TotalPasses / 1000.0).ToString("0.0"))k</div><div class="stat-label"><span class="mono">pass_events</span></div></div>
+</div>
+
+@if (Model.SpotlightPlayerId != 0)
+{
+    <div class="divider"><div class="dot"></div><span class="label">Player Spotlight</span><div class="dot"></div></div>
+    <a class="card player-card" style="cursor:pointer; text-decoration:none; color:inherit;" href="/Players/Profile?id=@Model.SpotlightPlayerId">
+        <div style="display:flex; gap:20px; align-items:center; flex-wrap:wrap;">
+            <img src="@WorldCupAnalytics.Helpers.AvatarHelper.GetUrl(Model.SpotlightName, "2E7D50")" class="p-avatar" style="width:64px;height:64px;font-size:22px;">
+            <div style="flex:1; min-width:200px;">
+                <div class="display" style="font-size:24px;">@Model.SpotlightName</div>
+                <div class="stat-label" style="margin:2px 0 10px;">@Model.SpotlightTeam &middot; @Model.SpotlightPosition &middot; Top scorer this tournament</div>
+                <div style="display:flex; gap:22px;">
+                    <div class="pc-stat"><span class="n">@Model.SpotlightGoals</span><span class="l">Goals</span></div>
+                    <div class="pc-stat"><span class="n">@Model.SpotlightAssists</span><span class="l">Assists</span></div>
+                    <div class="pc-stat"><span class="n">@Model.SpotlightXg</span><span class="l">xG</span></div>
+                    <div class="pc-stat"><span class="n">@(Model.SpotlightPassAccPct?.ToString("0") ?? "-")%</span><span class="l">Pass Acc.</span></div>
+                </div>
+            </div>
+            <span class="btn primary">View Full Profile &rarr;</span>
+        </div>
+    </a>
+}
+
+<div class="divider"><div class="dot"></div><span class="label">Leaderboards</span><div class="dot"></div></div>
+<div class="lead-grid">
+    <div class="card">
+        <h3>Top Scorers <span class="manual-tag">shot_events</span></h3>
+        <div class="lead-list">
+            @foreach (var row in Model.TopScorers)
+            {
+                <a class="lead-row" href="/Players/Profile?id=@row.PlayerId">
+                    <div class="lead-info">
+                        <div class="lead-rank">@row.Rank</div>
+                        <img src="@WorldCupAnalytics.Helpers.AvatarHelper.GetUrl(row.DisplayName, "1F6E80")" class="p-avatar" style="width:26px;height:26px;font-size:10px;">
+                        <div style="min-width:0;"><div class="p-name" style="font-size:12.5px;">@row.DisplayName</div><div class="p-team" style="font-size:10px;">@row.TeamName</div></div>
+                    </div>
+                    <div class="lead-val">@row.DisplayValue</div>
+                </a>
+            }
+        </div>
+    </div>
+    <div class="card">
+        <h3>Top Assists <span class="manual-tag">pass_events</span></h3>
+        <div class="lead-list">
+            @foreach (var row in Model.TopAssists)
+            {
+                <a class="lead-row" href="/Players/Profile?id=@row.PlayerId">
+                    <div class="lead-info">
+                        <div class="lead-rank">@row.Rank</div>
+                        <img src="@WorldCupAnalytics.Helpers.AvatarHelper.GetUrl(row.DisplayName, "1F6E80")" class="p-avatar" style="width:26px;height:26px;font-size:10px;">
+                        <div style="min-width:0;"><div class="p-name" style="font-size:12.5px;">@row.DisplayName</div><div class="p-team" style="font-size:10px;">@row.TeamName</div></div>
+                    </div>
+                    <div class="lead-val">@row.DisplayValue</div>
+                </a>
+            }
+        </div>
+    </div>
+    <div class="card">
+        <h3>Highest xG <span class="manual-tag">shot_events</span></h3>
+        <div class="lead-list">
+            @foreach (var row in Model.TopXg)
+            {
+                <a class="lead-row" href="/Players/Profile?id=@row.PlayerId">
+                    <div class="lead-info">
+                        <div class="lead-rank">@row.Rank</div>
+                        <img src="@WorldCupAnalytics.Helpers.AvatarHelper.GetUrl(row.DisplayName, "1F6E80")" class="p-avatar" style="width:26px;height:26px;font-size:10px;">
+                        <div style="min-width:0;"><div class="p-name" style="font-size:12.5px;">@row.DisplayName</div><div class="p-team" style="font-size:10px;">@row.TeamName</div></div>
+                    </div>
+                    <div class="lead-val">@row.DisplayValue</div>
+                </a>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="divider"><div class="dot"></div><span class="label">Finishing: Over vs Underperforming xG</span><div class="dot"></div></div>
+<div class="stat-label" style="margin-bottom:10px;">
+    <strong>What this measures:</strong> Goals minus xG (Expected Goals). xG estimates how likely an average shot from that position/situation is to result in a goal, based on StatsBomb's model. A positive number means a player scored <em>more</em> than their chances would predict &mdash; clinical finishing, or some luck. A negative number means they scored <em>less</em> than expected &mdash; missed presentable chances. Shown here for players with at least 5 shots, so one lucky strike doesn't dominate the list.
+</div>
+<div class="card">
+    <h3>Check Any Player</h3>
+    <div class="gsearch-wrap" style="max-width:380px; margin-bottom:14px;">
+        <input type="text" id="finishingSearch" class="search-input" placeholder="Search any player to see their Goals &minus; xG&hellip;" autocomplete="off">
+        <div class="gsearch-results" id="finishingSearchResults"></div>
+    </div>
+    <div id="finishingSearchResult"></div>
+</div>
+<div class="card" style="margin-top:14px;">
+    <h3>Goals minus xG (min. 5 shots)</h3>
+    @foreach (var row in Model.FinishingRows)
+    {
+        var isPositive = row.GoalsMinusXg >= 0;
+        <a class="bar-row" style="cursor:pointer; text-decoration:none; color:inherit; display:block;" href="/Players/Profile?id=@row.PlayerId">
+            <div class="top">
+                <span>@row.DisplayName <span class="stat-label" style="margin:0;">(@row.TeamName)</span></span>
+                <span class="bracket val" style="color:@(isPositive ? "var(--green)" : "var(--gold)");">@(isPositive ? "+" : "")@row.GoalsMinusXg</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:@(row.BarWidthPct.ToString("0"))%;background:@(isPositive ? "var(--green)" : "var(--gold)");"></div></div>
+        </a>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        // Hero search box — same pattern as the nav search, separate element.
+        (function () {
+          const input = document.getElementById('heroSearch');
+          const results = document.getElementById('heroSearchResults');
+          let debounceTimer;
+
+          input.addEventListener('input', function () {
+            clearTimeout(debounceTimer);
+            const query = input.value.trim();
+            if (query.length < 2) {
+              results.classList.remove('show');
+              results.innerHTML = '';
+              return;
+            }
+            debounceTimer = setTimeout(() => runSearch(query), 200);
+          });
+
+          document.addEventListener('click', function (e) {
+            if (!e.target.closest('.hero-search')) {
+              results.classList.remove('show');
+            }
+          });
+
+          async function runSearch(query) {
+            try {
+              const res = await fetch('/Players/Search?q=' + encodeURIComponent(query));
+              const players = await res.json();
+
+              if (players.length === 0) {
+                results.innerHTML = '<div class="sr-empty">No players match &ldquo;' + query + '&rdquo;</div>';
+              } else {
+                results.innerHTML = players.map(p =>
+                  '<a class="sr-item" href="/Players/Profile?id=' + p.playerId + '" style="text-decoration:none;color:inherit;">' +
+                    '<div><div class="sr-name">' + p.displayName + '</div><div class="sr-meta">' + p.teamName + ' &middot; ' + p.position + '</div></div>' +
+                    '<div class="sr-stat">' + p.goals + 'G ' + p.assists + 'A</div>' +
+                  '</a>'
+                ).join('');
+              }
+              results.classList.add('show');
+            } catch (err) {
+              results.innerHTML = '<div class="sr-empty">Search failed &mdash; try again</div>';
+              results.classList.add('show');
+            }
+          }
+        })();
+
+        // Finishing-stat lookup — separate search box, shows Goals - xG for
+        // whichever player is picked, even if they're not in the top-6 list above.
+        (function () {
+          const input = document.getElementById('finishingSearch');
+          const results = document.getElementById('finishingSearchResults');
+          const resultBox = document.getElementById('finishingSearchResult');
+          let debounceTimer;
+
+          input.addEventListener('input', function () {
+            clearTimeout(debounceTimer);
+            const query = input.value.trim();
+            if (query.length < 2) {
+              results.classList.remove('show');
+              results.innerHTML = '';
+              return;
+            }
+            debounceTimer = setTimeout(() => runSearch(query), 200);
+          });
+
+          document.addEventListener('click', function (e) {
+            if (!e.target.closest('#finishingSearch') && !e.target.closest('#finishingSearchResults')) {
+              results.classList.remove('show');
+            }
+          });
+
+          async function runSearch(query) {
+            try {
+              const res = await fetch('/Players/Search?q=' + encodeURIComponent(query));
+              const players = await res.json();
+
+              if (players.length === 0) {
+                results.innerHTML = '<div class="sr-empty">No players match &ldquo;' + query + '&rdquo;</div>';
+              } else {
+                results.innerHTML = players.map(p =>
+                  '<a class="sr-item" data-player=\'' + JSON.stringify(p) + '\' style="text-decoration:none;color:inherit;cursor:pointer;">' +
+                    '<div><div class="sr-name">' + p.displayName + '</div><div class="sr-meta">' + p.teamName + ' &middot; ' + p.position + '</div></div>' +
+                    '<div class="sr-stat">' + p.goals + 'G ' + p.assists + 'A</div>' +
+                  '</a>'
+                ).join('');
+                results.querySelectorAll('.sr-item').forEach(function (item) {
+                  item.addEventListener('click', function () {
+                    const p = JSON.parse(this.dataset.player);
+                    showResult(p);
+                    results.classList.remove('show');
+                    input.value = p.displayName;
+                  });
+                });
+              }
+              results.classList.add('show');
+            } catch (err) {
+              results.innerHTML = '<div class="sr-empty">Search failed &mdash; try again</div>';
+              results.classList.add('show');
+            }
+          }
+
+          function showResult(p) {
+            const diff = Math.round((p.goals - p.xg) * 100) / 100;
+            const isPositive = diff >= 0;
+            const color = isPositive ? 'var(--green)' : 'var(--gold)';
+            const note = p.shots < 5
+              ? '<div class="stat-label" style="margin-top:8px;">Only ' + p.shots + ' shot' + (p.shots === 1 ? '' : 's') + ' recorded &mdash; small sample, interpret with caution.</div>'
+              : '';
+            resultBox.innerHTML =
+              '<div style="display:flex; justify-content:space-between; align-items:center; padding:12px 0; border-top:1px solid var(--line);">' +
+                '<div><div class="p-name">' + p.displayName + '</div><div class="p-team">' + p.teamName + ' &middot; ' + p.position + '</div></div>' +
+                '<div style="text-align:right;">' +
+                  '<div class="stat-big" style="font-size:24px; color:' + color + ';">' + (isPositive ? '+' : '') + diff + '</div>' +
+                  '<div class="stat-label" style="margin:0;">' + p.goals + ' goals &minus; ' + p.xg + ' xG &middot; ' + p.shots + ' shots</div>' +
+                '</div>' +
+              '</div>' + note;
+          }
+        })();
+    </script>
+}

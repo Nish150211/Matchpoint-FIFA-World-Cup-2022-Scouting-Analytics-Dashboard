@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>@ViewData["Title"] - Matchpoint</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="ribbon"></div>
+
+    <div class="topstrip">
+        <a class="brand" href="/Home/Dashboard">
+            <div class="mark">M</div>
+            <div class="name">MATCHPOINT<span class="sub">FIFA WORLD CUP 2022</span></div>
+        </a>
+        <div class="nav-tabs">
+            <a class="nav-tab @(ViewData["ActiveTab"] as string == "home" ? "active" : "")" href="/Home/Dashboard">Home</a>
+            <a class="nav-tab @(ViewData["ActiveTab"] as string == "compare" ? "active" : "")" href="/Players/Compare">Compare</a>
+            <a class="nav-tab @(ViewData["ActiveTab"] as string == "teams" ? "active" : "")" href="/Teams/Compare">Teams</a>
+            <a class="nav-tab @(ViewData["ActiveTab"] as string == "report" ? "active" : "")" href="/Scouting/Report">Scouting Report</a>
+        </div>
+        <div class="gsearch-wrap">
+            <input class="gsearch" id="navSearch" type="text" placeholder="Search 829 players&hellip;" autocomplete="off">
+            <div class="gsearch-results" id="navSearchResults"></div>
+        </div>
+        <div class="userchip"><div class="avatar"></div> J. OKONKWO</div>
+    </div>
+
+    <div class="page">
+        @RenderBody()
+    </div>
+
+    <!-- Shared pitch zoom/pan modal — any element with class="pitch-zoomable"
+         wrapping an <svg> becomes clickable to open an enlarged, pannable,
+         zoomable version here. See wwwroot/js/pitch-zoom.js -->
+    <div class="pitch-modal-overlay" id="pitchModalOverlay">
+        <div class="pitch-modal-toolbar">
+            <button type="button" class="pitch-modal-btn" id="pitchZoomOut">&minus;</button>
+            <button type="button" class="pitch-modal-btn" id="pitchZoomReset">Reset</button>
+            <button type="button" class="pitch-modal-btn" id="pitchZoomIn">+</button>
+            <button type="button" class="pitch-modal-btn pitch-modal-close" id="pitchModalClose">&times; Close</button>
+        </div>
+        <div class="pitch-modal-canvas" id="pitchModalCanvas">
+            <div class="pitch-modal-svg-wrap" id="pitchModalSvgWrap"></div>
+        </div>
+        <div class="pitch-modal-hint">Scroll to zoom &middot; drag to pan &middot; Esc to close</div>
+    </div>
+
+    <script src="~/js/pitch-zoom.js" asp-append-version="true"></script>
+
+    <script>
+        // Live player search — calls a JSON endpoint as the user types and
+        // renders clickable results directly under the search box.
+        (function () {
+          const input = document.getElementById('navSearch');
+          const results = document.getElementById('navSearchResults');
+          let debounceTimer;
+
+          input.addEventListener('input', function () {
+            clearTimeout(debounceTimer);
+            const query = input.value.trim();
+            if (query.length < 2) {
+              results.classList.remove('show');
+              results.innerHTML = '';
+              return;
+            }
+            debounceTimer = setTimeout(() => runSearch(query), 200);
+          });
+
+          document.addEventListener('click', function (e) {
+            if (!e.target.closest('.gsearch-wrap')) {
+              results.classList.remove('show');
+            }
+          });
+
+          async function runSearch(query) {
+            try {
+              const res = await fetch('/Players/Search?q=' + encodeURIComponent(query));
+              const players = await res.json();
+
+              if (players.length === 0) {
+                results.innerHTML = '<div class="sr-empty">No players match &ldquo;' + query + '&rdquo;</div>';
+              } else {
+                results.innerHTML = players.map(p =>
+                  '<a class="sr-item" href="/Players/Profile?id=' + p.playerId + '" style="text-decoration:none;color:inherit;">' +
+                    '<div><div class="sr-name">' + p.displayName + '</div><div class="sr-meta">' + p.teamName + ' &middot; ' + p.position + '</div></div>' +
+                    '<div class="sr-stat">' + p.goals + 'G ' + p.assists + 'A</div>' +
+                  '</a>'
+                ).join('');
+              }
+              results.classList.add('show');
+            } catch (err) {
+              results.innerHTML = '<div class="sr-empty">Search failed &mdash; try again</div>';
+              results.classList.add('show');
+            }
+          }
+        })();
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

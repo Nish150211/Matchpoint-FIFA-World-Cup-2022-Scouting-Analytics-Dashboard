@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Sign In";
+    Layout = "_LoginLayout";
+}
+
+<div class="login-shell">
+    <div class="login-card">
+        <div class="login-brand">
+            <div class="mark">M</div>
+            <div class="name" style="font-size:20px;">MATCHPOINT</div>
+        </div>
+        <div class="login-title">Sign in to your workspace</div>
+        <p class="login-sub">Scouting &amp; analytics for the FIFA World Cup 2022&trade; (Qatar)</p>
+
+        <div class="login-field">
+            <label>Email</label>
+            <input class="login-input" type="email" value="j.okonkwo@scoutingclub.com">
+        </div>
+        <div class="login-field">
+            <label>Password</label>
+            <input class="login-input" type="password" value="••••••••••">
+        </div>
+        <div class="login-row">
+            <label class="login-check"><input type="checkbox" checked> Keep me signed in</label>
+            <a class="login-link" href="#">Forgot password?</a>
+        </div>
+
+        <!-- Static entry point, no real auth behind it — links to the new Home Dashboard once built -->
+        <a class="login-submit" href="/Home/Dashboard">Sign In →</a>
+
+        <div class="login-divider"><span>or continue with</span></div>
+        <div class="sso-row">
+            <div class="sso-btn">Club SSO</div>
+            <div class="sso-btn">Google</div>
+        </div>
+
+        <div class="login-footer">No account? <a class="login-link" href="#">Request scout access</a></div>
+        <div class="data-tag" style="justify-content:center; margin-top:20px;"><div class="pulse"></div>StatsBomb open event data · 2022 Qatar tournament</div>
+    </div>
+</div>

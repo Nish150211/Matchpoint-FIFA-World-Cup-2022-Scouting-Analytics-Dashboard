@@ -1,0 +1,125 @@
+﻿@model WorldCupAnalytics.Models.ViewModels.TeamsComparePageViewModel
+@{
+    Layout = "_AppLayout";
+}
+
+<div class="breadcrumb">MATCHPOINT / TEAMS</div>
+<div class="page-head">
+    <div><h1>Team Performance</h1><p>Pick any two teams &mdash; every chart recomputes from real match data.</p></div>
+</div>
+<div class="feature-strip">
+    <div class="feature-chip">Any-team selector (32 teams)</div>
+    <div class="feature-chip">Match-by-match xG</div>
+    <div class="feature-chip">Shots / SoT% / Pass Acc.</div>
+    <div class="feature-chip">Full results log per team</div>
+</div>
+
+<form method="get" action="/Teams/Compare">
+    <div class="grid cols-2" style="margin-bottom:6px;">
+        <div>
+            <label class="stat-label">Team A</label>
+            <select class="select" name="teamA" onchange="this.form.submit()">
+                @foreach (var t in Model.AllTeams)
+                {
+                    <option value="@t.TeamName" selected="@(t.TeamName == Model.TeamA!.TeamName)">@t.TeamName</option>
+                }
+            </select>
+        </div>
+        <div>
+            <label class="stat-label">Team B</label>
+            <select class="select" name="teamB" onchange="this.form.submit()">
+                @foreach (var t in Model.AllTeams)
+                {
+                    <option value="@t.TeamName" selected="@(t.TeamName == Model.TeamB!.TeamName)">@t.TeamName</option>
+                }
+            </select>
+        </div>
+    </div>
+</form>
+
+<div class="divider"><div class="dot"></div><span class="label">Match-by-Match xG</span><div class="dot"></div></div>
+<div class="card">
+    <h3>Expected Goals per Match <span class="manual-tag">shot_events</span></h3>
+    <p class="stat-label" style="margin:0 0 10px;">Both lines share the same vertical scale, so line height is directly comparable between teams &mdash; not rescaled to each team's own best match. Hover a point for the exact fixture.</p>
+    <div class="pitch-zoomable">
+        <svg width="100%" height="220" viewBox="0 0 720 220">
+            <g stroke="rgba(20,24,28,0.14)"><line x1="40" y1="20" x2="40" y2="190" /><line x1="40" y1="190" x2="700" y2="190" /></g>
+            <polyline points="@Model.TeamA!.LinePoints" fill="none" stroke="@Model.TeamA.ColorHex" stroke-width="2.5" />
+            <polyline points="@Model.TeamB!.LinePoints" fill="none" stroke="@Model.TeamB.ColorHex" stroke-width="2.5" />
+            @foreach (var m in Model.TeamA.Matches)
+            {
+                <circle cx="@m.ChartX" cy="@m.ChartY" r="4" fill="@Model.TeamA.ColorHex" stroke="var(--panel)" stroke-width="1.5">
+                    <title>@Model.TeamA.TeamName vs @m.Opponent (@m.Stage): xG @m.Xg, @m.GoalsFor-@m.GoalsAgainst</title>
+                </circle>
+            }
+            @foreach (var m in Model.TeamB.Matches)
+            {
+                <circle cx="@m.ChartX" cy="@m.ChartY" r="4" fill="@Model.TeamB.ColorHex" stroke="var(--panel)" stroke-width="1.5">
+                    <title>@Model.TeamB.TeamName vs @m.Opponent (@m.Stage): xG @m.Xg, @m.GoalsFor-@m.GoalsAgainst</title>
+                </circle>
+            }
+            @foreach (var label in Model.XAxisLabels)
+            {
+                var svgText = $"<text x=\"{label.ChartX.ToString(System.Globalization.CultureInfo.InvariantCulture)}\" y=\"205\" text-anchor=\"middle\" fill=\"#14181C\" font-family=\"IBM Plex Mono\" font-size=\"10\" opacity=\"0.55\">{label.Label}</text>";
+                @Html.Raw(svgText)
+            }
+        </svg>
+    </div>
+    <div class="legend">
+        <div class="legend-item"><div class="swatch" style="background:@Model.TeamA.ColorHex"></div>@Model.TeamA.TeamName &mdash; total @Model.TeamA.TotalXg xG / @Model.TeamA.MatchesPlayed matches</div>
+        <div class="legend-item"><div class="swatch" style="background:@Model.TeamB.ColorHex"></div>@Model.TeamB.TeamName &mdash; total @Model.TeamB.TotalXg xG / @Model.TeamB.MatchesPlayed matches</div>
+    </div>
+</div>
+
+<div class="divider"><div class="dot"></div><span class="label">Squad Comparison</span><div class="dot"></div></div>
+<div class="grid cols-3">
+    <div class="card" title="Total shots taken across all matches (shootout penalties excluded)">
+        <h3>Total Shots</h3>
+        @{
+            var maxShots = Math.Max(Model.TeamA.TotalShots, Model.TeamB.TotalShots); if (maxShots == 0) maxShots = 1;
+        }
+        <div class="bar-row"><div class="top"><span>@Model.TeamA.TeamName</span><span class="bracket val">@Model.TeamA.TotalShots</span></div><div class="bar-track"><div class="bar-fill" style="width:@(Math.Max(4, Math.Round(100.0 * Model.TeamA.TotalShots / maxShots)))%;background:@Model.TeamA.ColorHex;"></div></div></div>
+        <div class="bar-row"><div class="top"><span>@Model.TeamB.TeamName</span><span class="bracket val">@Model.TeamB.TotalShots</span></div><div class="bar-track"><div class="bar-fill" style="width:@(Math.Max(4, Math.Round(100.0 * Model.TeamB.TotalShots / maxShots)))%;background:@Model.TeamB.ColorHex;"></div></div></div>
+    </div>
+    <div class="card" title="Shots on target (goals + saves) as a percentage of total shots">
+        <h3>Shots on Target %</h3>
+        <div class="bar-row"><div class="top"><span>@Model.TeamA.TeamName</span><span class="bracket val">@Model.TeamA.ShotsOnTargetPct%</span></div><div class="bar-track"><div class="bar-fill" style="width:@Model.TeamA.ShotsOnTargetPct%;background:@Model.TeamA.ColorHex;"></div></div></div>
+        <div class="bar-row"><div class="top"><span>@Model.TeamB.TeamName</span><span class="bracket val">@Model.TeamB.ShotsOnTargetPct%</span></div><div class="bar-track"><div class="bar-fill" style="width:@Model.TeamB.ShotsOnTargetPct%;background:@Model.TeamB.ColorHex;"></div></div></div>
+    </div>
+    <div class="card" title="Completed passes as a percentage of total pass attempts, across all matches">
+        <h3>Pass Accuracy</h3>
+        <div class="bar-row"><div class="top"><span>@Model.TeamA.TeamName</span><span class="bracket val">@Model.TeamA.PassAccuracyPct%</span></div><div class="bar-track"><div class="bar-fill" style="width:@Model.TeamA.PassAccuracyPct%;background:@Model.TeamA.ColorHex;"></div></div></div>
+        <div class="bar-row"><div class="top"><span>@Model.TeamB.TeamName</span><span class="bracket val">@Model.TeamB.PassAccuracyPct%</span></div><div class="bar-track"><div class="bar-fill" style="width:@Model.TeamB.PassAccuracyPct%;background:@Model.TeamB.ColorHex;"></div></div></div>
+    </div>
+</div>
+
+<div class="divider"><div class="dot"></div><span class="label">Results Log</span><div class="dot"></div></div>
+<div class="grid cols-2">
+    @foreach (var team in new[] { Model.TeamA, Model.TeamB })
+    {
+        <div class="card">
+            <h3 style="color:@team!.ColorHex;">@team.TeamName &mdash; @team.GoalsFor&ndash;@team.GoalsAgainst &middot; @team.MatchesPlayed played</h3>
+            <table>
+                <thead><tr><th>Stage</th><th>Fixture</th><th>Score</th><th>xG</th><th>SoT%</th><th>Result</th></tr></thead>
+                <tbody>
+                    @foreach (var m in team.Matches)
+                    {
+                        <tr class="clickable" onclick="location.href='/Matches/Detail?id=@m.MatchId'">
+                            <td>@m.Stage</td>
+                            <td class="num">@(m.IsHome ? $"{team.TeamName} vs {m.Opponent}" : $"{m.Opponent} vs {team.TeamName}")</td>
+                            <td class="num">@m.GoalsFor&ndash;@m.GoalsAgainst</td>
+                            <td class="num">@m.Xg</td>
+                            <td class="num">@m.ShotsOnTargetPct%</td>
+                            <td>
+                                @{
+                                    var cls = m.Result == "W" ? "w" : m.Result == "L" ? "l" : "d"; var word = m.Result == "W" ? "Win" : m.Result == "L" ? "Loss" : "Draw";
+                                }
+                                <div class="fd @cls" style="display:inline-flex;" title="@word">@m.Result</div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

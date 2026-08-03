@@ -1,0 +1,377 @@
+﻿@model WorldCupAnalytics.Models.ViewModels.MatchDetailViewModel
+@{
+    Layout = "_AppLayout";
+}
+
+<a class="back-link" href="/Teams/Compare?teamA=@Model.HomeTeamName&teamB=@Model.AwayTeamName">&larr; Back to Teams</a>
+<div class="breadcrumb">MATCHPOINT / MATCH DETAIL</div>
+<div class="page-head">
+    <div>
+        <h1>@Model.HomeTeamName @Model.HomeScore &ndash; @Model.AwayScore @Model.AwayTeamName</h1>
+        <p>@Model.Stage &middot; @Model.MatchDate.ToString("d MMMM yyyy")@(string.IsNullOrEmpty(Model.StadiumName) ? "" : $" · {Model.StadiumName}, {Model.StadiumCountry}")@(string.IsNullOrEmpty(Model.RefereeName) ? "" : $" · Referee: {Model.RefereeName}")</p>
+    </div>
+</div>
+
+<div class="divider" style="margin-top:6px;"><div class="dot"></div><span class="label">Combined Shot Map</span><div class="dot"></div></div>
+<div class="stat-label" style="margin-bottom:10px;">Both teams on one pitch &mdash; each side's shots are shown near the goal they were actually attacking. Gold = goal, team color = other attempts. Shootout penalties excluded. Hover any dot for the player, minute, and xG.</div>
+<div class="legend" style="justify-content:flex-start; margin-top:0; margin-bottom:14px;">
+    <div class="legend-item"><div class="swatch" style="background:@Model.HomeColorHex;border-radius:50%;"></div>@Model.HomeTeamName</div>
+    <div class="legend-item"><div class="swatch" style="background:@Model.AwayColorHex;border-radius:50%;"></div>@Model.AwayTeamName</div>
+    <div class="legend-item"><div class="swatch" style="background:#B8842A;border-radius:50%;"></div>Goal</div>
+</div>
+<div class="card pitch-card">
+    <div class="pitch-zoomable">
+        <svg width="100%" height="340" viewBox="0 0 420 300">
+            <rect x="0" y="0" width="420" height="300" rx="8" fill="var(--panel-2)" />
+            <g stroke="rgba(20,24,28,0.25)" fill="none" stroke-width="1.5">
+                <rect x="10" y="10" width="400" height="280" />
+                <line x1="210" y1="10" x2="210" y2="290" />
+                <circle cx="210" cy="150" r="40" />
+                <rect x="10" y="70" width="60" height="160" />
+                <rect x="350" y="70" width="60" height="160" />
+                <rect x="10" y="115" width="24" height="70" />
+                <rect x="386" y="115" width="24" height="70" />
+            </g>
+            @foreach (var dot in Model.HomeShotMap)
+            {
+                <circle cx="@dot.SvgX" cy="@dot.SvgY" r="@dot.Radius" fill="@dot.Color" stroke="var(--chalk)" stroke-width="1">
+                    <title>@dot.MatchLabel &mdash; @(dot.Minute.HasValue ? $"{dot.Minute}' " : "")@dot.OutcomeName@(dot.Xg.HasValue ? $" (xG {dot.Xg})" : "")</title>
+                </circle>
+            }
+            @foreach (var dot in Model.AwayShotMap)
+            {
+                <circle cx="@dot.SvgX" cy="@dot.SvgY" r="@dot.Radius" fill="@dot.Color" stroke="var(--chalk)" stroke-width="1">
+                    <title>@dot.MatchLabel &mdash; @(dot.Minute.HasValue ? $"{dot.Minute}' " : "")@dot.OutcomeName@(dot.Xg.HasValue ? $" (xG {dot.Xg})" : "")</title>
+                </circle>
+            }
+        </svg>
+    </div>
+</div>
+
+<div class="divider"><div class="dot"></div><span class="label">Average Positions</span><div class="dot"></div></div>
+<div class="stat-label" style="margin-bottom:10px;">Starting XI, positioned at each player's average location across every touch this match (passes, carries, pressures, duels — not just passes). Hover a dot for the name and position.</div>
+<div class="pitch-grid">
+    <div class="card pitch-card">
+        <h4><span style="width:10px;height:10px;border-radius:50%;background:@Model.HomeColorHex;display:inline-block;"></span>@Model.HomeTeamName</h4>
+        <div class="pitch-zoomable">
+            <svg width="100%" height="300" viewBox="0 0 420 300">
+                <rect x="0" y="0" width="420" height="300" rx="8" fill="var(--panel-2)" />
+                <g stroke="rgba(20,24,28,0.20)" fill="none" stroke-width="1.5">
+                    <rect x="10" y="10" width="400" height="280" />
+                    <line x1="210" y1="10" x2="210" y2="290" />
+                </g>
+                @foreach (var node in Model.HomeFormation)
+                {
+                    var jerseyLabel = node.JerseyNumber?.ToString() ?? "-";
+                    var groupMarkup = $"<g><title>{node.DisplayName} ({node.Position})</title>" +
+                    $"<circle cx=\"{node.SvgX.ToString(System.Globalization.CultureInfo.InvariantCulture)}\" cy=\"{node.SvgY.ToString(System.Globalization.CultureInfo.InvariantCulture)}\" r=\"14\" fill=\"{Model.HomeColorHex}\" stroke=\"var(--panel)\" stroke-width=\"2\"/>" +
+                    $"<text x=\"{node.SvgX.ToString(System.Globalization.CultureInfo.InvariantCulture)}\" y=\"{(node.SvgY + 4).ToString(System.Globalization.CultureInfo.InvariantCulture)}\" text-anchor=\"middle\" fill=\"#F4F6F1\" font-family=\"IBM Plex Mono\" font-size=\"10\" font-weight=\"700\">{jerseyLabel}</text></g>";
+                    @Html.Raw(groupMarkup)
+                }
+            </svg>
+        </div>
+    </div>
+    <div class="card pitch-card">
+        <h4><span style="width:10px;height:10px;border-radius:50%;background:@Model.AwayColorHex;display:inline-block;"></span>@Model.AwayTeamName</h4>
+        <div class="pitch-zoomable">
+            <svg width="100%" height="300" viewBox="0 0 420 300">
+                <rect x="0" y="0" width="420" height="300" rx="8" fill="var(--panel-2)" />
+                <g stroke="rgba(20,24,28,0.20)" fill="none" stroke-width="1.5">
+                    <rect x="10" y="10" width="400" height="280" />
+                    <line x1="210" y1="10" x2="210" y2="290" />
+                </g>
+                @foreach (var node in Model.AwayFormation)
+                {
+                    var jerseyLabel = node.JerseyNumber?.ToString() ?? "-";
+                    var groupMarkup = $"<g><title>{node.DisplayName} ({node.Position})</title>" +
+                    $"<circle cx=\"{node.SvgX.ToString(System.Globalization.CultureInfo.InvariantCulture)}\" cy=\"{node.SvgY.ToString(System.Globalization.CultureInfo.InvariantCulture)}\" r=\"14\" fill=\"{Model.AwayColorHex}\" stroke=\"var(--panel)\" stroke-width=\"2\"/>" +
+                    $"<text x=\"{node.SvgX.ToString(System.Globalization.CultureInfo.InvariantCulture)}\" y=\"{(node.SvgY + 4).ToString(System.Globalization.CultureInfo.InvariantCulture)}\" text-anchor=\"middle\" fill=\"#F4F6F1\" font-family=\"IBM Plex Mono\" font-size=\"10\" font-weight=\"700\">{jerseyLabel}</text></g>";
+                    @Html.Raw(groupMarkup)
+                }
+            </svg>
+        </div>
+    </div>
+</div>
+
+<div class="divider"><div class="dot"></div><span class="label">Substitutions</span><div class="dot"></div></div>
+<div class="card">
+    @if (Model.Substitutions.Any())
+    {
+        <table>
+            <thead><tr><th>Min</th><th>Team</th><th>Off</th><th>On</th><th>Reason</th></tr></thead>
+            <tbody>
+                @foreach (var s in Model.Substitutions)
+                {
+                    <tr>
+                        <td class="num">@s.Minute'</td>
+                        <td><span class="pos-tag" style="background:@s.TeamColorHex;">@s.TeamName</span></td>
+                        <td>
+                            @if (s.PlayerOffId.HasValue)
+                            {
+                                <a href="/Players/Profile?id=@s.PlayerOffId" style="text-decoration:none;color:inherit;">@s.PlayerOffName</a>
+                            }
+                            else
+                            {
+
+                                @s.PlayerOffName
+                            }
+                        </td>
+                        <td>
+                            @if (s.PlayerOnId.HasValue)
+                            {
+                                <a href="/Players/Profile?id=@s.PlayerOnId" style="text-decoration:none;color:inherit;">@s.PlayerOnName</a>
+                            }
+                            else
+                            {
+
+                                @s.PlayerOnName
+                            }
+                        </td>
+                        <td>@(s.Reason ?? "-")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <div class="stat-label">No substitutions recorded for this match</div>
+    }
+</div>
+
+<div class="divider"><div class="dot"></div><span class="label">Pass Networks</span><div class="dot"></div></div>
+<div class="stat-label" style="margin-bottom:10px;">Starting XI only, positioned at each player's average pass-origin location for this match. Line thickness = combined passes between that pair (both directions); pairs under 3 combinations aren't drawn, to keep this readable. Node size = total passes attempted. Hover any player or connection for the exact number.</div>
+<div class="pitch-grid">
+    <div class="card pitch-card">
+        <h4><span style="width:10px;height:10px;border-radius:50%;background:@Model.HomeColorHex;display:inline-block;"></span>@Model.HomeTeamName</h4>
+        <div class="pitch-zoomable">
+            <svg width="100%" height="300" viewBox="0 0 420 300">
+                <rect x="0" y="0" width="420" height="300" rx="8" fill="var(--panel-2)" />
+                <g stroke="rgba(20,24,28,0.20)" fill="none" stroke-width="1.5">
+                    <rect x="10" y="10" width="400" height="280" />
+                    <line x1="210" y1="10" x2="210" y2="290" />
+                </g>
+                @foreach (var edge in Model.HomePassNetwork.Edges)
+                {
+                    <line x1="@edge.X1" y1="@edge.Y1" x2="@edge.X2" y2="@edge.Y2" stroke="@Model.HomeColorHex" stroke-opacity="0.45" stroke-width="@edge.StrokeWidth">
+                        <title>@edge.CombinedPassCount combined passes</title>
+                    </line>
+                }
+                @foreach (var node in Model.HomePassNetwork.Nodes)
+                {
+                    <circle cx="@node.SvgX" cy="@node.SvgY" r="@node.Radius" fill="@Model.HomeColorHex" stroke="var(--panel)" stroke-width="2">
+                        <title>@node.DisplayName (@node.Position) &mdash; @node.TotalPasses passes attempted</title>
+                    </circle>
+                }
+            </svg>
+        </div>
+    </div>
+    <div class="card pitch-card">
+        <h4><span style="width:10px;height:10px;border-radius:50%;background:@Model.AwayColorHex;display:inline-block;"></span>@Model.AwayTeamName</h4>
+        <div class="pitch-zoomable">
+            <svg width="100%" height="300" viewBox="0 0 420 300">
+                <rect x="0" y="0" width="420" height="300" rx="8" fill="var(--panel-2)" />
+                <g stroke="rgba(20,24,28,0.20)" fill="none" stroke-width="1.5">
+                    <rect x="10" y="10" width="400" height="280" />
+                    <line x1="210" y1="10" x2="210" y2="290" />
+                </g>
+                @foreach (var edge in Model.AwayPassNetwork.Edges)
+                {
+                    <line x1="@edge.X1" y1="@edge.Y1" x2="@edge.X2" y2="@edge.Y2" stroke="@Model.AwayColorHex" stroke-opacity="0.45" stroke-width="@edge.StrokeWidth">
+                        <title>@edge.CombinedPassCount combined passes</title>
+                    </line>
+                }
+                @foreach (var node in Model.AwayPassNetwork.Nodes)
+                {
+                    <circle cx="@node.SvgX" cy="@node.SvgY" r="@node.Radius" fill="@Model.AwayColorHex" stroke="var(--panel)" stroke-width="2">
+                        <title>@node.DisplayName (@node.Position) &mdash; @node.TotalPasses passes attempted</title>
+                    </circle>
+                }
+            </svg>
+        </div>
+    </div>
+</div>
+
+<div class="divider"><div class="dot"></div><span class="label">Match Stats</span><div class="dot"></div></div>
+<div class="grid cols-3">
+    <div class="card" title="Total shots taken (shootout penalties excluded)">
+        <h3>Shots</h3>
+        <div class="bar-row"><div class="top"><span>@Model.HomeTeamName</span><span class="bracket val">@Model.HomeShots</span></div><div class="bar-track"><div class="bar-fill" style="width:@(Math.Max(4, Math.Round(100.0 * Model.HomeShots / Math.Max(1, Math.Max(Model.HomeShots, Model.AwayShots)))))%;background:@Model.HomeColorHex;"></div></div></div>
+        <div class="bar-row"><div class="top"><span>@Model.AwayTeamName</span><span class="bracket val">@Model.AwayShots</span></div><div class="bar-track"><div class="bar-fill" style="width:@(Math.Max(4, Math.Round(100.0 * Model.AwayShots / Math.Max(1, Math.Max(Model.HomeShots, Model.AwayShots)))))%;background:@Model.AwayColorHex;"></div></div></div>
+    </div>
+    <div class="card" title="Expected Goals — StatsBomb's model estimate of shot quality, summed across the match">
+        <h3>xG</h3>
+        @{
+            var maxXgMatch = Math.Max(Model.HomeXg, Model.AwayXg); if (maxXgMatch == 0) maxXgMatch = 1;
+        }
+        <div class="bar-row"><div class="top"><span>@Model.HomeTeamName</span><span class="bracket val">@Model.HomeXg</span></div><div class="bar-track"><div class="bar-fill" style="width:@(Math.Max(4, Math.Round(100.0 * (double)(Model.HomeXg / maxXgMatch))))%;background:@Model.HomeColorHex;"></div></div></div>
+        <div class="bar-row"><div class="top"><span>@Model.AwayTeamName</span><span class="bracket val">@Model.AwayXg</span></div><div class="bar-track"><div class="bar-fill" style="width:@(Math.Max(4, Math.Round(100.0 * (double)(Model.AwayXg / maxXgMatch))))%;background:@Model.AwayColorHex;"></div></div></div>
+    </div>
+    <div class="card" title="Completed passes divided by total pass attempts">
+        <h3>Pass Accuracy</h3>
+        <div class="bar-row"><div class="top"><span>@Model.HomeTeamName</span><span class="bracket val">@Model.HomePassAccuracyPct%</span></div><div class="bar-track"><div class="bar-fill" style="width:@Model.HomePassAccuracyPct%;background:@Model.HomeColorHex;"></div></div></div>
+        <div class="bar-row"><div class="top"><span>@Model.AwayTeamName</span><span class="bracket val">@Model.AwayPassAccuracyPct%</span></div><div class="bar-track"><div class="bar-fill" style="width:@Model.AwayPassAccuracyPct%;background:@Model.AwayColorHex;"></div></div></div>
+    </div>
+</div>
+
+<div class="divider"><div class="dot"></div><span class="label">Possession Battle</span><div class="dot"></div></div>
+<div class="stat-label" style="margin-bottom:10px;">Running (cumulative-to-date) share of match time each team controlled the ball, computed from real possession-sequence timing &mdash; not a pass-count estimate. Every point on the line is hoverable for the exact minute and split, so you don't need to interpret the shape. Naturally swings early on (small sample of match time so far) and settles as the game progresses.</div>
+<div class="card">
+    <div class="pitch-zoomable">
+        <svg width="100%" height="230" viewBox="0 0 720 230">
+            <g stroke="rgba(20,24,28,0.14)"><line x1="40" y1="20" x2="40" y2="190" /><line x1="40" y1="190" x2="700" y2="190" /></g>
+            <line x1="40" y1="105" x2="700" y2="105" stroke="rgba(20,24,28,0.35)" stroke-dasharray="4,4" />
+            <text x="705" y="109" fill="#14181C" font-family="IBM Plex Mono" font-size="10" opacity="0.6">50%</text>
+            @{
+                int[] possMinuteTicks = Model.XgChartMaxMinutes == 120
+                ? new[] { 0, 15, 30, 45, 60, 75, 90, 105, 120 }
+                : new[] { 0, 15, 30, 45, 60, 75, 90 };
+            }
+            @foreach (var tick in possMinuteTicks)
+            {
+                var tx = 40 + (tick / (double)Model.XgChartMaxMinutes) * (700 - 40);
+                var tickText = $"<text x=\"{tx.ToString(System.Globalization.CultureInfo.InvariantCulture)}\" y=\"205\" text-anchor=\"middle\" fill=\"#14181C\" font-family=\"IBM Plex Mono\" font-size=\"10\" opacity=\"0.55\">{tick}'</text>";
+                @Html.Raw(tickText)
+            }
+            <polyline points="@Model.Possession.HomeRunningPctPolyline" fill="none" stroke="@Model.HomeColorHex" stroke-width="2.5" />
+            @foreach (var pt in Model.Possession.Points)
+            {
+                <circle cx="@pt.SvgX" cy="@pt.SvgY" r="5" fill="@Model.HomeColorHex" stroke="var(--panel)" stroke-width="1" opacity="0.6">
+                    <title>@pt.Minute' &mdash; @Model.HomeTeamName @pt.HomePctAtPoint% / @Model.AwayTeamName @pt.AwayPctAtPoint% (cumulative to this point)</title>
+                </circle>
+            }
+        </svg>
+    </div>
+    <div class="legend">
+        <div class="legend-item"><div class="swatch" style="background:@Model.HomeColorHex"></div>@Model.HomeTeamName &mdash; @Model.Possession.HomePossessionPct% final possession</div>
+        <div class="legend-item"><div class="swatch" style="background:@Model.AwayColorHex"></div>@Model.AwayTeamName &mdash; @Model.Possession.AwayPossessionPct% final possession</div>
+    </div>
+</div>
+
+<div class="divider"><div class="dot"></div><span class="label">xG Race</span><div class="dot"></div></div>
+<div class="stat-label" style="margin-bottom:10px;">Cumulative expected goals over the match &mdash; the line jumps at the exact minute of each shot and stays flat in between, since xG doesn't accrue gradually over time. Both teams share the same vertical scale. Every shot has a hoverable dot (larger gold ones are actual goals) &mdash; hover any point to read the exact minute, player, and xG without having to interpret the shape yourself.</div>
+<div class="card">
+    <div class="pitch-zoomable">
+        <svg width="100%" height="230" viewBox="0 0 720 230">
+            <g stroke="rgba(20,24,28,0.14)"><line x1="40" y1="20" x2="40" y2="190" /><line x1="40" y1="190" x2="700" y2="190" /></g>
+            @{
+                int[] minuteTicks = Model.XgChartMaxMinutes == 120
+                ? new[] { 0, 15, 30, 45, 60, 75, 90, 105, 120 }
+                : new[] { 0, 15, 30, 45, 60, 75, 90 };
+            }
+            @foreach (var tick in minuteTicks)
+            {
+                var tx = 40 + (tick / (double)Model.XgChartMaxMinutes) * (700 - 40);
+                var tickText = $"<text x=\"{tx.ToString(System.Globalization.CultureInfo.InvariantCulture)}\" y=\"205\" text-anchor=\"middle\" fill=\"#14181C\" font-family=\"IBM Plex Mono\" font-size=\"10\" opacity=\"0.55\">{tick}'</text>";
+                @Html.Raw(tickText)
+            }
+            <polyline points="@Model.HomeXgRace.StepPolylinePoints" fill="none" stroke="@Model.HomeXgRace.ColorHex" stroke-width="2.5" />
+            <polyline points="@Model.AwayXgRace.StepPolylinePoints" fill="none" stroke="@Model.AwayXgRace.ColorHex" stroke-width="2.5" />
+            @foreach (var m in Model.HomeXgRace.AllShotMarkers)
+            {
+                <circle cx="@m.SvgX" cy="@m.SvgY" r="5" fill="@Model.HomeXgRace.ColorHex" stroke="var(--panel)" stroke-width="1" opacity="0.55">
+                    <title>@Model.HomeXgRace.TeamName &mdash; @m.Minute' @m.OutcomeName (shot xG @m.ShotXg, cumulative @m.CumulativeXg by @m.PlayerName)</title>
+                </circle>
+            }
+            @foreach (var m in Model.AwayXgRace.AllShotMarkers)
+            {
+                <circle cx="@m.SvgX" cy="@m.SvgY" r="5" fill="@Model.AwayXgRace.ColorHex" stroke="var(--panel)" stroke-width="1" opacity="0.55">
+                    <title>@Model.AwayXgRace.TeamName &mdash; @m.Minute' @m.OutcomeName (shot xG @m.ShotXg, cumulative @m.CumulativeXg by @m.PlayerName)</title>
+                </circle>
+            }
+            @foreach (var m in Model.HomeXgRace.GoalMarkers)
+            {
+                <circle cx="@m.SvgX" cy="@m.SvgY" r="7" fill="#B8842A" stroke="var(--panel)" stroke-width="1.5">
+                    <title>@m.Minute' GOAL &mdash; @m.PlayerName (cumulative xG: @m.CumulativeXg)</title>
+                </circle>
+            }
+            @foreach (var m in Model.AwayXgRace.GoalMarkers)
+            {
+                <circle cx="@m.SvgX" cy="@m.SvgY" r="7" fill="#B8842A" stroke="var(--panel)" stroke-width="1.5">
+                    <title>@m.Minute' GOAL &mdash; @m.PlayerName (cumulative xG: @m.CumulativeXg)</title>
+                </circle>
+            }
+        </svg>
+    </div>
+    <div class="legend">
+        <div class="legend-item"><div class="swatch" style="background:@Model.HomeXgRace.ColorHex"></div>@Model.HomeXgRace.TeamName &mdash; final xG @Model.HomeXgRace.FinalXg</div>
+        <div class="legend-item"><div class="swatch" style="background:@Model.AwayXgRace.ColorHex"></div>@Model.AwayXgRace.TeamName &mdash; final xG @Model.AwayXgRace.FinalXg</div>
+        <div class="legend-item"><div class="swatch" style="background:#B8842A;border-radius:50%;"></div>Goal scored</div>
+    </div>
+</div>
+
+<div class="divider"><div class="dot"></div><span class="label">Goal Timeline</span><div class="dot"></div></div>
+<div class="card">
+    @if (Model.GoalTimeline.Any())
+    {
+        <table>
+            <thead><tr><th>Min</th><th>Player</th><th>Team</th><th>Type</th><th>Technique</th><th>xG</th></tr></thead>
+            <tbody>
+                @foreach (var g in Model.GoalTimeline)
+                {
+                    <tr>
+                        <td class="num">@g.Minute'</td>
+                        <td>
+                            @if (g.PlayerId.HasValue)
+                            {
+                                <a href="/Players/Profile?id=@g.PlayerId" style="text-decoration:none;color:inherit;">@g.PlayerName</a>
+                            }
+                            else
+                            {
+                                @g.PlayerName
+                            }
+                        </td>
+                        <td><span class="pos-tag" style="background:@g.TeamColorHex;">@g.TeamName</span></td>
+                        <td title="Set-piece context — where the shot originated from">@g.ShotType</td>
+                        <td>@g.Technique</td>
+                        <td class="num">@g.Xg</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <div class="stat-label">No goals in this match</div>
+    }
+</div>
+
+<div class="divider"><div class="dot"></div><span class="label">Lineups</span><div class="dot"></div></div>
+<div class="grid cols-2">
+    <div class="card">
+        <h3 style="color:@Model.HomeColorHex;">@Model.HomeTeamName</h3>
+        @foreach (var group in new[] { true, false })
+        {
+            var players = Model.HomeLineup.Where(l => l.IsStartingXi == group).ToList();
+            if (players.Any())
+            {
+                <div class="stat-label" style="margin:10px 0 6px;">@(group ? "Starting XI" : "Substitutes")</div>
+                @foreach (var l in players)
+                {
+                    <a href="/Players/Profile?id=@l.PlayerId" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--line);">
+                        <span>@(l.JerseyNumber?.ToString() ?? "-") &middot; @l.PlayerName</span>
+                        <span class="pos-tag">@l.Position</span>
+                    </a>
+                }
+            }
+        }
+    </div>
+    <div class="card">
+        <h3 style="color:@Model.AwayColorHex;">@Model.AwayTeamName</h3>
+        @foreach (var group in new[] { true, false })
+        {
+            var players = Model.AwayLineup.Where(l => l.IsStartingXi == group).ToList();
+            if (players.Any())
+            {
+                <div class="stat-label" style="margin:10px 0 6px;">@(group ? "Starting XI" : "Substitutes")</div>
+                @foreach (var l in players)
+                {
+                    <a href="/Players/Profile?id=@l.PlayerId" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--line);">
+                        <span>@(l.JerseyNumber?.ToString() ?? "-") &middot; @l.PlayerName</span>
+                        <span class="pos-tag">@l.Position</span>
+                    </a>
+                }
+            }
+        }
+    </div>
+</div>

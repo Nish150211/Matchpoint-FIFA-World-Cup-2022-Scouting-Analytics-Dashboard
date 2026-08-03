@@ -1,0 +1,408 @@
+﻿@model WorldCupAnalytics.Models.ViewModels.ComparePageViewModel
+@{
+    Layout = "_AppLayout";
+}
+
+<div class="breadcrumb">MATCHPOINT / COMPARE</div>
+<div class="page-head">
+    <div><h1>Player Comparison</h1><p>Search and add up to 4 players &mdash; every number recomputes live from the source data.</p></div>
+</div>
+<div class="feature-strip">
+    <div class="feature-chip">Team / Group / Position filters</div>
+    <div class="feature-chip">Live player search</div>
+    <div class="feature-chip">Up to 4-way comparison</div>
+    <div class="feature-chip">Goals &middot; Assists &middot; xG &middot; Shots &middot; SoT &middot; Pass Acc.</div>
+    <div class="feature-chip">Form (last 5 results)</div>
+</div>
+
+<div class="compare-shell">
+    <!-- FILTER RAIL -->
+    <div class="rail">
+        <h4>Tournament</h4>
+        <select class="select" disabled style="opacity:0.7;"><option>FIFA World Cup 2022&trade; &mdash; Qatar</option></select>
+
+        <h4>Team</h4>
+        <select class="select" id="teamFilter">
+            <option value="">All Teams</option>
+            @foreach (var t in Model.AllTeamNames)
+            {
+                <option value="@t">@t</option>
+            }
+        </select>
+
+        <h4>Group</h4>
+        <select class="select" id="groupFilter">
+            <option value="">All Groups</option>
+            @foreach (var g in Model.AllGroupLetters)
+            {
+                <option value="@g">Group @g</option>
+            }
+        </select>
+
+        <h4>Position</h4>
+        <div class="chip-row" id="posFilter">
+            <div class="chip on" data-pos="">ALL</div>
+            <div class="chip" data-pos="GK">GK</div>
+            <div class="chip" data-pos="DF">DF</div>
+            <div class="chip" data-pos="MF">MF</div>
+            <div class="chip" data-pos="FW">FW</div>
+        </div>
+
+        <h4>Player Search <span class="manual-tag">players</span></h4>
+        <div class="search-wrap">
+            <input class="search-input" id="playerSearch" type="text" placeholder="Filter 829 players&hellip;" autocomplete="off">
+        </div>
+        <div class="stat-label" style="margin-top:6px;">Check up to 4 players to compare</div>
+        <div class="browse-panel" id="browsePanel"></div>
+        <div class="browse-count" id="browseCount"></div>
+
+        <h4>Comparison (<span id="wlCount">@Model.Players.Count</span>/4)</h4>
+        <div class="watchlist" id="watchlist">
+            @if (Model.Players.Any())
+            {
+                foreach (var p in Model.Players)
+                {
+                    <div class="wl-item" data-id="@p.PlayerId">
+                        <div class="wl-left">
+                            <div class="wl-dot" style="background:@p.ColorHex;"></div>
+                            <div style="min-width:0;"><div class="wl-name">@p.DisplayName</div><div class="wl-team">@p.TeamName</div></div>
+                        </div>
+                        <button type="button" class="wl-remove" data-id="@p.PlayerId">&times;</button>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="wl-empty">No players selected yet</div>
+            }
+        </div>
+        <button type="button" class="clear-btn" id="clearBtn">Clear All</button>
+
+        <div class="data-tag" style="margin-top:22px;"><div class="pulse"></div>829 featured players</div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="rail-content">
+        <form id="compareForm" method="get" action="/Players/Compare">
+            <input type="hidden" name="ids" id="idsField" value="@Model.SelectedIdsCsv">
+        </form>
+
+        @if (!Model.Players.Any())
+        {
+            <div class="empty-state">
+                <div class="display">No players selected</div>
+                <p>Use the filters on the left to browse players, then check the box next to up to 4 of them to compare.</p>
+            </div>
+        }
+        else
+        {
+            <div class="divider" style="margin-top:0;"><div class="dot"></div><span class="label">Comparison Table</span><div class="dot"></div></div>
+            <div class="card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Player</th>
+                            <th>Pos</th>
+                            <th>Starts</th>
+                            <th>Goals</th>
+                            <th>Assists</th>
+                            <th>xG</th>
+                            <th>Shots</th>
+                            <th>SoT</th>
+                            <th>Pass Acc.</th>
+                            <th>Form</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var p in Model.Players)
+                        {
+                            <tr>
+                                <td>
+                                    <a class="player-cell" href="/Players/Profile?id=@p.PlayerId">
+                                        <img src="@WorldCupAnalytics.Helpers.AvatarHelper.GetUrl(p.DisplayName, p.ColorHex.TrimStart('#'))" class="p-avatar">
+                                        <div><div class="p-name">@p.DisplayName</div><div class="p-team">@p.TeamName</div></div>
+                                    </a>
+                                </td>
+                                <td><span class="pos-tag" title="Most frequent position across this player's matches, from match_lineups">@p.Position</span></td>
+                                <td class="num" title="Matches started (from match_lineups)">@p.Starts</td>
+                                <td class="num" title="Goals scored in open play + regulation/extra-time penalties. Shootout penalties are excluded to match official tournament stats.">@p.Goals</td>
+                                <td class="num" title="Passes that led directly to a goal (shot_assist/goal_assist flag)">@p.Assists</td>
+                                <td class="num" title="Expected Goals — StatsBomb's model estimate of how likely each shot was to result in a goal, summed across all shots. Shootout penalties excluded.">@p.Xg</td>
+                                <td class="num" title="Total shots taken (open play + regulation/extra-time penalties)">@p.Shots</td>
+                                <td class="num" title="Shots on target — goals + saves, excluding blocked/off-target attempts">@p.ShotsOnTarget</td>
+                                <td class="num" title="Completed passes &divide; total passes attempted">@p.PassAccuracyPct%</td>
+                                <td>
+                                    <div class="form-dots">
+                                        @foreach (var result in p.Form)
+                                        {
+                                            var cls = result == "W" ? "w" : result == "L" ? "l" : "d";
+                                            var word = result == "W" ? "Win" : result == "L" ? "Loss" : "Draw";
+                                            <div class="fd @cls" title="@word (team result in this player's match, most recent 5 starts, oldest to newest)">@result</div>
+                                        }
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <div class="stat-label" style="margin-top:10px;">Goals/xG/Shots from <span class="mono">shot_events</span> (shootout penalties excluded) &middot; Assists/Pass Acc. from <span class="mono">pass_events</span> &middot; Form from <span class="mono">match_lineups</span> + <span class="mono">matches</span>. Hover any column header value or Form dot for details.</div>
+            </div>
+
+            <div class="divider"><div class="dot"></div><span class="label">Defensive &amp; Work Rate</span><div class="dot"></div></div>
+            <div class="stat-label" style="margin-bottom:10px;">Pressures/Interceptions/Clearances/Blocks/Fouls are raw involvement counts from <span class="mono">event_locations</span>. Ground Duels and Dribbles show real win/success rates from <span class="mono">duel_events</span> and <span class="mono">dribble_events</span> &mdash; Aerial Duels are losses-only, since StatsBomb doesn't tag the winning side separately.</div>
+            <div class="card">
+                <table>
+                    <thead>
+                        <tr><th>Player</th><th title="Applying pressure to the opponent in possession">Pressures</th><th title="Tackle duels only — real won/total, since aerial wins aren't tracked separately in this dataset">Ground Duels</th><th title="Aerial duels this player lost — StatsBomb doesn't tag the winning side of an aerial as a separate event, so wins can't be counted here">Aerial Lost</th><th>Interceptions</th><th>Clearances</th><th>Blocks</th><th title="Fouls this player gave away">Fouls</th><th title="Dribble attempts, real success rate">Dribbles</th></tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var p in Model.Players)
+                        {
+                            <tr>
+                                <td><div class="player-cell" style="cursor:default;"><img src="@WorldCupAnalytics.Helpers.AvatarHelper.GetUrl(p.DisplayName, p.ColorHex.TrimStart('#'))" class="p-avatar" style="width:26px;height:26px;font-size:10px;"><span class="p-name" style="font-size:12.5px;">@p.DisplayName</span></div></td>
+                                <td class="num">@p.Pressures</td>
+                                <td class="num">@p.GroundDuelsWon/@p.GroundDuelsTotal (@p.GroundDuelWinPct%)</td>
+                                <td class="num">@p.AerialDuelsLost</td>
+                                <td class="num">@p.Interceptions</td>
+                                <td class="num">@p.Clearances</td>
+                                <td class="num">@p.Blocks</td>
+                                <td class="num">@p.FoulsCommitted / @p.FoulsWon</td>
+                                <td class="num">@p.DribblesCompleted/@p.DribblesAttempted (@p.DribbleSuccessPct%)</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="divider"><div class="dot"></div><span class="label">Attribute Radar &amp; Bars</span><div class="dot"></div></div>
+            <div class="grid cols-2">
+                <div class="card">
+                    <h3>Percentile Radar</h3>
+                    <p class="stat-label" style="margin:0 0 10px;">Each axis is scaled to the <em>best player currently selected</em> for that stat &mdash; e.g. if Player A has the most Goals of the group, they sit at the outer edge on that axis and everyone else is shown as a percentage of A's total. Hover a vertex to see the real number.</p>
+                    <svg width="100%" height="360" viewBox="0 0 380 360">
+                        @{
+                            double[] ringFractions = { 1.0, 0.66, 0.33 };
+                            double cx = 190, cy = 170, r = 140;
+                            (double x, double y) RingPoint(double angleDeg, double f)
+                            {
+                                var rad = Math.PI / 180.0 * angleDeg;
+                                return (cx + (r * f) * Math.Sin(rad), cy - (r * f) * Math.Cos(rad));
+                            }
+                        }
+                        @foreach (var f in ringFractions)
+                        {
+                            var pts = string.Join(" ", Enumerable.Range(0, 6).Select(i => { var p = RingPoint(i * 60.0, f); return $"{p.x.ToString(System.Globalization.CultureInfo.InvariantCulture)},{p.y.ToString(System.Globalization.CultureInfo.InvariantCulture)}"; }));
+                            <polygon points="@pts" fill="none" stroke="rgba(20,24,28,0.14)" />
+                        }
+                        @for (int i = 0; i < 6; i++)
+                        {
+                            var p = RingPoint(i * 60.0, 1.0);
+                            <line x1="@cx" y1="@cy" x2="@p.x.ToString(System.Globalization.CultureInfo.InvariantCulture)" y2="@p.y.ToString(System.Globalization.CultureInfo.InvariantCulture)" stroke="rgba(20,24,28,0.20)" />
+                        }
+                        @foreach (var series in Model.RadarSeries)
+                        {
+                            <polygon points="@series.PolygonPoints" fill="@series.ColorHex" fill-opacity="0.18" stroke="@series.ColorHex" stroke-width="2" />
+                        }
+                        @foreach (var series in Model.RadarSeries)
+                        {
+                            @foreach (var pt in series.Points)
+                            {
+                                <circle cx="@pt.X" cy="@pt.Y" r="4" fill="@series.ColorHex" stroke="var(--panel)" stroke-width="1.5">
+                                    <title>@series.PlayerName &mdash; @pt.AxisLabel: @pt.RawValueDisplay (@(pt.Percentile.ToString("0"))% of best in group)</title>
+                                </circle>
+                            }
+                        }
+                        @for (int i = 0; i < 6; i++)
+                        {
+                            var p = RingPoint(i * 60.0, 1.28);
+                            string[] axisLabels = { "GOALS", "xG", "ASSISTS", "SHOTS", "PASS ACC.", "TOUCHES" };
+                            var svgText = $"<text x=\"{p.x.ToString(System.Globalization.CultureInfo.InvariantCulture)}\" y=\"{p.y.ToString(System.Globalization.CultureInfo.InvariantCulture)}\" text-anchor=\"middle\" fill=\"#14181C\" font-family=\"IBM Plex Mono\" font-size=\"10.5\" opacity=\"0.72\">{axisLabels[i]}</text>";
+                            @Html.Raw(svgText)
+                        }
+                    </svg>
+                    <div class="legend">
+                        @foreach (var p in Model.Players)
+                        {
+                            <div class="legend-item"><div class="swatch" style="background:@p.ColorHex;"></div>@p.DisplayName</div>
+                        }
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Head-to-Head Bars</h3>
+                    <p class="stat-label" style="margin:0 0 12px;">Each group of bars is scaled to whoever has the highest value for that stat among the selected players.</p>
+                    @{
+                        var maxGoals = Model.Players.Max(p => p.Goals); if (maxGoals == 0) maxGoals = 1;
+                        var maxXgBar = Model.Players.Max(p => p.Xg); if (maxXgBar == 0) maxXgBar = 1;
+                        var maxAssists = Model.Players.Max(p => p.Assists); if (maxAssists == 0) maxAssists = 1;
+                        var maxPassAcc = Model.Players.Max(p => p.PassAccuracyPct); if (maxPassAcc == 0) maxPassAcc = 1;
+                    }
+                    @foreach (var p in Model.Players)
+                    {
+                        var pct = Math.Max(4, Math.Min(100, (double)p.Goals / (double)maxGoals * 100));
+                        <div class="bar-row" title="@p.DisplayName: @p.Goals goals"><div class="top"><span>Goals &mdash; @p.DisplayName</span><span class="bracket val" style="color:@p.ColorHex;">@p.Goals</span></div><div class="bar-track"><div class="bar-fill" style="width:@(pct.ToString("0"))%;background:@p.ColorHex;"></div></div></div>
+                    }
+                    @foreach (var p in Model.Players)
+                    {
+                        var pct = Math.Max(4, Math.Min(100, (double)(p.Xg / maxXgBar) * 100));
+                        <div class="bar-row" title="@p.DisplayName: @p.Xg expected goals"><div class="top"><span>xG &mdash; @p.DisplayName</span><span class="bracket val" style="color:@p.ColorHex;">@p.Xg</span></div><div class="bar-track"><div class="bar-fill" style="width:@(pct.ToString("0"))%;background:@p.ColorHex;"></div></div></div>
+                    }
+                    @foreach (var p in Model.Players)
+                    {
+                        var pct = Math.Max(4, Math.Min(100, (double)p.Assists / (double)maxAssists * 100));
+                        <div class="bar-row" title="@p.DisplayName: @p.Assists assists"><div class="top"><span>Assists &mdash; @p.DisplayName</span><span class="bracket val" style="color:@p.ColorHex;">@p.Assists</span></div><div class="bar-track"><div class="bar-fill" style="width:@(pct.ToString("0"))%;background:@p.ColorHex;"></div></div></div>
+                    }
+                    @foreach (var p in Model.Players)
+                    {
+                        var pct = Math.Max(4, Math.Min(100, (double)(p.PassAccuracyPct / maxPassAcc) * 100));
+                        <div class="bar-row" title="@p.DisplayName: @p.PassAccuracyPct% of passes completed"><div class="top"><span>Pass Accuracy % &mdash; @p.DisplayName</span><span class="bracket val" style="color:@p.ColorHex;">@p.PassAccuracyPct%</span></div><div class="bar-track"><div class="bar-fill" style="width:@(pct.ToString("0"))%;background:@p.ColorHex;"></div></div></div>
+                    }
+                </div>
+            </div>
+
+            <div class="divider"><div class="dot"></div><span class="label">Shot Maps</span><div class="dot"></div></div>
+            <div class="stat-label" style="margin-bottom:10px;">Each dot is one real shot, plotted at its actual pitch location. Gold = goal, green = saved, dim = off target/blocked. Shootout penalties excluded. Hover any dot for the minute, outcome, and xG.</div>
+            <div class="legend" style="justify-content:flex-start; margin-top:0; margin-bottom:14px;">
+                <div class="legend-item"><div class="swatch" style="background:#B8842A;border-radius:50%;"></div>Goal</div>
+                <div class="legend-item"><div class="swatch" style="background:#2E7D50;border-radius:50%;"></div>Saved</div>
+                <div class="legend-item"><div class="swatch" style="background:rgba(20,24,28,0.25);border-radius:50%;"></div>Off target / blocked</div>
+            </div>
+            <div class="pitch-grid">
+                @foreach (var p in Model.Players)
+                {
+                    <div class="card pitch-card">
+                        <h4><span style="width:10px;height:10px;border-radius:50%;background:@p.ColorHex;display:inline-block;"></span>@p.DisplayName</h4>
+                        <div class="pmeta">@p.Shots shots &middot; @p.Goals goals &middot; @p.Xg xG</div>
+                        <div class="pitch-zoomable">
+                            <svg width="100%" height="260" viewBox="0 0 420 300">
+                                <rect x="0" y="0" width="420" height="300" rx="8" fill="var(--panel-2)" />
+                                <g stroke="rgba(20,24,28,0.25)" fill="none" stroke-width="1.5">
+                                    <rect x="10" y="10" width="400" height="280" />
+                                    <rect x="10" y="70" width="60" height="160" />
+                                    <rect x="350" y="70" width="60" height="160" />
+                                </g>
+                                @foreach (var dot in p.ShotMap)
+                                {
+                                    <circle cx="@dot.SvgX" cy="@dot.SvgY" r="@dot.Radius" fill="@dot.Color" stroke="var(--chalk)" stroke-width="1">
+                                        <title>@dot.TooltipText</title>
+                                    </circle>
+                                }
+                            </svg>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <div class="divider"><div class="dot"></div><span class="label">Touch Heat Maps</span><div class="dot"></div></div>
+            <div class="stat-label" style="margin-bottom:10px;">Pitch divided into an 8&times;6 grid; darker green = more touches (passes, carries, pressures, duels &mdash; every located on-ball event) in that zone. Hover any zone for the exact count.</div>
+            <div class="pitch-grid">
+                @foreach (var p in Model.Players)
+                {
+                    <div class="card pitch-card">
+                        <h4><span style="width:10px;height:10px;border-radius:50%;background:@p.ColorHex;display:inline-block;"></span>@p.DisplayName</h4>
+                        <div class="pmeta">@p.TouchesCount touches logged</div>
+                        <div class="pitch-zoomable">
+                            <svg width="100%" height="260" viewBox="0 0 420 300">
+                                <rect x="0" y="0" width="420" height="300" rx="8" fill="var(--panel-2)" />
+                                @foreach (var cell in p.HeatMap)
+                                {
+                                    <rect x="@cell.SvgX" y="@cell.SvgY" width="@cell.Width" height="@cell.Height" fill="@($"rgba(46,125,80,{cell.Opacity.ToString(System.Globalization.CultureInfo.InvariantCulture)})")">
+                                        <title>@cell.TouchCount touch@(cell.TouchCount == 1 ? "" : "es") in this zone</title>
+                                    </rect>
+                                }
+                                <g stroke="rgba(20,24,28,0.25)" fill="none" stroke-width="1.5">
+                                    <rect x="10" y="10" width="400" height="280" />
+                                    <rect x="10" y="70" width="60" height="160" />
+                                    <rect x="350" y="70" width="60" height="160" />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        (function () {
+          const state = { team: '', group: '', pos: '', q: '' };
+          let currentIds = @Html.Raw("[" + Model.SelectedIdsCsv + "]");
+
+          const browsePanel = document.getElementById('browsePanel');
+          const browseCount = document.getElementById('browseCount');
+          const idsField = document.getElementById('idsField');
+          const compareForm = document.getElementById('compareForm');
+
+          function submitForm() {
+            idsField.value = currentIds.join(',');
+            compareForm.submit();
+          }
+
+          async function refreshBrowse() {
+            const params = new URLSearchParams(state);
+            const res = await fetch('/Players/Browse?' + params.toString());
+            const players = await res.json();
+
+            if (players.length === 0) {
+              browsePanel.innerHTML = '<div class="browse-empty">No players match these filters</div>';
+              browseCount.textContent = '';
+              return;
+            }
+
+            browsePanel.innerHTML = players.map(p => {
+              const isChecked = currentIds.includes(p.playerId);
+              const isDisabled = !isChecked && currentIds.length >= 4;
+              return '<div class="browse-row ' + (isChecked ? 'checked' : '') + ' ' + (isDisabled ? 'disabled' : '') + '">' +
+                '<input type="checkbox" class="browse-check" data-id="' + p.playerId + '" ' + (isChecked ? 'checked' : '') + ' ' + (isDisabled ? 'disabled' : '') + '>' +
+                '<div class="browse-info"><div class="browse-name">' + p.displayName + '</div><div class="browse-meta">' + p.teamName + ' &middot; ' + p.position + '</div></div>' +
+                '<div class="browse-stat">' + p.goals + 'G ' + p.assists + 'A</div>' +
+              '</div>';
+            }).join('');
+            browseCount.textContent = players.length + ' player' + (players.length === 1 ? '' : 's') + ' shown';
+
+            browsePanel.querySelectorAll('.browse-check').forEach(cb => {
+              cb.addEventListener('change', function () {
+                const id = parseInt(this.dataset.id);
+                if (this.checked) {
+                  if (currentIds.length >= 4) { this.checked = false; return; }
+                  currentIds.push(id);
+                } else {
+                  currentIds = currentIds.filter(x => x !== id);
+                }
+                submitForm();
+              });
+            });
+          }
+
+          document.getElementById('teamFilter').addEventListener('change', e => { state.team = e.target.value; refreshBrowse(); });
+          document.getElementById('groupFilter').addEventListener('change', e => { state.group = e.target.value; refreshBrowse(); });
+          document.getElementById('playerSearch').addEventListener('input', e => { state.q = e.target.value; refreshBrowse(); });
+
+          document.querySelectorAll('#posFilter .chip').forEach(chip => {
+            chip.addEventListener('click', function () {
+              document.querySelectorAll('#posFilter .chip').forEach(c => c.classList.remove('on'));
+              this.classList.add('on');
+              state.pos = this.dataset.pos;
+              refreshBrowse();
+            });
+          });
+
+          document.querySelectorAll('.wl-remove').forEach(btn => {
+            btn.addEventListener('click', function () {
+              const id = parseInt(this.dataset.id);
+              currentIds = currentIds.filter(x => x !== id);
+              submitForm();
+            });
+          });
+
+          document.getElementById('clearBtn').addEventListener('click', function () {
+            currentIds = [];
+            submitForm();
+          });
+
+          refreshBrowse();
+        })();
+    </script>
+}
